@@ -1,0 +1,2 @@
+python -m magscale.train --model vit --width 512 --depth 12 --heads 8 --lr 4e-4 --beta 3.5 --h 0,200,800 --D 131072 --steps 8000 --seed 0 --n 64 --sigma 1.0 --mask random --ratio 0.75 --batch 256 --amp --floor_masks 8 --save  --out runs/vitxxl_b3.5_hmix_D131072_s0_alt.json
+python -m magscale.train --model vit --width 512 --depth 12 --heads 8 --lr 4e-4 --beta 3.5 --h 0,200,800 --D 131072 --steps 8000 --seed 0 --n 64 --sigma 1.0 --mask random --ratio 0.75 --batch 256 --amp --floor_masks 8 --save --no_altitude --out runs/vitxxl_b3.5_hmix_D131072_s0_noalt.json

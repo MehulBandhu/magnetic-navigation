@@ -1,0 +1,83 @@
+{
+ "unmasked": {
+  "2.5": {
+   "predicted_from_beta": 0.4,
+   "spectrum_exponent_c": 0.6242086549315182,
+   "predicted_from_spectrum": 0.39797158834699314,
+   "two_layer_slope": 0.6635843498462862,
+   "window": [
+    0.010579134403993192,
+    0.11566930376980995
+   ],
+   "one_layer_whitened_slope": 0.16735839926522517
+  },
+  "3.0": {
+   "predicted_from_beta": 0.6666666666666666,
+   "spectrum_exponent_c": 0.7491579270476172,
+   "predicted_from_spectrum": 0.6651679653969155,
+   "two_layer_slope": 0.8304570579695795,
+   "window": [
+    0.010445234547516634,
+    0.18322302661609413
+   ],
+   "one_layer_whitened_slope": 0.21582698046488763
+  },
+  "3.5": {
+   "predicted_from_beta": 0.8571428571428571,
+   "spectrum_exponent_c": 0.8744149420330657,
+   "predicted_from_spectrum": 0.8563781885120333,
+   "two_layer_slope": 0.9946306152663691,
+   "window": [
+    0.011234906374947546,
+    0.3148720875931801
+   ],
+   "one_layer_whitened_slope": 0.3062645014268002
+  },
+  "4.0": {
+   "predicted_from_beta": 1.0,
+   "spectrum_exponent_c": 1.000808572442544,
+   "predicted_from_spectrum": 1.0008079191813581,
+   "two_layer_slope": 1.151045249671441,
+   "window": [
+    0.012623511831906515,
+    0.5641915705933761
+   ],
+   "one_layer_whitened_slope": 0.45948263905249787
+  }
+ },
+ "masked_whitened": {
+  "3.5_0": {
+   "two_layer_slope": 1.8643129465133914,
+   "spectrum_exponent_c": 1.2066495320906776,
+   "predicted_from_spectrum": 1.1712589501714141,
+   "predicted_from_beta": 0.8571428571428571,
+   "ranks": [
+    16,
+    905
+   ],
+   "n_modes": 1024
+  },
+  "3.5_200": {
+   "two_layer_slope": 1.889938590146781,
+   "spectrum_exponent_c": 1.5939636740651952,
+   "predicted_from_spectrum": 1.3726331306850732,
+   "predicted_from_beta": 0.8571428571428571,
+   "ranks": [
+    16,
+    295
+   ],
+   "n_modes": 1024
+  },
+  "3.5_800": {
+   "two_layer_slope": 2.1716688709729417,
+   "spectrum_exponent_c": 2.4376611119838913,
+   "predicted_from_spectrum": 1.5897707047612744,
+   "predicted_from_beta": 0.8571428571428571,
+   "ranks": [
+    16,
+    76
+   ],
+   "n_modes": 1024
+  }
+ }
+}

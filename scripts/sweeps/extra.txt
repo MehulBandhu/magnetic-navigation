@@ -1,0 +1,2 @@
+python -m magscale.train --model vit --width 512 --depth 4 --heads 16 --lr 1e-3 --beta 3.5 --h 200 --D 0 --steps 4000 --n 64 --sigma 1.0 --mask random --ratio 0.75 --batch 256 --amp --floor_masks 8 --wd 0 --save --out runs/width512_parsp_wd0_b3.5_h200.json
+python -m magscale.train --model vit --width 256 --depth 6 --heads 4 --lr 0.001 --beta 3.5 --h 200 --D 32768 --steps 8000 --seed 0 --n 64 --sigma 1.0 --mask random --ratio 0.75 --batch 256 --amp --floor_masks 8 --noisy_target --out runs/vitl_b3.5_h200_D32768_s0_noisytarget.json
