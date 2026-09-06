@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.DS_Store
+runs/*.pt
+wheels/
+logs/
+runs_fake/
+results_fake/
+figures/*_nonetwork.png
+results/*_nonetwork.json
+figures/demo_run.png
+data/

@@ -1,0 +1,6 @@
+# versions used for every result in this repo (Mac, Colab A100, Cuillin CPU nodes)
+torch>=2.3          # torch.amp.GradScaler; 2.13.0 (Mac, Colab), 2.14.0+cpu (Cuillin)
+numpy>=2.0          # 2.5.2
+scipy>=1.14         # 1.18.1
+matplotlib>=3.9     # 3.11.1
+pytest>=8           # tests only
