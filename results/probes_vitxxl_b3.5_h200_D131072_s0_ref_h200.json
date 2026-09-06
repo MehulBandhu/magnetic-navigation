@@ -1,0 +1,21 @@
+{
+ "jacobian": {
+  "rel_err": 0.5901337049818551,
+  "cosine": 0.8377957441486161,
+  "gain_ratio": 0.995618448622126,
+  "n_rows": 16
+ },
+ "linearity": {
+  "rel_nonlinearity": 0.0047675919098158675,
+  "affine_offset_ratio": 0.004615218378603458
+ },
+ "ntk": {
+  "alignment": 0.9537110924720764,
+  "centred_alignment": 0.9545955657958984,
+  "offdiag_alignment": 0.9510974287986755,
+  "top_eigenvector_overlap": 0.6338701248168945,
+  "rel_change": 0.9019649624824524,
+  "scale_ratio": 0.12044346332550049,
+  "n_outputs": 128
+ }
+}

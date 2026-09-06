@@ -1,0 +1,32 @@
+{
+ "run": "vitxxl_b3.5_hmix_D131072_s0_noalt",
+ "train_h": [
+  0.0,
+  200.0,
+  800.0
+ ],
+ "train_sigma": 1.0,
+ "rows": [
+  {
+   "sigma": 1.0,
+   "h": 100.0,
+   "loss": 2.020452558994293,
+   "floor": 1.4342097043991089,
+   "in_training": false
+  },
+  {
+   "sigma": 1.0,
+   "h": 200.0,
+   "loss": 0.774516649544239,
+   "floor": 0.510309100151062,
+   "in_training": true
+  },
+  {
+   "sigma": 1.0,
+   "h": 400.0,
+   "loss": 0.38280633464455605,
+   "floor": 0.197304368019104,
+   "in_training": false
+  }
+ ]
+}
