@@ -1,0 +1,32 @@
+{
+ "2.5": {
+  "mse_network_median": 35.76416015625,
+  "mse_wiener_beta35_median": 19.186431884765625,
+  "ratio_median": 1.7808481358320782,
+  "nonlinearity_median": 0.042215216904878616
+ },
+ "3.0": {
+  "mse_network_median": 12.426671981811523,
+  "mse_wiener_beta35_median": 6.969724655151367,
+  "ratio_median": 1.774396591645447,
+  "nonlinearity_median": 0.020980704575777054
+ },
+ "3.5": {
+  "mse_network_median": 4.8116278648376465,
+  "mse_wiener_beta35_median": 2.460896134376526,
+  "ratio_median": 1.893095278765522,
+  "nonlinearity_median": 0.012658260762691498
+ },
+ "4.0": {
+  "mse_network_median": 1.9627412557601929,
+  "mse_wiener_beta35_median": 1.2370643615722656,
+  "ratio_median": 1.604892015343368,
+  "nonlinearity_median": 0.010976303368806839
+ },
+ "4.5": {
+  "mse_network_median": 1.2278904914855957,
+  "mse_wiener_beta35_median": 0.9598599970340729,
+  "ratio_median": 1.3388781776021366,
+  "nonlinearity_median": 0.010084590874612331
+ }
+}
