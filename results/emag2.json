@@ -9,6 +9,7 @@
    "lat": -36.8,
    "lon": 138.33333333333331,
    "beta": 3.707195925824304,
+   "top_octave_excess": 0.5052809398019696,
    "rms_nT": 46.06538778518441,
    "kurtosis": 3.5400309369003313,
    "mse_network": 17.68903350830078,
@@ -17,13 +18,16 @@
    "mse_wiener_beta35_stationary": 5.0458903312683105,
    "floor_predicted": 1.7204364405598183,
    "mse_interp": 22.832697087058364,
-   "nonlinearity": NaN
+   "nonlinearity": NaN,
+   "err_top5_gauss": 0.7225344777107239,
+   "err_top5_network": 0.7793026566505432
   },
   {
    "region": "australia",
    "lat": -36.8,
    "lon": 141.0,
    "beta": 2.880625004223911,
+   "top_octave_excess": 0.7815509562203495,
    "rms_nT": 63.38767678630922,
    "kurtosis": 2.574546168782574,
    "mse_network": 60.899662017822266,
@@ -32,13 +36,16 @@
    "mse_wiener_beta35_stationary": 21.9725399017334,
    "floor_predicted": 7.672250715219562,
    "mse_interp": 60.57883371809171,
-   "nonlinearity": 0.08147116005420685
+   "nonlinearity": 0.08147116005420685,
+   "err_top5_gauss": 0.534248948097229,
+   "err_top5_network": 0.5225752592086792
   },
   {
    "region": "australia",
    "lat": -36.8,
    "lon": 143.66666666666669,
    "beta": 2.0672803298285687,
+   "top_octave_excess": 0.3675322537494782,
    "rms_nT": 33.00756623421539,
    "kurtosis": 5.053182353704261,
    "mse_network": 39.730831146240234,
@@ -47,13 +54,16 @@
    "mse_wiener_beta35_stationary": 16.430633544921875,
    "floor_predicted": 37.66349281243832,
    "mse_interp": 38.416904247463584,
-   "nonlinearity": 0.06874779611825943
+   "nonlinearity": 0.06874779611825943,
+   "err_top5_gauss": 0.6740843057632446,
+   "err_top5_network": 0.7680473327636719
   },
   {
    "region": "australia",
    "lat": -36.8,
    "lon": 146.33333333333331,
    "beta": 2.3386141935539198,
+   "top_octave_excess": 0.43386641316383384,
    "rms_nT": 30.896625860781537,
    "kurtosis": 4.258486876695105,
    "mse_network": 63.83753967285156,
@@ -62,13 +72,16 @@
    "mse_wiener_beta35_stationary": 15.061060905456543,
    "floor_predicted": 24.615835127869584,
    "mse_interp": 65.44235538023908,
-   "nonlinearity": 0.09676697105169296
+   "nonlinearity": 0.09676697105169296,
+   "err_top5_gauss": 0.6683006286621094,
+   "err_top5_network": 0.6173151731491089
   },
   {
    "region": "australia",
    "lat": -36.8,
    "lon": 149.0,
    "beta": 2.693375221813051,
+   "top_octave_excess": 0.31975754899582876,
    "rms_nT": 32.52766570395262,
    "kurtosis": 4.136644227324666,
    "mse_network": 146.4412384033203,
@@ -77,13 +90,16 @@
    "mse_wiener_beta35_stationary": 45.48492431640625,
    "floor_predicted": 11.806571717833306,
    "mse_interp": 116.1408939138906,
-   "nonlinearity": 0.14214111864566803
+   "nonlinearity": 0.14214111864566803,
+   "err_top5_gauss": 0.6444432735443115,
+   "err_top5_network": 0.5905212759971619
   },
   {
    "region": "australia",
    "lat": -34.666666666666664,
    "lon": 132.5,
    "beta": 5.476963591632775,
+   "top_octave_excess": 1.3976258027676232,
    "rms_nT": 121.55992677800205,
    "kurtosis": 2.3305342682100068,
    "mse_network": 4.142158031463623,
@@ -92,13 +108,16 @@
    "mse_wiener_beta35_stationary": 1.2059482336044312,
    "floor_predicted": 0.24646613260891936,
    "mse_interp": 6.3388162107509105,
-   "nonlinearity": 0.131199911236763
+   "nonlinearity": 0.131199911236763,
+   "err_top5_gauss": 0.4164222180843353,
+   "err_top5_network": 0.6894271969795227
   },
   {
    "region": "australia",
    "lat": -34.666666666666664,
    "lon": 135.10000000000002,
    "beta": 1.6596655663092645,
+   "top_octave_excess": 0.49046649554075916,
    "rms_nT": 149.89935821620236,
    "kurtosis": 3.4146971335441063,
    "mse_network": 24.69580078125,
@@ -107,13 +126,16 @@
    "mse_wiener_beta35_stationary": 10.294763565063477,
    "floor_predicted": 84.29310001591956,
    "mse_interp": 27.20318744208736,
-   "nonlinearity": 0.06635165214538574
+   "nonlinearity": 0.06635165214538574,
+   "err_top5_gauss": 0.6789582967758179,
+   "err_top5_network": 0.6377360224723816
   },
   {
    "region": "australia",
    "lat": -34.666666666666664,
    "lon": 137.7,
    "beta": 2.394531548116173,
+   "top_octave_excess": 0.638486928727274,
    "rms_nT": 245.97735237352705,
    "kurtosis": 3.551056253162135,
    "mse_network": 72.91985321044922,
@@ -122,13 +144,16 @@
    "mse_wiener_beta35_stationary": 14.471588134765625,
    "floor_predicted": 21.009402098861894,
    "mse_interp": 46.27586152310578,
-   "nonlinearity": 0.13746266067028046
+   "nonlinearity": 0.13746266067028046,
+   "err_top5_gauss": 0.5973693132400513,
+   "err_top5_network": 0.5230013132095337
   },
   {
    "region": "australia",
    "lat": -34.666666666666664,
    "lon": 140.3,
    "beta": 2.0399352480033626,
+   "top_octave_excess": 0.7168481114091503,
    "rms_nT": 84.73931185347392,
    "kurtosis": 5.076627427806815,
    "mse_network": 96.7613754272461,
@@ -137,13 +162,16 @@
    "mse_wiener_beta35_stationary": 34.732059478759766,
    "floor_predicted": 46.16998824038245,
    "mse_interp": 85.34866692096513,
-   "nonlinearity": 0.12721417844295502
+   "nonlinearity": 0.12721417844295502,
+   "err_top5_gauss": 0.726596474647522,
+   "err_top5_network": 0.6484600901603699
   },
   {
    "region": "australia",
    "lat": -34.666666666666664,
    "lon": 142.89999999999998,
    "beta": 2.7518273242609297,
+   "top_octave_excess": 0.44945463941327735,
    "rms_nT": 28.613264288804448,
    "kurtosis": 4.613503382314883,
    "mse_network": 24.469789505004883,
@@ -152,13 +180,16 @@
    "mse_wiener_beta35_stationary": 7.305200099945068,
    "floor_predicted": 9.688153754532472,
    "mse_interp": 20.633028798157923,
-   "nonlinearity": 0.12899354100227356
+   "nonlinearity": 0.12899354100227356,
+   "err_top5_gauss": 0.7204124927520752,
+   "err_top5_network": 0.8416681885719299
   },
   {
    "region": "australia",
    "lat": -34.666666666666664,
    "lon": 145.5,
    "beta": 3.2363882325638893,
+   "top_octave_excess": 0.6631752429734618,
    "rms_nT": 32.5866206770029,
    "kurtosis": 4.488542581826515,
    "mse_network": 32.252193450927734,
@@ -167,13 +198,16 @@
    "mse_wiener_beta35_stationary": 10.662859916687012,
    "floor_predicted": 4.138057034453504,
    "mse_interp": 30.113197438832525,
-   "nonlinearity": 0.06184907630085945
+   "nonlinearity": 0.06184907630085945,
+   "err_top5_gauss": 0.6235759258270264,
+   "err_top5_network": 0.6007686853408813
   },
   {
    "region": "australia",
    "lat": -34.666666666666664,
    "lon": 148.10000000000002,
    "beta": 2.277414043940962,
+   "top_octave_excess": 0.5873925527454308,
    "rms_nT": 77.22169484544533,
    "kurtosis": 7.011958934680764,
    "mse_network": 143.64950561523438,
@@ -182,13 +216,16 @@
    "mse_wiener_beta35_stationary": 34.71126937866211,
    "floor_predicted": 25.788363684101768,
    "mse_interp": 88.60377643902534,
-   "nonlinearity": 0.12786312401294708
+   "nonlinearity": 0.12786312401294708,
+   "err_top5_gauss": 0.6716628670692444,
+   "err_top5_network": 0.6370857357978821
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 116.80000000000001,
    "beta": 2.3859423632208983,
+   "top_octave_excess": 0.4874535838663899,
    "rms_nT": 62.37117618011567,
    "kurtosis": 2.7856609338212324,
    "mse_network": 96.13958740234375,
@@ -197,13 +234,16 @@
    "mse_wiener_beta35_stationary": 28.37189483642578,
    "floor_predicted": 19.653569083648794,
    "mse_interp": 66.96566241105178,
-   "nonlinearity": 0.11084012687206268
+   "nonlinearity": 0.11084012687206268,
+   "err_top5_gauss": 0.512927770614624,
+   "err_top5_network": 0.47287699580192566
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 119.33333333333331,
    "beta": 1.4244217695479695,
+   "top_octave_excess": 0.49742163052906896,
    "rms_nT": 73.40850572390185,
    "kurtosis": 3.6884730264609633,
    "mse_network": 250.9021453857422,
@@ -212,13 +252,16 @@
    "mse_wiener_beta35_stationary": 80.69100952148438,
    "floor_predicted": 117.7537487528336,
    "mse_interp": 248.7661508180056,
-   "nonlinearity": 0.1699436604976654
+   "nonlinearity": 0.1699436604976654,
+   "err_top5_gauss": 0.5200586318969727,
+   "err_top5_network": 0.4759313464164734
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 121.86666666666667,
    "beta": 1.2613907180701198,
+   "top_octave_excess": 0.694231939248353,
    "rms_nT": 84.5355416974419,
    "kurtosis": 4.782927967287407,
    "mse_network": 57.134456634521484,
@@ -227,13 +270,16 @@
    "mse_wiener_beta35_stationary": 31.089614868164062,
    "floor_predicted": 120.71189410368451,
    "mse_interp": 108.79852436805216,
-   "nonlinearity": 0.1157994270324707
+   "nonlinearity": 0.1157994270324707,
+   "err_top5_gauss": 0.5453336238861084,
+   "err_top5_network": 0.5750090479850769
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 129.46666666666664,
    "beta": 4.09899414491323,
+   "top_octave_excess": 0.6145455113926045,
    "rms_nT": 121.51453928984112,
    "kurtosis": 4.175989533631929,
    "mse_network": 82.07759094238281,
@@ -242,13 +288,16 @@
    "mse_wiener_beta35_stationary": 10.299444198608398,
    "floor_predicted": 0.9882875610357091,
    "mse_interp": 44.00535100584127,
-   "nonlinearity": 0.09686394780874252
+   "nonlinearity": 0.09686394780874252,
+   "err_top5_gauss": 0.6534132957458496,
+   "err_top5_network": 0.6694759726524353
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 132.0,
    "beta": 2.8285338739672157,
+   "top_octave_excess": 0.8068379773774718,
    "rms_nT": 123.31430989034888,
    "kurtosis": 3.5000199898730284,
    "mse_network": 104.19437408447266,
@@ -257,13 +306,16 @@
    "mse_wiener_beta35_stationary": 21.212854385375977,
    "floor_predicted": 9.814546630057052,
    "mse_interp": 78.55490193676887,
-   "nonlinearity": 0.09634656459093094
+   "nonlinearity": 0.09634656459093094,
+   "err_top5_gauss": 0.6763390898704529,
+   "err_top5_network": 0.6176445484161377
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 134.53333333333336,
    "beta": 1.7539022506778965,
+   "top_octave_excess": 0.514786091130183,
    "rms_nT": 105.20037759819694,
    "kurtosis": 5.2474018906687565,
    "mse_network": 98.3274917602539,
@@ -272,13 +324,16 @@
    "mse_wiener_beta35_stationary": 43.11738967895508,
    "floor_predicted": 68.31298498189909,
    "mse_interp": 80.03988952858164,
-   "nonlinearity": 0.10150159150362015
+   "nonlinearity": 0.10150159150362015,
+   "err_top5_gauss": 0.5815585255622864,
+   "err_top5_network": 0.5080578327178955
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 137.06666666666666,
    "beta": 2.2059331504060813,
+   "top_octave_excess": 1.1871879251568025,
    "rms_nT": 174.9401075668405,
    "kurtosis": 3.7171765859929375,
    "mse_network": 32.74162673950195,
@@ -287,13 +342,16 @@
    "mse_wiener_beta35_stationary": 11.986534118652344,
    "floor_predicted": 30.828112963472233,
    "mse_interp": 67.33421333042735,
-   "nonlinearity": 0.07978883385658264
+   "nonlinearity": 0.07978883385658264,
+   "err_top5_gauss": 0.6056116223335266,
+   "err_top5_network": 0.637027382850647
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 139.60000000000002,
    "beta": 1.5381002552610727,
+   "top_octave_excess": 0.5581834903125488,
    "rms_nT": 150.2963264347838,
    "kurtosis": 3.128854990615268,
    "mse_network": 63.004695892333984,
@@ -302,13 +360,16 @@
    "mse_wiener_beta35_stationary": 40.388980865478516,
    "floor_predicted": 122.94660010494358,
    "mse_interp": 83.80264989209572,
-   "nonlinearity": 0.05509933829307556
+   "nonlinearity": 0.05509933829307556,
+   "err_top5_gauss": 0.6773244738578796,
+   "err_top5_network": 0.6179251670837402
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 142.13333333333333,
    "beta": 3.4237855115382474,
+   "top_octave_excess": 0.8742888166066447,
    "rms_nT": 148.57423005112415,
    "kurtosis": 8.351953425342622,
    "mse_network": 123.71154022216797,
@@ -317,13 +378,16 @@
    "mse_wiener_beta35_stationary": 24.089570999145508,
    "floor_predicted": 2.9867892513720755,
    "mse_interp": 77.44722718771368,
-   "nonlinearity": 0.15069465339183807
+   "nonlinearity": 0.15069465339183807,
+   "err_top5_gauss": 0.8101455569267273,
+   "err_top5_network": 0.7788518071174622
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 144.66666666666669,
    "beta": 4.157432052551537,
+   "top_octave_excess": 0.8930429603380554,
    "rms_nT": 19.737854940714403,
    "kurtosis": 3.258960121535556,
    "mse_network": 11.531237602233887,
@@ -332,13 +396,16 @@
    "mse_wiener_beta35_stationary": 3.1078760623931885,
    "floor_predicted": 0.8925214253387255,
    "mse_interp": 14.30847751488898,
-   "nonlinearity": 0.1543622612953186
+   "nonlinearity": 0.1543622612953186,
+   "err_top5_gauss": 0.5477017164230347,
+   "err_top5_network": 0.6837117075920105
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 147.2,
    "beta": 1.5966813392296053,
+   "top_octave_excess": 0.5942456470390385,
    "rms_nT": 114.57915526483174,
    "kurtosis": 6.640225326514339,
    "mse_network": 104.66707611083984,
@@ -347,13 +414,16 @@
    "mse_wiener_beta35_stationary": 29.62744140625,
    "floor_predicted": 97.43285479590891,
    "mse_interp": 95.01239106343239,
-   "nonlinearity": 0.10196056216955185
+   "nonlinearity": 0.10196056216955185,
+   "err_top5_gauss": 0.7341469526290894,
+   "err_top5_network": 0.7289396524429321
   },
   {
    "region": "australia",
    "lat": -32.53333333333333,
    "lon": 149.73333333333335,
    "beta": 2.443593662650966,
+   "top_octave_excess": 0.3927814994464845,
    "rms_nT": 90.95356926848395,
    "kurtosis": 3.8040495254868496,
    "mse_network": 93.49752807617188,
@@ -362,13 +432,16 @@
    "mse_wiener_beta35_stationary": 28.88532257080078,
    "floor_predicted": 21.946929261223005,
    "mse_interp": 72.16137089746492,
-   "nonlinearity": 0.09773637354373932
+   "nonlinearity": 0.09773637354373932,
+   "err_top5_gauss": 0.555641770362854,
+   "err_top5_network": 0.5783578157424927
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 116.69999999999999,
    "beta": 2.252293925287694,
+   "top_octave_excess": 0.4002817025047828,
    "rms_nT": 86.25728972273097,
    "kurtosis": 4.21926001817046,
    "mse_network": 128.03477478027344,
@@ -377,13 +450,16 @@
    "mse_wiener_beta35_stationary": 76.53950500488281,
    "floor_predicted": 30.040667842466714,
    "mse_interp": 114.5071234707796,
-   "nonlinearity": 0.16395840048789978
+   "nonlinearity": 0.16395840048789978,
+   "err_top5_gauss": 0.7892600297927856,
+   "err_top5_network": 0.6528900265693665
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 119.16666666666669,
    "beta": 0.9189137038927194,
+   "top_octave_excess": 0.23617067733984592,
    "rms_nT": 111.26179330501651,
    "kurtosis": 15.049745913659043,
    "mse_network": 745.427001953125,
@@ -392,13 +468,16 @@
    "mse_wiener_beta35_stationary": 379.8570556640625,
    "floor_predicted": 124.54176541577465,
    "mse_interp": 455.5480146046919,
-   "nonlinearity": 0.3009028732776642
+   "nonlinearity": 0.3009028732776642,
+   "err_top5_gauss": 0.8559574484825134,
+   "err_top5_network": 0.8493005633354187
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 121.63333333333333,
    "beta": 1.5069554411910335,
+   "top_octave_excess": 0.36701907918377497,
    "rms_nT": 53.491194224442346,
    "kurtosis": 3.4390319848569435,
    "mse_network": 276.2230529785156,
@@ -407,13 +486,16 @@
    "mse_wiener_beta35_stationary": 99.22738647460938,
    "floor_predicted": 119.9500811635328,
    "mse_interp": 170.73578794113644,
-   "nonlinearity": 0.4193820357322693
+   "nonlinearity": 0.4193820357322693,
+   "err_top5_gauss": 0.5714590549468994,
+   "err_top5_network": 0.4790937304496765
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 124.10000000000002,
    "beta": 2.2071392270747285,
+   "top_octave_excess": 0.47730037669190384,
    "rms_nT": 149.98764417460484,
    "kurtosis": 6.394134819786242,
    "mse_network": 59.47142028808594,
@@ -422,13 +504,16 @@
    "mse_wiener_beta35_stationary": 16.78148078918457,
    "floor_predicted": 29.657443939201055,
    "mse_interp": 42.91024740675326,
-   "nonlinearity": 0.15216365456581116
+   "nonlinearity": 0.15216365456581116,
+   "err_top5_gauss": 0.5442590713500977,
+   "err_top5_network": 0.6694110631942749
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 126.56666666666666,
    "beta": 2.1491207838633906,
+   "top_octave_excess": 0.5411377928760797,
    "rms_nT": 133.96539932677993,
    "kurtosis": 2.635270422988878,
    "mse_network": 70.5825424194336,
@@ -437,13 +522,16 @@
    "mse_wiener_beta35_stationary": 28.22233772277832,
    "floor_predicted": 38.76052106058194,
    "mse_interp": 57.52215753524695,
-   "nonlinearity": 0.09304308891296387
+   "nonlinearity": 0.09304308891296387,
+   "err_top5_gauss": 0.5282866954803467,
+   "err_top5_network": 0.45941615104675293
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 129.03333333333336,
    "beta": 3.243600627519277,
+   "top_octave_excess": 0.595484094508798,
    "rms_nT": 183.11868710721907,
    "kurtosis": 12.051827672682817,
    "mse_network": 90.7115249633789,
@@ -452,13 +540,16 @@
    "mse_wiener_beta35_stationary": 12.631965637207031,
    "floor_predicted": 4.6343414451833285,
    "mse_interp": 40.09122257245432,
-   "nonlinearity": 0.10925059765577316
+   "nonlinearity": 0.10925059765577316,
+   "err_top5_gauss": 0.6953249573707581,
+   "err_top5_network": 0.8361904621124268
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 131.5,
    "beta": 1.9780780957860773,
+   "top_octave_excess": 0.5766942905591683,
    "rms_nT": 169.250892379558,
    "kurtosis": 4.7212226714192465,
    "mse_network": 127.371337890625,
@@ -467,13 +558,16 @@
    "mse_wiener_beta35_stationary": 23.171342849731445,
    "floor_predicted": 49.507854851091416,
    "mse_interp": 92.62204457833506,
-   "nonlinearity": 0.1736617535352707
+   "nonlinearity": 0.1736617535352707,
+   "err_top5_gauss": 0.6027101874351501,
+   "err_top5_network": 0.6309973001480103
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 133.96666666666664,
    "beta": 2.1130252527055764,
+   "top_octave_excess": 0.7195854453837194,
    "rms_nT": 188.0075281930439,
    "kurtosis": 5.132748166737535,
    "mse_network": 79.52912139892578,
@@ -482,13 +576,16 @@
    "mse_wiener_beta35_stationary": 39.21299743652344,
    "floor_predicted": 40.4500892844139,
    "mse_interp": 83.46361826234698,
-   "nonlinearity": 0.14902178943157196
+   "nonlinearity": 0.14902178943157196,
+   "err_top5_gauss": 0.5851168036460876,
+   "err_top5_network": 0.6262611746788025
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 136.43333333333334,
    "beta": 2.236765199016411,
+   "top_octave_excess": 0.3460580746122074,
    "rms_nT": 246.22259285084516,
    "kurtosis": 8.108244883528315,
    "mse_network": 181.6806640625,
@@ -497,13 +594,16 @@
    "mse_wiener_beta35_stationary": 31.174713134765625,
    "floor_predicted": 32.22692006299103,
    "mse_interp": 138.015868545691,
-   "nonlinearity": 0.1091424897313118
+   "nonlinearity": 0.1091424897313118,
+   "err_top5_gauss": 0.7847369909286499,
+   "err_top5_network": 0.8604966402053833
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 138.89999999999998,
    "beta": 2.910994230728672,
+   "top_octave_excess": 0.6341803380147597,
    "rms_nT": 162.46699387556026,
    "kurtosis": 2.508542277917923,
    "mse_network": 30.093351364135742,
@@ -512,13 +612,16 @@
    "mse_wiener_beta35_stationary": 8.394489288330078,
    "floor_predicted": 8.447386889859297,
    "mse_interp": 44.768571485153736,
-   "nonlinearity": 0.085862897336483
+   "nonlinearity": 0.085862897336483,
+   "err_top5_gauss": 0.6607466340065002,
+   "err_top5_network": 0.6656922101974487
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 141.36666666666667,
    "beta": 3.0334187871004827,
+   "top_octave_excess": 0.652909298760972,
    "rms_nT": 110.11009619086633,
    "kurtosis": 4.47094885172739,
    "mse_network": 78.73107147216797,
@@ -527,13 +630,16 @@
    "mse_wiener_beta35_stationary": 20.58085060119629,
    "floor_predicted": 5.935186985186249,
    "mse_interp": 63.23652445368051,
-   "nonlinearity": 0.084841288626194
+   "nonlinearity": 0.084841288626194,
+   "err_top5_gauss": 0.761450469493866,
+   "err_top5_network": 0.5607035160064697
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 143.83333333333331,
    "beta": 2.105985083782524,
+   "top_octave_excess": 0.2290853854801837,
    "rms_nT": 26.613706750367427,
    "kurtosis": 10.537747350438677,
    "mse_network": 93.90088653564453,
@@ -542,13 +648,16 @@
    "mse_wiener_beta35_stationary": 11.092707633972168,
    "floor_predicted": 39.19949390678969,
    "mse_interp": 57.70293793896113,
-   "nonlinearity": 0.10356313735246658
+   "nonlinearity": 0.10356313735246658,
+   "err_top5_gauss": 0.637766420841217,
+   "err_top5_network": 0.6829298734664917
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 146.3,
    "beta": 2.0327503810049428,
+   "top_octave_excess": 0.43343847971750843,
    "rms_nT": 74.92108789736984,
    "kurtosis": 14.788338944888729,
    "mse_network": 95.65985870361328,
@@ -557,13 +666,16 @@
    "mse_wiener_beta35_stationary": 16.2150821685791,
    "floor_predicted": 44.87842404894178,
    "mse_interp": 40.92267656029764,
-   "nonlinearity": 0.16268685460090637
+   "nonlinearity": 0.16268685460090637,
+   "err_top5_gauss": 0.6970663070678711,
+   "err_top5_network": 0.8760942816734314
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 148.76666666666665,
    "beta": 2.7034444507320616,
+   "top_octave_excess": 0.3019384564878805,
    "rms_nT": 79.30940513894514,
    "kurtosis": 3.15084023222759,
    "mse_network": 102.39850616455078,
@@ -572,13 +684,16 @@
    "mse_wiener_beta35_stationary": 28.759315490722656,
    "floor_predicted": 12.529842186448207,
    "mse_interp": 106.57186242092013,
-   "nonlinearity": 0.15916503965854645
+   "nonlinearity": 0.15916503965854645,
+   "err_top5_gauss": 0.5407693982124329,
+   "err_top5_network": 0.4591781198978424
   },
   {
    "region": "australia",
    "lat": -30.4,
    "lon": 151.23333333333335,
    "beta": 2.018138489930774,
+   "top_octave_excess": 0.3617902740732138,
    "rms_nT": 55.1434317109318,
    "kurtosis": 3.7893122948673867,
    "mse_network": 93.74994659423828,
@@ -587,13 +702,16 @@
    "mse_wiener_beta35_stationary": 44.09075927734375,
    "floor_predicted": 45.75839441879782,
    "mse_interp": 75.0405158159514,
-   "nonlinearity": 0.08802302926778793
+   "nonlinearity": 0.08802302926778793,
+   "err_top5_gauss": 0.7147894501686096,
+   "err_top5_network": 0.6535731554031372
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 116.64999999999998,
    "beta": 0.9660461175474764,
+   "top_octave_excess": 0.29088254473146724,
    "rms_nT": 124.01660940540616,
    "kurtosis": 11.230380856783274,
    "mse_network": 452.8144836425781,
@@ -602,13 +720,16 @@
    "mse_wiener_beta35_stationary": 145.3977813720703,
    "floor_predicted": 121.04130995205003,
    "mse_interp": 207.48046874124293,
-   "nonlinearity": 0.22048331797122955
+   "nonlinearity": 0.22048331797122955,
+   "err_top5_gauss": 0.7511934638023376,
+   "err_top5_network": 0.7490891814231873
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 119.08333333333331,
    "beta": 1.230925983071227,
+   "top_octave_excess": 0.34521605741768013,
    "rms_nT": 75.83330238511464,
    "kurtosis": 12.860638493097468,
    "mse_network": 512.1153564453125,
@@ -617,13 +738,16 @@
    "mse_wiener_beta35_stationary": 277.9957580566406,
    "floor_predicted": 115.26281649358982,
    "mse_interp": 436.1231284730984,
-   "nonlinearity": 0.2502158582210541
+   "nonlinearity": 0.2502158582210541,
+   "err_top5_gauss": 0.7341309189796448,
+   "err_top5_network": 0.7456859946250916
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 121.51666666666665,
    "beta": 2.173879946746498,
+   "top_octave_excess": 0.2626564748867607,
    "rms_nT": 53.54703202547238,
    "kurtosis": 3.269477329451956,
    "mse_network": 149.1311492919922,
@@ -632,13 +756,16 @@
    "mse_wiener_beta35_stationary": 87.4013442993164,
    "floor_predicted": 31.346137150277787,
    "mse_interp": 144.56889961646002,
-   "nonlinearity": 0.17958372831344604
+   "nonlinearity": 0.17958372831344604,
+   "err_top5_gauss": 0.6463194489479065,
+   "err_top5_network": 0.5851072669029236
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 123.94999999999999,
    "beta": 3.1913531426954584,
+   "top_octave_excess": 0.9461148089210466,
    "rms_nT": 72.82148275070449,
    "kurtosis": 3.2918890864978594,
    "mse_network": 39.43317794799805,
@@ -647,13 +774,16 @@
    "mse_wiener_beta35_stationary": 11.009264945983887,
    "floor_predicted": 4.154201208295432,
    "mse_interp": 40.965268639795305,
-   "nonlinearity": 0.1172085627913475
+   "nonlinearity": 0.1172085627913475,
+   "err_top5_gauss": 0.513869047164917,
+   "err_top5_network": 0.5040415525436401
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 126.38333333333333,
    "beta": 3.9690678673100352,
+   "top_octave_excess": 0.26723461698734746,
    "rms_nT": 123.33631490591927,
    "kurtosis": 7.734817572460987,
    "mse_network": 180.2933807373047,
@@ -662,13 +792,16 @@
    "mse_wiener_beta35_stationary": 5.088181495666504,
    "floor_predicted": 1.2547498444571394,
    "mse_interp": 164.06595418502496,
-   "nonlinearity": 0.2225709855556488
+   "nonlinearity": 0.2225709855556488,
+   "err_top5_gauss": 0.49987128376960754,
+   "err_top5_network": 0.8328889608383179
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 128.81666666666666,
    "beta": 4.475767209052812,
+   "top_octave_excess": 0.5805015972306306,
    "rms_nT": 109.4552750615062,
    "kurtosis": 5.270442894967455,
    "mse_network": 92.22809600830078,
@@ -677,13 +810,16 @@
    "mse_wiener_beta35_stationary": 10.459687232971191,
    "floor_predicted": 0.6208458179177437,
    "mse_interp": 76.87746877489988,
-   "nonlinearity": 0.1460970789194107
+   "nonlinearity": 0.1460970789194107,
+   "err_top5_gauss": 0.7000988721847534,
+   "err_top5_network": 0.6206135153770447
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 131.25,
    "beta": 3.943721988631612,
+   "top_octave_excess": 0.5552571474465278,
    "rms_nT": 100.04267217170323,
    "kurtosis": 3.297305845534973,
    "mse_network": 50.13393020629883,
@@ -692,13 +828,16 @@
    "mse_wiener_beta35_stationary": 14.35218334197998,
    "floor_predicted": 1.3432675729923622,
    "mse_interp": 64.10142572108803,
-   "nonlinearity": 0.09944508224725723
+   "nonlinearity": 0.09944508224725723,
+   "err_top5_gauss": 0.6274721622467041,
+   "err_top5_network": 0.5155989527702332
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 133.68333333333334,
    "beta": 2.0573029383612718,
+   "top_octave_excess": 0.8044366151348603,
    "rms_nT": 178.3175410328496,
    "kurtosis": 5.4991837760699775,
    "mse_network": 285.0375671386719,
@@ -707,13 +846,16 @@
    "mse_wiener_beta35_stationary": 41.21016311645508,
    "floor_predicted": 37.613918913150364,
    "mse_interp": 108.6341572157883,
-   "nonlinearity": 0.14904046058654785
+   "nonlinearity": 0.14904046058654785,
+   "err_top5_gauss": 0.7135387659072876,
+   "err_top5_network": 0.7797260284423828
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 136.11666666666667,
    "beta": 3.2671982271114435,
+   "top_octave_excess": 0.5379467826786763,
    "rms_nT": 225.17898404321346,
    "kurtosis": 7.836251612811811,
    "mse_network": 57.216094970703125,
@@ -722,13 +864,16 @@
    "mse_wiener_beta35_stationary": 8.188007354736328,
    "floor_predicted": 3.5256203547563207,
    "mse_interp": 37.86539281589716,
-   "nonlinearity": 0.18796084821224213
+   "nonlinearity": 0.18796084821224213,
+   "err_top5_gauss": 0.6670831441879272,
+   "err_top5_network": 0.5690833926200867
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 138.55,
    "beta": 3.9487569709046006,
+   "top_octave_excess": 0.324300938407686,
    "rms_nT": 37.476563940788466,
    "kurtosis": 3.4534201456952265,
    "mse_network": 59.21389389038086,
@@ -737,13 +882,16 @@
    "mse_wiener_beta35_stationary": 17.123077392578125,
    "floor_predicted": 1.4094984269383344,
    "mse_interp": 95.00093624031011,
-   "nonlinearity": 0.08593311160802841
+   "nonlinearity": 0.08593311160802841,
+   "err_top5_gauss": 0.8065268397331238,
+   "err_top5_network": 0.7252705097198486
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 140.98333333333335,
    "beta": 3.478408313950447,
+   "top_octave_excess": 0.3846887968835162,
    "rms_nT": 32.41273722889573,
    "kurtosis": 2.9840748982247267,
    "mse_network": 57.5094108581543,
@@ -752,13 +900,16 @@
    "mse_wiener_beta35_stationary": 12.865962028503418,
    "floor_predicted": 2.457520478022179,
    "mse_interp": 110.9054582576111,
-   "nonlinearity": 0.06186266988515854
+   "nonlinearity": 0.06186266988515854,
+   "err_top5_gauss": 0.6609275341033936,
+   "err_top5_network": 0.577393651008606
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 143.41666666666669,
    "beta": 3.0896936591948094,
+   "top_octave_excess": 0.2533190599731582,
    "rms_nT": 13.000656020385563,
    "kurtosis": 4.029340021794744,
    "mse_network": 122.88519287109375,
@@ -767,13 +918,16 @@
    "mse_wiener_beta35_stationary": 27.486730575561523,
    "floor_predicted": 5.055919810272329,
    "mse_interp": 91.07638001305843,
-   "nonlinearity": 0.12586064636707306
+   "nonlinearity": 0.12586064636707306,
+   "err_top5_gauss": 0.6480571031570435,
+   "err_top5_network": 0.6294080018997192
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 145.85000000000002,
    "beta": 2.6447600213352254,
+   "top_octave_excess": 0.2753146816700375,
    "rms_nT": 50.57617184226564,
    "kurtosis": 2.737597011928226,
    "mse_network": 29.66582679748535,
@@ -782,13 +936,16 @@
    "mse_wiener_beta35_stationary": 9.507832527160645,
    "floor_predicted": 14.935011296737834,
    "mse_interp": 35.005348593558296,
-   "nonlinearity": 0.10693157464265823
+   "nonlinearity": 0.10693157464265823,
+   "err_top5_gauss": 0.5823723673820496,
+   "err_top5_network": 0.5406959056854248
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 148.28333333333336,
    "beta": 2.7334738404451064,
+   "top_octave_excess": 0.15996046044164244,
    "rms_nT": 45.76021477950665,
    "kurtosis": 4.030953467852312,
    "mse_network": 160.0585174560547,
@@ -797,13 +954,16 @@
    "mse_wiener_beta35_stationary": 31.968725204467773,
    "floor_predicted": 11.964719617451692,
    "mse_interp": 110.69068906790254,
-   "nonlinearity": 0.11509022861719131
+   "nonlinearity": 0.11509022861719131,
+   "err_top5_gauss": 0.5978379249572754,
+   "err_top5_network": 0.5579538345336914
   },
   {
    "region": "australia",
    "lat": -28.266666666666666,
    "lon": 150.71666666666664,
    "beta": 2.9308201750396345,
+   "top_octave_excess": 0.20489308248446175,
    "rms_nT": 56.213238892484284,
    "kurtosis": 2.5866090671018305,
    "mse_network": 56.503719329833984,
@@ -812,13 +972,16 @@
    "mse_wiener_beta35_stationary": 31.954381942749023,
    "floor_predicted": 8.06234369986044,
    "mse_interp": 104.77055109567216,
-   "nonlinearity": 0.11747298389673233
+   "nonlinearity": 0.11747298389673233,
+   "err_top5_gauss": 0.6830273270606995,
+   "err_top5_network": 0.6238320469856262
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 116.55000000000001,
    "beta": 1.5850576638244784,
+   "top_octave_excess": 0.2555640656646088,
    "rms_nT": 155.07186330694088,
    "kurtosis": 9.69658856708109,
    "mse_network": 401.3689880371094,
@@ -827,13 +990,16 @@
    "mse_wiener_beta35_stationary": 123.93492889404297,
    "floor_predicted": 99.26407724146065,
    "mse_interp": 222.68165627071266,
-   "nonlinearity": 0.1653977930545807
+   "nonlinearity": 0.1653977930545807,
+   "err_top5_gauss": 0.8635830879211426,
+   "err_top5_network": 0.8773937225341797
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 118.91666666666669,
    "beta": 1.6545895052592356,
+   "top_octave_excess": 0.14588475670533735,
    "rms_nT": 100.13740738274164,
    "kurtosis": 11.885920162378033,
    "mse_network": 699.989501953125,
@@ -842,13 +1008,16 @@
    "mse_wiener_beta35_stationary": 154.10337829589844,
    "floor_predicted": 81.8025915397702,
    "mse_interp": 275.19050070621023,
-   "nonlinearity": 0.3491644561290741
+   "nonlinearity": 0.3491644561290741,
+   "err_top5_gauss": 0.7593737840652466,
+   "err_top5_network": 0.805295467376709
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 121.28333333333336,
    "beta": 2.303511760993653,
+   "top_octave_excess": 0.32474216987191823,
    "rms_nT": 73.11444448143772,
    "kurtosis": 6.3112121225786915,
    "mse_network": 224.2101287841797,
@@ -857,13 +1026,16 @@
    "mse_wiener_beta35_stationary": 76.94522094726562,
    "floor_predicted": 26.838623023837286,
    "mse_interp": 146.69701244092929,
-   "nonlinearity": 0.18848875164985657
+   "nonlinearity": 0.18848875164985657,
+   "err_top5_gauss": 0.6365677714347839,
+   "err_top5_network": 0.6757870316505432
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 123.64999999999998,
    "beta": 1.603888049788219,
+   "top_octave_excess": 0.24455382251258953,
    "rms_nT": 61.33754819724799,
    "kurtosis": 7.530092936239723,
    "mse_network": 420.2605895996094,
@@ -872,13 +1044,16 @@
    "mse_wiener_beta35_stationary": 142.0169677734375,
    "floor_predicted": 98.37889598414921,
    "mse_interp": 291.4885128671652,
-   "nonlinearity": 0.14638584852218628
+   "nonlinearity": 0.14638584852218628,
+   "err_top5_gauss": 0.8455925583839417,
+   "err_top5_network": 0.8740763068199158
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 126.01666666666665,
    "beta": 4.445424248744467,
+   "top_octave_excess": 0.6169217329691312,
    "rms_nT": 156.43454927988176,
    "kurtosis": 3.946600566478487,
    "mse_network": 57.22369384765625,
@@ -887,13 +1062,16 @@
    "mse_wiener_beta35_stationary": 9.91917896270752,
    "floor_predicted": 0.7394284435415813,
    "mse_interp": 44.66838235723487,
-   "nonlinearity": 0.15472334623336792
+   "nonlinearity": 0.15472334623336792,
+   "err_top5_gauss": 0.6609919667243958,
+   "err_top5_network": 0.7201900482177734
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 128.38333333333333,
    "beta": 1.9619656774163958,
+   "top_octave_excess": 0.279201573425922,
    "rms_nT": 218.28356648818632,
    "kurtosis": 2.884059620338072,
    "mse_network": 58.0240592956543,
@@ -902,13 +1080,16 @@
    "mse_wiener_beta35_stationary": 26.57407569885254,
    "floor_predicted": 48.19280578242492,
    "mse_interp": 74.9649314757756,
-   "nonlinearity": 0.08087626099586487
+   "nonlinearity": 0.08087626099586487,
+   "err_top5_gauss": 0.5819130539894104,
+   "err_top5_network": 0.6220057606697083
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 130.75,
    "beta": 1.557101515518483,
+   "top_octave_excess": 0.2394925173725313,
    "rms_nT": 134.7641654419815,
    "kurtosis": 3.4300206829471387,
    "mse_network": 113.9859848022461,
@@ -917,13 +1098,16 @@
    "mse_wiener_beta35_stationary": 55.92893981933594,
    "floor_predicted": 103.96982605428718,
    "mse_interp": 110.63595993093377,
-   "nonlinearity": 0.10920931398868561
+   "nonlinearity": 0.10920931398868561,
+   "err_top5_gauss": 0.5725154280662537,
+   "err_top5_network": 0.5511837601661682
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 133.11666666666667,
    "beta": 2.648228863776901,
+   "top_octave_excess": 0.4694349818044576,
    "rms_nT": 147.25737485848046,
    "kurtosis": 4.19354240068533,
    "mse_network": 82.63082885742188,
@@ -932,13 +1116,16 @@
    "mse_wiener_beta35_stationary": 29.483301162719727,
    "floor_predicted": 14.930589566370552,
    "mse_interp": 68.1997315760334,
-   "nonlinearity": 0.09859594702720642
+   "nonlinearity": 0.09859594702720642,
+   "err_top5_gauss": 0.5405972003936768,
+   "err_top5_network": 0.5591706037521362
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 135.48333333333335,
    "beta": 4.717270383412905,
+   "top_octave_excess": 0.7893981520447951,
    "rms_nT": 100.48224012258038,
    "kurtosis": 3.2598266691523996,
    "mse_network": 20.955469131469727,
@@ -947,13 +1134,16 @@
    "mse_wiener_beta35_stationary": 5.958029270172119,
    "floor_predicted": 0.5465859325519814,
    "mse_interp": 33.45330137483638,
-   "nonlinearity": 0.0863414779305458
+   "nonlinearity": 0.0863414779305458,
+   "err_top5_gauss": 0.6610375642776489,
+   "err_top5_network": 0.5386687517166138
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 137.85000000000002,
    "beta": 4.325071372115136,
+   "top_octave_excess": 0.33914958696334097,
    "rms_nT": 39.80751451192448,
    "kurtosis": 4.413974268422087,
    "mse_network": 12.303887367248535,
@@ -962,13 +1152,16 @@
    "mse_wiener_beta35_stationary": 1.9582599401474,
    "floor_predicted": 0.7535112280936321,
    "mse_interp": 25.130940845849313,
-   "nonlinearity": 0.05818949267268181
+   "nonlinearity": 0.05818949267268181,
+   "err_top5_gauss": 0.49964606761932373,
+   "err_top5_network": 0.6783185005187988
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 140.21666666666664,
    "beta": 4.957991330187203,
+   "top_octave_excess": 0.44102884883245713,
    "rms_nT": 25.0980241892609,
    "kurtosis": 4.523827899555988,
    "mse_network": 19.881431579589844,
@@ -977,13 +1170,16 @@
    "mse_wiener_beta35_stationary": 2.583275556564331,
    "floor_predicted": 0.36592756600033355,
    "mse_interp": 25.165080338265728,
-   "nonlinearity": 0.07290705293416977
+   "nonlinearity": 0.07290705293416977,
+   "err_top5_gauss": 0.4528360068798065,
+   "err_top5_network": 0.5438737869262695
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 142.58333333333331,
    "beta": 4.88947107270644,
+   "top_octave_excess": 0.47342511739145177,
    "rms_nT": 18.9673070536758,
    "kurtosis": 2.681657907759102,
    "mse_network": 6.033519744873047,
@@ -992,13 +1188,16 @@
    "mse_wiener_beta35_stationary": 2.875694990158081,
    "floor_predicted": 0.42061056893588183,
    "mse_interp": 14.247919987727888,
-   "nonlinearity": 0.06615257263183594
+   "nonlinearity": 0.06615257263183594,
+   "err_top5_gauss": 0.6248062252998352,
+   "err_top5_network": 0.650403618812561
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 144.95,
    "beta": 5.3314380607910765,
+   "top_octave_excess": 0.7446074176346231,
    "rms_nT": 40.569926589981364,
    "kurtosis": 3.6832221341081315,
    "mse_network": 5.5702362060546875,
@@ -1007,13 +1206,16 @@
    "mse_wiener_beta35_stationary": 1.7865647077560425,
    "floor_predicted": 0.29399172315501804,
    "mse_interp": 11.84797054415175,
-   "nonlinearity": 0.020586172118782997
+   "nonlinearity": 0.020586172118782997,
+   "err_top5_gauss": 0.5029593110084534,
+   "err_top5_network": 0.5699275732040405
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 147.31666666666666,
    "beta": 3.803157313590258,
+   "top_octave_excess": 0.20056959501627808,
    "rms_nT": 35.212553545170685,
    "kurtosis": 4.361081483096928,
    "mse_network": 102.60579681396484,
@@ -1022,13 +1224,16 @@
    "mse_wiener_beta35_stationary": 15.846598625183105,
    "floor_predicted": 1.5082737146449439,
    "mse_interp": 94.38766892614136,
-   "nonlinearity": 0.11088789999485016
+   "nonlinearity": 0.11088789999485016,
+   "err_top5_gauss": 0.7500627040863037,
+   "err_top5_network": 0.5769867300987244
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 149.68333333333334,
    "beta": 3.7384399259965795,
+   "top_octave_excess": 0.5876433977974604,
    "rms_nT": 70.94108024571096,
    "kurtosis": 2.4555595001080848,
    "mse_network": 92.246337890625,
@@ -1037,13 +1242,16 @@
    "mse_wiener_beta35_stationary": 22.664159774780273,
    "floor_predicted": 1.767788016016296,
    "mse_interp": 168.9205320495267,
-   "nonlinearity": 0.12785759568214417
+   "nonlinearity": 0.12785759568214417,
+   "err_top5_gauss": 0.7068169116973877,
+   "err_top5_network": 0.6212489604949951
   },
   {
    "region": "australia",
    "lat": -26.133333333333333,
    "lon": 152.05,
    "beta": 2.2004575876007917,
+   "top_octave_excess": 0.35864461002393255,
    "rms_nT": 55.7810900656403,
    "kurtosis": 4.158688748752291,
    "mse_network": 194.0137481689453,
@@ -1052,13 +1260,16 @@
    "mse_wiener_beta35_stationary": 42.64413833618164,
    "floor_predicted": 30.999972671196918,
    "mse_interp": 171.75431934452035,
-   "nonlinearity": 0.12635941803455353
+   "nonlinearity": 0.12635941803455353,
+   "err_top5_gauss": 0.578095555305481,
+   "err_top5_network": 0.599899172782898
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 116.5,
    "beta": 3.398739797879947,
+   "top_octave_excess": 0.31831888809770736,
    "rms_nT": 184.22208065323827,
    "kurtosis": 7.410971655508024,
    "mse_network": 66.42791748046875,
@@ -1067,13 +1278,16 @@
    "mse_wiener_beta35_stationary": 33.76654052734375,
    "floor_predicted": 3.0400678241190158,
    "mse_interp": 57.58898585961516,
-   "nonlinearity": 0.16425462067127228
+   "nonlinearity": 0.16425462067127228,
+   "err_top5_gauss": 0.849532425403595,
+   "err_top5_network": 0.7118116617202759
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 118.83333333333331,
    "beta": 2.505556083971005,
+   "top_octave_excess": 0.3199742643127736,
    "rms_nT": 344.2380821625324,
    "kurtosis": 13.82879582543796,
    "mse_network": 345.4226989746094,
@@ -1082,13 +1296,16 @@
    "mse_wiener_beta35_stationary": 87.4166259765625,
    "floor_predicted": 17.17938777734091,
    "mse_interp": 181.66069972656547,
-   "nonlinearity": 0.21884576976299286
+   "nonlinearity": 0.21884576976299286,
+   "err_top5_gauss": 0.8016709685325623,
+   "err_top5_network": 0.7855063080787659
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 121.16666666666669,
    "beta": 2.8848514678615116,
+   "top_octave_excess": 0.33347606120980167,
    "rms_nT": 84.63525438542041,
    "kurtosis": 6.854171164725919,
    "mse_network": 168.99192810058594,
@@ -1097,13 +1314,16 @@
    "mse_wiener_beta35_stationary": 49.44844436645508,
    "floor_predicted": 7.278878758032358,
    "mse_interp": 118.2352262586985,
-   "nonlinearity": 0.1875782012939453
+   "nonlinearity": 0.1875782012939453,
+   "err_top5_gauss": 0.8516886234283447,
+   "err_top5_network": 0.7448068857192993
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 123.5,
    "beta": 4.288429208877889,
+   "top_octave_excess": 0.19796539562676752,
    "rms_nT": 91.90619416268333,
    "kurtosis": 4.256786487299213,
    "mse_network": 38.50564956665039,
@@ -1112,13 +1332,16 @@
    "mse_wiener_beta35_stationary": 5.801297664642334,
    "floor_predicted": 0.7597888079432472,
    "mse_interp": 38.63163171834433,
-   "nonlinearity": 0.12411230057477951
+   "nonlinearity": 0.12411230057477951,
+   "err_top5_gauss": 0.5940428972244263,
+   "err_top5_network": 0.7041000723838806
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 125.83333333333331,
    "beta": 5.081034628711228,
+   "top_octave_excess": 0.44817125027767896,
    "rms_nT": 85.08424805727523,
    "kurtosis": 7.461152901862442,
    "mse_network": 58.61824035644531,
@@ -1127,13 +1350,16 @@
    "mse_wiener_beta35_stationary": 5.204781532287598,
    "floor_predicted": 0.33890779375111196,
    "mse_interp": 51.69093280849549,
-   "nonlinearity": 0.1006118431687355
+   "nonlinearity": 0.1006118431687355,
+   "err_top5_gauss": 0.6300469636917114,
+   "err_top5_network": 0.8025893568992615
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 128.16666666666669,
    "beta": 4.377132214214079,
+   "top_octave_excess": 0.6728335464512697,
    "rms_nT": 69.4400597914918,
    "kurtosis": 3.6799472418053485,
    "mse_network": 28.526458740234375,
@@ -1142,13 +1368,16 @@
    "mse_wiener_beta35_stationary": 16.136268615722656,
    "floor_predicted": 0.7619828933336175,
    "mse_interp": 32.33273574600932,
-   "nonlinearity": 0.059068892151117325
+   "nonlinearity": 0.059068892151117325,
+   "err_top5_gauss": 0.7652738690376282,
+   "err_top5_network": 0.7540096044540405
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 130.5,
    "beta": 3.596121642492238,
+   "top_octave_excess": 0.6635506902573035,
    "rms_nT": 127.54746215472125,
    "kurtosis": 3.1718111641595788,
    "mse_network": 51.08351516723633,
@@ -1157,13 +1386,16 @@
    "mse_wiener_beta35_stationary": 17.44364356994629,
    "floor_predicted": 2.1659402659305447,
    "mse_interp": 55.456340279253844,
-   "nonlinearity": 0.06543737649917603
+   "nonlinearity": 0.06543737649917603,
+   "err_top5_gauss": 0.708962082862854,
+   "err_top5_network": 0.7070676684379578
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 132.83333333333331,
    "beta": 3.422697191958363,
+   "top_octave_excess": 0.48761890277352127,
    "rms_nT": 81.84546194515983,
    "kurtosis": 4.604710757123335,
    "mse_network": 203.56651306152344,
@@ -1172,13 +1404,16 @@
    "mse_wiener_beta35_stationary": 47.085811614990234,
    "floor_predicted": 2.9572246791603156,
    "mse_interp": 109.70766482493025,
-   "nonlinearity": 0.1553506702184677
+   "nonlinearity": 0.1553506702184677,
+   "err_top5_gauss": 0.7769423127174377,
+   "err_top5_network": 0.6672731637954712
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 135.16666666666669,
    "beta": 3.319180092513314,
+   "top_octave_excess": 0.47819942374931707,
    "rms_nT": 204.32523635580975,
    "kurtosis": 4.063922966548565,
    "mse_network": 20.34220314025879,
@@ -1187,13 +1422,16 @@
    "mse_wiener_beta35_stationary": 8.864078521728516,
    "floor_predicted": 3.445434764646093,
    "mse_interp": 26.31121246009214,
-   "nonlinearity": 0.14233528077602386
+   "nonlinearity": 0.14233528077602386,
+   "err_top5_gauss": 0.6432709693908691,
+   "err_top5_network": 0.5901696085929871
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 137.5,
    "beta": 2.8614149508319913,
+   "top_octave_excess": 0.31258441286002725,
    "rms_nT": 151.30296413118853,
    "kurtosis": 3.794397931451693,
    "mse_network": 37.32643508911133,
@@ -1202,13 +1440,16 @@
    "mse_wiener_beta35_stationary": 11.629830360412598,
    "floor_predicted": 7.717506934749344,
    "mse_interp": 54.80409524590863,
-   "nonlinearity": 0.08039315044879913
+   "nonlinearity": 0.08039315044879913,
+   "err_top5_gauss": 0.6916303634643555,
+   "err_top5_network": 0.7601140141487122
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 139.83333333333331,
    "beta": 4.149572926692209,
+   "top_octave_excess": 0.5579325480926473,
    "rms_nT": 147.8041282099463,
    "kurtosis": 5.909491910877403,
    "mse_network": 75.04937744140625,
@@ -1217,13 +1458,16 @@
    "mse_wiener_beta35_stationary": 7.648102283477783,
    "floor_predicted": 0.9764410835133681,
    "mse_interp": 39.3425945730612,
-   "nonlinearity": 0.10918266326189041
+   "nonlinearity": 0.10918266326189041,
+   "err_top5_gauss": 0.6614464521408081,
+   "err_top5_network": 0.7188025116920471
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 142.16666666666669,
    "beta": 3.9031623908605484,
+   "top_octave_excess": 0.24548594627174988,
    "rms_nT": 116.80649559286024,
    "kurtosis": 6.237889989090116,
    "mse_network": 59.86624526977539,
@@ -1232,13 +1476,16 @@
    "mse_wiener_beta35_stationary": 3.6735620498657227,
    "floor_predicted": 1.384867763950087,
    "mse_interp": 24.63277722288448,
-   "nonlinearity": 0.1312512755393982
+   "nonlinearity": 0.1312512755393982,
+   "err_top5_gauss": 0.6255226135253906,
+   "err_top5_network": 0.7535960078239441
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 144.5,
    "beta": 3.409353289520095,
+   "top_octave_excess": 0.3189044013033081,
    "rms_nT": 35.08473825822935,
    "kurtosis": 3.5720239280159274,
    "mse_network": 34.8271484375,
@@ -1247,13 +1494,16 @@
    "mse_wiener_beta35_stationary": 5.128299713134766,
    "floor_predicted": 2.730575423933569,
    "mse_interp": 39.4565396592074,
-   "nonlinearity": 0.08189532160758972
+   "nonlinearity": 0.08189532160758972,
+   "err_top5_gauss": 0.6491640210151672,
+   "err_top5_network": 0.6449272632598877
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 146.83333333333331,
    "beta": 3.8503737370321893,
+   "top_octave_excess": 0.3066633398497373,
    "rms_nT": 56.56089824647355,
    "kurtosis": 2.5249842777589864,
    "mse_network": 53.220855712890625,
@@ -1262,13 +1512,16 @@
    "mse_wiener_beta35_stationary": 15.761601448059082,
    "floor_predicted": 1.2464266186811224,
    "mse_interp": 60.90335369244621,
-   "nonlinearity": 0.048358965665102005
+   "nonlinearity": 0.048358965665102005,
+   "err_top5_gauss": 0.6477404832839966,
+   "err_top5_network": 0.6881160736083984
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 149.16666666666669,
    "beta": 3.6885604620020995,
+   "top_octave_excess": 0.2585852103723891,
    "rms_nT": 101.4637524680747,
    "kurtosis": 4.024799381462682,
    "mse_network": 78.49911499023438,
@@ -1277,13 +1530,16 @@
    "mse_wiener_beta35_stationary": 20.410202026367188,
    "floor_predicted": 1.8451371457755765,
    "mse_interp": 68.42268094701397,
-   "nonlinearity": 0.172428697347641
+   "nonlinearity": 0.172428697347641,
+   "err_top5_gauss": 0.8370451331138611,
+   "err_top5_network": 0.6177359819412231
   },
   {
    "region": "australia",
    "lat": -24.0,
    "lon": 151.5,
    "beta": 2.9283235009389283,
+   "top_octave_excess": 0.3174281049622299,
    "rms_nT": 88.8336451244392,
    "kurtosis": 4.355023192505972,
    "mse_network": 145.3385467529297,
@@ -1292,13 +1548,16 @@
    "mse_wiener_beta35_stationary": 37.9318962097168,
    "floor_predicted": 7.485600272298075,
    "mse_interp": 91.02807038313306,
-   "nonlinearity": 0.21489854156970978
+   "nonlinearity": 0.21489854156970978,
+   "err_top5_gauss": 0.7929138541221619,
+   "err_top5_network": 0.6665947437286377
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 116.44999999999999,
    "beta": 1.8100038073859683,
+   "top_octave_excess": 0.17539912045926398,
    "rms_nT": 353.9560755414819,
    "kurtosis": 10.10833339999825,
    "mse_network": 714.9290161132812,
@@ -1307,13 +1566,16 @@
    "mse_wiener_beta35_stationary": 135.34014892578125,
    "floor_predicted": 72.01393423161718,
    "mse_interp": 361.6043549364462,
-   "nonlinearity": 0.23267187178134918
+   "nonlinearity": 0.23267187178134918,
+   "err_top5_gauss": 0.7731533646583557,
+   "err_top5_network": 0.7846049070358276
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 118.75,
    "beta": 2.0191106415522877,
+   "top_octave_excess": 0.260655899452559,
    "rms_nT": 269.23957049988263,
    "kurtosis": 9.284302455656524,
    "mse_network": 430.5041809082031,
@@ -1322,13 +1584,16 @@
    "mse_wiener_beta35_stationary": 59.20600509643555,
    "floor_predicted": 46.16641691048258,
    "mse_interp": 186.10804540302107,
-   "nonlinearity": 0.2901653051376343
+   "nonlinearity": 0.2901653051376343,
+   "err_top5_gauss": 0.7131320238113403,
+   "err_top5_network": 0.7340646982192993
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 121.05000000000001,
    "beta": 2.808671990019528,
+   "top_octave_excess": 0.27266413625250185,
    "rms_nT": 123.96457355777214,
    "kurtosis": 13.086864089682845,
    "mse_network": 512.3972778320312,
@@ -1337,13 +1602,16 @@
    "mse_wiener_beta35_stationary": 68.07347106933594,
    "floor_predicted": 9.068180166616207,
    "mse_interp": 229.1031243115584,
-   "nonlinearity": 0.3084850609302521
+   "nonlinearity": 0.3084850609302521,
+   "err_top5_gauss": 0.8886831402778625,
+   "err_top5_network": 0.8940688967704773
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 123.35000000000002,
    "beta": 4.127996616849395,
+   "top_octave_excess": 0.22597656866809482,
    "rms_nT": 67.6994580591949,
    "kurtosis": 2.9791092437591704,
    "mse_network": 39.138607025146484,
@@ -1352,13 +1620,16 @@
    "mse_wiener_beta35_stationary": 13.082305908203125,
    "floor_predicted": 1.052696603347956,
    "mse_interp": 36.29607148353722,
-   "nonlinearity": 0.14426958560943604
+   "nonlinearity": 0.14426958560943604,
+   "err_top5_gauss": 0.7496455907821655,
+   "err_top5_network": 0.6986113786697388
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 125.64999999999998,
    "beta": 4.080285834163786,
+   "top_octave_excess": 0.18260959766850496,
    "rms_nT": 47.695590747577725,
    "kurtosis": 4.8011172039745205,
    "mse_network": 21.541906356811523,
@@ -1367,13 +1638,16 @@
    "mse_wiener_beta35_stationary": 5.3215460777282715,
    "floor_predicted": 1.0511019974565696,
    "mse_interp": 30.05657261174218,
-   "nonlinearity": 0.05807553976774216
+   "nonlinearity": 0.05807553976774216,
+   "err_top5_gauss": 0.6998094916343689,
+   "err_top5_network": 0.6590606570243835
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 127.94999999999999,
    "beta": 3.1055581916015242,
+   "top_octave_excess": 0.26218632219969795,
    "rms_nT": 62.27609281908114,
    "kurtosis": 4.2282022976440805,
    "mse_network": 79.04206085205078,
@@ -1382,13 +1656,16 @@
    "mse_wiener_beta35_stationary": 15.292824745178223,
    "floor_predicted": 4.941679199452879,
    "mse_interp": 41.20756539318716,
-   "nonlinearity": 0.0971391424536705
+   "nonlinearity": 0.0971391424536705,
+   "err_top5_gauss": 0.7446621060371399,
+   "err_top5_network": 0.6612410545349121
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 130.25,
    "beta": 2.398774923624635,
+   "top_octave_excess": 0.21549464659300963,
    "rms_nT": 89.54595562740874,
    "kurtosis": 4.681770687680301,
    "mse_network": 108.29498291015625,
@@ -1397,13 +1674,16 @@
    "mse_wiener_beta35_stationary": 28.571548461914062,
    "floor_predicted": 19.893097006401007,
    "mse_interp": 82.80381845749616,
-   "nonlinearity": 0.13473527133464813
+   "nonlinearity": 0.13473527133464813,
+   "err_top5_gauss": 0.7532535195350647,
+   "err_top5_network": 0.7453204989433289
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 132.55,
    "beta": 3.3760133146908875,
+   "top_octave_excess": 0.3533273205544303,
    "rms_nT": 91.54498266115509,
    "kurtosis": 3.519514231145491,
    "mse_network": 32.25606918334961,
@@ -1412,13 +1692,16 @@
    "mse_wiener_beta35_stationary": 12.9779634475708,
    "floor_predicted": 2.8458209093512488,
    "mse_interp": 44.29894636543593,
-   "nonlinearity": 0.09079082310199738
+   "nonlinearity": 0.09079082310199738,
+   "err_top5_gauss": 0.6460115313529968,
+   "err_top5_network": 0.6157976388931274
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 134.85000000000002,
    "beta": 2.5382634369707517,
+   "top_octave_excess": 0.24964413886546827,
    "rms_nT": 133.17894316423465,
    "kurtosis": 2.6511984201062835,
    "mse_network": 38.44559097290039,
@@ -1427,13 +1710,16 @@
    "mse_wiener_beta35_stationary": 15.492950439453125,
    "floor_predicted": 17.025105168345643,
    "mse_interp": 50.67810536153718,
-   "nonlinearity": 0.06277068704366684
+   "nonlinearity": 0.06277068704366684,
+   "err_top5_gauss": 0.5439214110374451,
+   "err_top5_network": 0.5401127338409424
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 137.14999999999998,
    "beta": 3.450650187576336,
+   "top_octave_excess": 0.414384851412657,
    "rms_nT": 208.40757481889875,
    "kurtosis": 3.3656373038521195,
    "mse_network": 36.0142936706543,
@@ -1442,13 +1728,16 @@
    "mse_wiener_beta35_stationary": 8.14692211151123,
    "floor_predicted": 2.6599251155279835,
    "mse_interp": 35.9779190401787,
-   "nonlinearity": 0.07941465824842453
+   "nonlinearity": 0.07941465824842453,
+   "err_top5_gauss": 0.6247285008430481,
+   "err_top5_network": 0.680292010307312
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 139.45,
    "beta": 3.2256824124276853,
+   "top_octave_excess": 0.94984561962849,
    "rms_nT": 212.1550966823313,
    "kurtosis": 2.9329819187610027,
    "mse_network": 30.3354549407959,
@@ -1457,13 +1746,16 @@
    "mse_wiener_beta35_stationary": 7.031566619873047,
    "floor_predicted": 4.0839812211462085,
    "mse_interp": 40.863772722768765,
-   "nonlinearity": 0.06196057051420212
+   "nonlinearity": 0.06196057051420212,
+   "err_top5_gauss": 0.5016120076179504,
+   "err_top5_network": 0.5872263312339783
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 141.75,
    "beta": 3.959843440542573,
+   "top_octave_excess": 0.3522968167715802,
    "rms_nT": 114.17883251658967,
    "kurtosis": 3.227977202295643,
    "mse_network": 45.56019973754883,
@@ -1472,13 +1764,16 @@
    "mse_wiener_beta35_stationary": 10.86473560333252,
    "floor_predicted": 1.1417046015854158,
    "mse_interp": 64.26155939948238,
-   "nonlinearity": 0.07908539474010468
+   "nonlinearity": 0.07908539474010468,
+   "err_top5_gauss": 0.5340820550918579,
+   "err_top5_network": 0.46009862422943115
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 144.05,
    "beta": 4.576816971104295,
+   "top_octave_excess": 0.2091801256896473,
    "rms_nT": 70.48962058494392,
    "kurtosis": 3.1762140060928368,
    "mse_network": 18.090787887573242,
@@ -1487,13 +1782,16 @@
    "mse_wiener_beta35_stationary": 3.8913567066192627,
    "floor_predicted": 0.5747613512708712,
    "mse_interp": 25.961882194576926,
-   "nonlinearity": 0.06174672394990921
+   "nonlinearity": 0.06174672394990921,
+   "err_top5_gauss": 0.5385355949401855,
+   "err_top5_network": 0.5759539604187012
   },
   {
    "region": "australia",
    "lat": -21.86666666666666,
    "lon": 146.35000000000002,
    "beta": 4.066757365471891,
+   "top_octave_excess": 0.5826774242700411,
    "rms_nT": 66.85165809976492,
    "kurtosis": 3.1097043534992665,
    "mse_network": 13.827754020690918,
@@ -1502,13 +1800,16 @@
    "mse_wiener_beta35_stationary": 8.291202545166016,
    "floor_predicted": 1.0243029904722971,
    "mse_interp": 34.16402786726771,
-   "nonlinearity": 0.04188862070441246
+   "nonlinearity": 0.04188862070441246,
+   "err_top5_gauss": 0.705422043800354,
+   "err_top5_network": 0.6503578424453735
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 123.19999999999999,
    "beta": 5.030829799983666,
+   "top_octave_excess": 0.2538727674351223,
    "rms_nT": 56.07236682191647,
    "kurtosis": 3.1728565032756877,
    "mse_network": 17.7833251953125,
@@ -1517,13 +1818,16 @@
    "mse_wiener_beta35_stationary": 2.4971930980682373,
    "floor_predicted": 0.37727776482221514,
    "mse_interp": 30.471964816394124,
-   "nonlinearity": 0.04751542583107948
+   "nonlinearity": 0.04751542583107948,
+   "err_top5_gauss": 0.48948222398757935,
+   "err_top5_network": 0.5597918033599854
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 125.46666666666664,
    "beta": 3.6995493142038214,
+   "top_octave_excess": 0.2542470872347439,
    "rms_nT": 61.168834057488525,
    "kurtosis": 9.792759962262757,
    "mse_network": 315.0871276855469,
@@ -1532,13 +1836,16 @@
    "mse_wiener_beta35_stationary": 10.97237491607666,
    "floor_predicted": 1.9424252364001895,
    "mse_interp": 34.24827583887646,
-   "nonlinearity": 0.2655290961265564
+   "nonlinearity": 0.2655290961265564,
+   "err_top5_gauss": 0.8335450887680054,
+   "err_top5_network": 0.9776787161827087
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 127.73333333333335,
    "beta": 4.339093719933431,
+   "top_octave_excess": 0.382703579347125,
    "rms_nT": 69.16394452116634,
    "kurtosis": 5.289582164551705,
    "mse_network": 78.3101577758789,
@@ -1547,13 +1854,16 @@
    "mse_wiener_beta35_stationary": 3.3525829315185547,
    "floor_predicted": 0.7348708349950742,
    "mse_interp": 50.68698851084823,
-   "nonlinearity": 0.14004339277744293
+   "nonlinearity": 0.14004339277744293,
+   "err_top5_gauss": 0.6193109154701233,
+   "err_top5_network": 0.7881345152854919
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 130.0,
    "beta": 2.309760427995555,
+   "top_octave_excess": 0.18902511477046136,
    "rms_nT": 90.66755177122171,
    "kurtosis": 3.13543699101494,
    "mse_network": 80.61235046386719,
@@ -1562,13 +1872,16 @@
    "mse_wiener_beta35_stationary": 24.39882469177246,
    "floor_predicted": 26.41137984250552,
    "mse_interp": 79.85699268839473,
-   "nonlinearity": 0.11689966917037964
+   "nonlinearity": 0.11689966917037964,
+   "err_top5_gauss": 0.620853066444397,
+   "err_top5_network": 0.6325005292892456
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 132.26666666666665,
    "beta": 3.068028648615358,
+   "top_octave_excess": 0.24191649388281103,
    "rms_nT": 95.59941410088007,
    "kurtosis": 3.1961152112697464,
    "mse_network": 11.562285423278809,
@@ -1577,13 +1890,16 @@
    "mse_wiener_beta35_stationary": 4.687698841094971,
    "floor_predicted": 4.78759442852945,
    "mse_interp": 20.830932576004386,
-   "nonlinearity": 0.08339649438858032
+   "nonlinearity": 0.08339649438858032,
+   "err_top5_gauss": 0.5043074488639832,
+   "err_top5_network": 0.5881887674331665
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 134.53333333333336,
    "beta": 3.5124474401591876,
+   "top_octave_excess": 0.3757801158077096,
    "rms_nT": 98.0522477770736,
    "kurtosis": 6.2418107711155155,
    "mse_network": 30.614349365234375,
@@ -1592,13 +1908,16 @@
    "mse_wiener_beta35_stationary": 7.0961432456970215,
    "floor_predicted": 2.418152700714259,
    "mse_interp": 38.14860218510339,
-   "nonlinearity": 0.06199972331523895
+   "nonlinearity": 0.06199972331523895,
+   "err_top5_gauss": 0.4798315167427063,
+   "err_top5_network": 0.5883989334106445
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 136.8,
    "beta": 3.9454372456532756,
+   "top_octave_excess": 0.3763855559678742,
    "rms_nT": 50.98606602616882,
    "kurtosis": 2.5849233227564268,
    "mse_network": 34.944610595703125,
@@ -1607,13 +1926,16 @@
    "mse_wiener_beta35_stationary": 9.576635360717773,
    "floor_predicted": 1.3855269893244848,
    "mse_interp": 47.51106762307933,
-   "nonlinearity": 0.07133463770151138
+   "nonlinearity": 0.07133463770151138,
+   "err_top5_gauss": 0.5660415887832642,
+   "err_top5_network": 0.5303723216056824
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 139.06666666666666,
    "beta": 2.542035935437175,
+   "top_octave_excess": 0.3490291468230093,
    "rms_nT": 130.84142769427936,
    "kurtosis": 8.456642828577364,
    "mse_network": 59.17910385131836,
@@ -1622,13 +1944,16 @@
    "mse_wiener_beta35_stationary": 16.289499282836914,
    "floor_predicted": 16.40146690089766,
    "mse_interp": 45.309629505548834,
-   "nonlinearity": 0.08707425743341446
+   "nonlinearity": 0.08707425743341446,
+   "err_top5_gauss": 0.6630598902702332,
+   "err_top5_network": 0.7466388940811157
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 141.33333333333331,
    "beta": 3.3669547533149946,
+   "top_octave_excess": 0.44599017138157626,
    "rms_nT": 142.42492565724498,
    "kurtosis": 2.9450121939712113,
    "mse_network": 61.265254974365234,
@@ -1637,13 +1962,16 @@
    "mse_wiener_beta35_stationary": 18.939455032348633,
    "floor_predicted": 3.162666224080121,
    "mse_interp": 52.10105414298033,
-   "nonlinearity": 0.10452213883399963
+   "nonlinearity": 0.10452213883399963,
+   "err_top5_gauss": 0.7090521454811096,
+   "err_top5_network": 0.5736459493637085
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 143.60000000000002,
    "beta": 3.2966681503988156,
+   "top_octave_excess": 0.15492499015648745,
    "rms_nT": 82.9129031515033,
    "kurtosis": 4.2663373034775995,
    "mse_network": 97.41948699951172,
@@ -1652,13 +1980,16 @@
    "mse_wiener_beta35_stationary": 21.433603286743164,
    "floor_predicted": 3.4875178206289283,
    "mse_interp": 67.10449943345616,
-   "nonlinearity": 0.10141339898109436
+   "nonlinearity": 0.10141339898109436,
+   "err_top5_gauss": 0.7110235095024109,
+   "err_top5_network": 0.5394278168678284
   },
   {
    "region": "australia",
    "lat": -19.733333333333334,
    "lon": 145.86666666666667,
    "beta": 2.3496547967478763,
+   "top_octave_excess": 0.1794960872472959,
    "rms_nT": 66.30607124252829,
    "kurtosis": 3.0170547517222785,
    "mse_network": 62.88491439819336,
@@ -1667,13 +1998,16 @@
    "mse_wiener_beta35_stationary": 29.949636459350586,
    "floor_predicted": 26.40682864529914,
    "mse_interp": 70.84211445213232,
-   "nonlinearity": 0.09873179346323013
+   "nonlinearity": 0.09873179346323013,
+   "err_top5_gauss": 0.5925981402397156,
+   "err_top5_network": 0.518280565738678
   },
   {
    "region": "australia",
    "lat": -17.599999999999994,
    "lon": 123.05000000000001,
    "beta": 4.526513718206038,
+   "top_octave_excess": 0.2842044472045568,
    "rms_nT": 34.3190821283311,
    "kurtosis": 6.217993808141269,
    "mse_network": 81.4676513671875,
@@ -1682,13 +2016,16 @@
    "mse_wiener_beta35_stationary": 8.991524696350098,
    "floor_predicted": 0.64476614766416,
    "mse_interp": 44.65287369916107,
-   "nonlinearity": 0.08378191292285919
+   "nonlinearity": 0.08378191292285919,
+   "err_top5_gauss": 0.7450682520866394,
+   "err_top5_network": 0.8713997006416321
   },
   {
    "region": "australia",
    "lat": -17.599999999999994,
    "lon": 125.28333333333336,
    "beta": 2.575950506788549,
+   "top_octave_excess": 0.27261644435204846,
    "rms_nT": 27.091011524140807,
    "kurtosis": 4.638112267961793,
    "mse_network": 73.87853240966797,
@@ -1697,13 +2034,16 @@
    "mse_wiener_beta35_stationary": 27.76988983154297,
    "floor_predicted": 12.996241858425167,
    "mse_interp": 73.64870367175871,
-   "nonlinearity": 0.1166144534945488
+   "nonlinearity": 0.1166144534945488,
+   "err_top5_gauss": 0.7563326358795166,
+   "err_top5_network": 0.7823437452316284
   },
   {
    "region": "australia",
    "lat": -17.599999999999994,
    "lon": 127.51666666666665,
    "beta": 2.4053118498742374,
+   "top_octave_excess": 0.26032368046079013,
    "rms_nT": 84.48652179434266,
    "kurtosis": 4.216502802493055,
    "mse_network": 17.196918487548828,
@@ -1712,13 +2052,16 @@
    "mse_wiener_beta35_stationary": 7.86144495010376,
    "floor_predicted": 20.573632459110172,
    "mse_interp": 24.108217006988625,
-   "nonlinearity": 0.0434662289917469
+   "nonlinearity": 0.0434662289917469,
+   "err_top5_gauss": 0.6184841394424438,
+   "err_top5_network": 0.608677089214325
   },
   {
    "region": "australia",
    "lat": -17.599999999999994,
    "lon": 129.75,
    "beta": 3.553739608168548,
+   "top_octave_excess": 0.1783019778036204,
    "rms_nT": 126.25026856386806,
    "kurtosis": 6.244199020318926,
    "mse_network": 94.55767822265625,
@@ -1727,13 +2070,16 @@
    "mse_wiener_beta35_stationary": 8.238293647766113,
    "floor_predicted": 2.0493914047011734,
    "mse_interp": 44.329499253356914,
-   "nonlinearity": 0.1008639931678772
+   "nonlinearity": 0.1008639931678772,
+   "err_top5_gauss": 0.7614781260490417,
+   "err_top5_network": 0.8606021404266357
   },
   {
    "region": "australia",
    "lat": -17.599999999999994,
    "lon": 131.98333333333335,
    "beta": 4.228137235465896,
+   "top_octave_excess": 0.30688120553497505,
    "rms_nT": 66.09538615743851,
    "kurtosis": 3.7307254005044563,
    "mse_network": 11.020268440246582,
@@ -1742,13 +2088,16 @@
    "mse_wiener_beta35_stationary": 2.929853677749634,
    "floor_predicted": 0.8371536640825514,
    "mse_interp": 17.271016956034803,
-   "nonlinearity": 0.11282151937484741
+   "nonlinearity": 0.11282151937484741,
+   "err_top5_gauss": 0.4211052656173706,
+   "err_top5_network": 0.5261678695678711
   },
   {
    "region": "australia",
    "lat": -17.599999999999994,
    "lon": 134.21666666666664,
    "beta": 4.4544725515417385,
+   "top_octave_excess": 0.707081905003732,
    "rms_nT": 50.64348868439041,
    "kurtosis": 4.6802332843200825,
    "mse_network": 10.943603515625,
@@ -1757,13 +2106,16 @@
    "mse_wiener_beta35_stationary": 2.536351203918457,
    "floor_predicted": 0.6176646421064065,
    "mse_interp": 15.19920680825851,
-   "nonlinearity": 0.03351164981722832
+   "nonlinearity": 0.03351164981722832,
+   "err_top5_gauss": 0.47091394662857056,
+   "err_top5_network": 0.6661962866783142
   },
   {
    "region": "australia",
    "lat": -17.599999999999994,
    "lon": 136.45,
    "beta": 3.4250972045753616,
+   "top_octave_excess": 0.40376993283527784,
    "rms_nT": 38.455866952968165,
    "kurtosis": 3.6033243599370683,
    "mse_network": 8.662620544433594,
@@ -1772,13 +2124,16 @@
    "mse_wiener_beta35_stationary": 4.212717056274414,
    "floor_predicted": 3.086227498073331,
    "mse_interp": 16.96170563084019,
-   "nonlinearity": 0.0395076684653759
+   "nonlinearity": 0.0395076684653759,
+   "err_top5_gauss": 0.453050434589386,
+   "err_top5_network": 0.5207551717758179
   },
   {
    "region": "australia",
    "lat": -17.599999999999994,
    "lon": 143.14999999999998,
    "beta": 2.421278076417942,
+   "top_octave_excess": 0.28924470640203037,
    "rms_nT": 32.57493362315044,
    "kurtosis": 3.316830109794727,
    "mse_network": 58.88994216918945,
@@ -1787,13 +2142,16 @@
    "mse_wiener_beta35_stationary": 20.989107131958008,
    "floor_predicted": 20.511045298062523,
    "mse_interp": 56.99903672781958,
-   "nonlinearity": 0.06765730679035187
+   "nonlinearity": 0.06765730679035187,
+   "err_top5_gauss": 0.5204561948776245,
+   "err_top5_network": 0.5334588289260864
   },
   {
    "region": "australia",
    "lat": -17.599999999999994,
    "lon": 145.38333333333333,
    "beta": 2.356366380242834,
+   "top_octave_excess": 0.10059324717574455,
    "rms_nT": 46.11943415153745,
    "kurtosis": 8.855995326967294,
    "mse_network": 70.54890441894531,
@@ -1802,13 +2160,16 @@
    "mse_wiener_beta35_stationary": 20.649883270263672,
    "floor_predicted": 20.010119444004903,
    "mse_interp": 57.65612288116612,
-   "nonlinearity": 0.10475967824459076
+   "nonlinearity": 0.10475967824459076,
+   "err_top5_gauss": 0.6205641627311707,
+   "err_top5_network": 0.6506651043891907
   },
   {
    "region": "australia",
    "lat": -15.466666666666669,
    "lon": 127.30000000000001,
    "beta": 3.8837675527241617,
+   "top_octave_excess": 0.41774661719640066,
    "rms_nT": 27.22222553994405,
    "kurtosis": 10.822453544872339,
    "mse_network": 47.3552360534668,
@@ -1817,13 +2178,16 @@
    "mse_wiener_beta35_stationary": 6.905145645141602,
    "floor_predicted": 1.354327496772535,
    "mse_interp": 30.507187801467172,
-   "nonlinearity": 0.11695203930139542
+   "nonlinearity": 0.11695203930139542,
+   "err_top5_gauss": 0.5259029865264893,
+   "err_top5_network": 0.7316709160804749
   },
   {
    "region": "australia",
    "lat": -15.466666666666669,
    "lon": 129.5,
    "beta": 3.9414170926467094,
+   "top_octave_excess": 0.43718173388580833,
    "rms_nT": 42.87127262113316,
    "kurtosis": 2.6124672098807085,
    "mse_network": 6.814612865447998,
@@ -1832,13 +2196,16 @@
    "mse_wiener_beta35_stationary": 2.5865023136138916,
    "floor_predicted": 1.333175158831378,
    "mse_interp": 14.67451972192248,
-   "nonlinearity": 0.11494581401348114
+   "nonlinearity": 0.11494581401348114,
+   "err_top5_gauss": 0.4440028965473175,
+   "err_top5_network": 0.48125818371772766
   },
   {
    "region": "australia",
    "lat": -15.466666666666669,
    "lon": 131.7,
    "beta": 4.584373984237711,
+   "top_octave_excess": 0.7697490701948728,
    "rms_nT": 71.10922118783536,
    "kurtosis": 3.397009086451155,
    "mse_network": 2.966449499130249,
@@ -1847,13 +2214,16 @@
    "mse_wiener_beta35_stationary": 1.4191442728042603,
    "floor_predicted": 0.5742760825294013,
    "mse_interp": 9.134116291942702,
-   "nonlinearity": 0.017325224354863167
+   "nonlinearity": 0.017325224354863167,
+   "err_top5_gauss": 0.46983811259269714,
+   "err_top5_network": 0.5413414239883423
   },
   {
    "region": "australia",
    "lat": -15.466666666666669,
    "lon": 133.89999999999998,
    "beta": 3.334385939654013,
+   "top_octave_excess": 0.4071733257953535,
    "rms_nT": 67.74822771425801,
    "kurtosis": 3.3711397678838257,
    "mse_network": 2.809779167175293,
@@ -1862,13 +2232,16 @@
    "mse_wiener_beta35_stationary": 1.4938396215438843,
    "floor_predicted": 3.6070323421999206,
    "mse_interp": 9.257550117331684,
-   "nonlinearity": 0.0164053775370121
+   "nonlinearity": 0.0164053775370121,
+   "err_top5_gauss": 0.3665321469306946,
+   "err_top5_network": 0.4144275188446045
   },
   {
    "region": "australia",
    "lat": -15.466666666666669,
    "lon": 142.7,
    "beta": 1.8992117417614738,
+   "top_octave_excess": 0.22661035216509454,
    "rms_nT": 10.150635029106573,
    "kurtosis": 6.757925996847243,
    "mse_network": 121.8966293334961,
@@ -1877,13 +2250,16 @@
    "mse_wiener_beta35_stationary": 21.629188537597656,
    "floor_predicted": 56.41303874404199,
    "mse_interp": 131.84866281673962,
-   "nonlinearity": 0.07229304313659668
+   "nonlinearity": 0.07229304313659668,
+   "err_top5_gauss": 0.7213044762611389,
+   "err_top5_network": 0.7255386710166931
   },
   {
    "region": "australia",
    "lat": -13.333333333333329,
    "lon": 131.7,
    "beta": 2.18595711177264,
+   "top_octave_excess": 0.3442033197075568,
    "rms_nT": 21.961827682001463,
    "kurtosis": 3.585888290739472,
    "mse_network": 18.240217208862305,
@@ -1892,13 +2268,16 @@
    "mse_wiener_beta35_stationary": 10.302334785461426,
    "floor_predicted": 31.777611516449785,
    "mse_interp": 29.940875769571306,
-   "nonlinearity": 0.2965480089187622
+   "nonlinearity": 0.2965480089187622,
+   "err_top5_gauss": 0.6636572480201721,
+   "err_top5_network": 0.6346612572669983
   },
   {
    "region": "australia",
    "lat": -13.333333333333329,
    "lon": 133.89999999999998,
    "beta": 3.5640212664004682,
+   "top_octave_excess": 0.7626786140802314,
    "rms_nT": 32.28013023078078,
    "kurtosis": 2.627430204310182,
    "mse_network": 5.654791355133057,
@@ -1907,13 +2286,16 @@
    "mse_wiener_beta35_stationary": 3.0819578170776367,
    "floor_predicted": 2.065221474257919,
    "mse_interp": 13.044538706002532,
-   "nonlinearity": 0.025291534140706062
+   "nonlinearity": 0.025291534140706062,
+   "err_top5_gauss": 0.47731804847717285,
+   "err_top5_network": 0.5052022337913513
   },
   {
    "region": "australia",
    "lat": -13.333333333333329,
    "lon": 142.7,
    "beta": 2.346761992172655,
+   "top_octave_excess": 0.27776311747199406,
    "rms_nT": 15.686434254334596,
    "kurtosis": 2.9464410374547763,
    "mse_network": 71.9520492553711,
@@ -1922,13 +2304,16 @@
    "mse_wiener_beta35_stationary": 19.88361167907715,
    "floor_predicted": 26.97804146968893,
    "mse_interp": 67.33644441868194,
-   "nonlinearity": 0.07214349508285522
+   "nonlinearity": 0.07214349508285522,
+   "err_top5_gauss": 0.7396138906478882,
+   "err_top5_network": 0.7549218535423279
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -111.25,
    "beta": 2.80702323497454,
+   "top_octave_excess": 0.15949786812118652,
    "rms_nT": 46.082885669148155,
    "kurtosis": 4.510968972745849,
    "mse_network": 192.5172882080078,
@@ -1937,13 +2322,16 @@
    "mse_wiener_beta35_stationary": 57.38938522338867,
    "floor_predicted": 8.714981524517857,
    "mse_interp": 181.16852568005808,
-   "nonlinearity": 0.1498800814151764
+   "nonlinearity": 0.1498800814151764,
+   "err_top5_gauss": 0.5743487477302551,
+   "err_top5_network": 0.49484920501708984
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -108.75,
    "beta": 3.0061341056677344,
+   "top_octave_excess": 0.16129481846084986,
    "rms_nT": 50.94990684671677,
    "kurtosis": 3.0244995593279778,
    "mse_network": 164.12979125976562,
@@ -1952,13 +2340,16 @@
    "mse_wiener_beta35_stationary": 46.44697952270508,
    "floor_predicted": 6.230624804110349,
    "mse_interp": 156.47590294117242,
-   "nonlinearity": 0.12241753190755844
+   "nonlinearity": 0.12241753190755844,
+   "err_top5_gauss": 0.51825350522995,
+   "err_top5_network": 0.4477655589580536
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -106.25,
    "beta": 3.5563907387296423,
+   "top_octave_excess": 0.1936694347414422,
    "rms_nT": 71.52790341847283,
    "kurtosis": 4.285028270126216,
    "mse_network": 111.61514282226562,
@@ -1967,13 +2358,16 @@
    "mse_wiener_beta35_stationary": 19.66330909729004,
    "floor_predicted": 2.1813440457070956,
    "mse_interp": 84.20428089571915,
-   "nonlinearity": 0.127358540892601
+   "nonlinearity": 0.127358540892601,
+   "err_top5_gauss": 0.5373262763023376,
+   "err_top5_network": 0.639458179473877
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -103.75,
    "beta": 4.686788977619597,
+   "top_octave_excess": 0.2731424495193067,
    "rms_nT": 90.80279385511862,
    "kurtosis": 3.234639595633336,
    "mse_network": 32.77040100097656,
@@ -1982,13 +2376,16 @@
    "mse_wiener_beta35_stationary": 8.999266624450684,
    "floor_predicted": 0.4964653042603733,
    "mse_interp": 33.46238608998408,
-   "nonlinearity": 0.08908330649137497
+   "nonlinearity": 0.08908330649137497,
+   "err_top5_gauss": 0.7484206557273865,
+   "err_top5_network": 0.6431716680526733
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -101.25,
    "beta": 5.0333514416664515,
+   "top_octave_excess": 0.21013493846044823,
    "rms_nT": 120.10410998742341,
    "kurtosis": 2.4382695576358886,
    "mse_network": 26.731910705566406,
@@ -1997,13 +2394,16 @@
    "mse_wiener_beta35_stationary": 7.224066257476807,
    "floor_predicted": 0.38912900338680245,
    "mse_interp": 43.480572827130025,
-   "nonlinearity": 0.0696553885936737
+   "nonlinearity": 0.0696553885936737,
+   "err_top5_gauss": 0.5045253038406372,
+   "err_top5_network": 0.5936207175254822
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -98.75,
    "beta": 4.132963871232838,
+   "top_octave_excess": 0.11845202355462195,
    "rms_nT": 113.03875728357814,
    "kurtosis": 2.3532333476397254,
    "mse_network": 22.580841064453125,
@@ -2012,13 +2412,16 @@
    "mse_wiener_beta35_stationary": 9.331246376037598,
    "floor_predicted": 1.0240981521170411,
    "mse_interp": 52.79954826441567,
-   "nonlinearity": 0.044357944279909134
+   "nonlinearity": 0.044357944279909134,
+   "err_top5_gauss": 0.6048901081085205,
+   "err_top5_network": 0.49087390303611755
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -96.25,
    "beta": 6.6788965982568,
+   "top_octave_excess": 0.958158743305173,
    "rms_nT": 61.029773132059326,
    "kurtosis": 2.912845403395424,
    "mse_network": 12.883845329284668,
@@ -2027,13 +2430,16 @@
    "mse_wiener_beta35_stationary": 2.371142864227295,
    "floor_predicted": 0.12752228866374193,
    "mse_interp": 35.17765900303416,
-   "nonlinearity": 0.03612742945551872
+   "nonlinearity": 0.03612742945551872,
+   "err_top5_gauss": 0.5545169711112976,
+   "err_top5_network": 0.6053392887115479
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -93.75,
    "beta": 6.71141165704948,
+   "top_octave_excess": 1.1491264514982056,
    "rms_nT": 75.60626162012188,
    "kurtosis": 4.725456927971541,
    "mse_network": 23.76153564453125,
@@ -2042,13 +2448,16 @@
    "mse_wiener_beta35_stationary": 1.2499138116836548,
    "floor_predicted": 0.12889312787181148,
    "mse_interp": 12.724789203684578,
-   "nonlinearity": 0.06805527210235596
+   "nonlinearity": 0.06805527210235596,
+   "err_top5_gauss": 0.39190950989723206,
+   "err_top5_network": 0.8781622052192688
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -88.75,
    "beta": 6.54106994627249,
+   "top_octave_excess": 3.2775921804202564,
    "rms_nT": 73.87644718078506,
    "kurtosis": 7.191834173497683,
    "mse_network": 41.42143249511719,
@@ -2057,13 +2466,16 @@
    "mse_wiener_beta35_stationary": 2.4182262420654297,
    "floor_predicted": 0.12092901463110028,
    "mse_interp": 29.01444360406387,
-   "nonlinearity": 0.11110248416662216
+   "nonlinearity": 0.11110248416662216,
+   "err_top5_gauss": 0.6121596693992615,
+   "err_top5_network": 0.8649137020111084
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -86.25,
    "beta": 4.186380692850814,
+   "top_octave_excess": 9.584053655639183,
    "rms_nT": 86.73735952716191,
    "kurtosis": 3.587860919128211,
    "mse_network": 39.16151428222656,
@@ -2072,13 +2484,16 @@
    "mse_wiener_beta35_stationary": 7.8317084312438965,
    "floor_predicted": 0.946328233703774,
    "mse_interp": 36.49636416618269,
-   "nonlinearity": 0.08535019308328629
+   "nonlinearity": 0.08535019308328629,
+   "err_top5_gauss": 0.6989574432373047,
+   "err_top5_network": 0.6600655317306519
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -83.75,
    "beta": 5.1977682343705025,
+   "top_octave_excess": 0.22463414086070058,
    "rms_nT": 144.86428889766552,
    "kurtosis": 5.373117378467123,
    "mse_network": 99.12007904052734,
@@ -2087,13 +2502,16 @@
    "mse_wiener_beta35_stationary": 4.813789367675781,
    "floor_predicted": 0.31957264108830163,
    "mse_interp": 37.226053363943464,
-   "nonlinearity": 0.1135312095284462
+   "nonlinearity": 0.1135312095284462,
+   "err_top5_gauss": 0.5734487771987915,
+   "err_top5_network": 0.6659870743751526
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -81.25,
    "beta": 5.6098100926948815,
+   "top_octave_excess": 0.2407297447707648,
    "rms_nT": 89.52184697424212,
    "kurtosis": 2.844334804421109,
    "mse_network": 15.895283699035645,
@@ -2102,13 +2520,16 @@
    "mse_wiener_beta35_stationary": 3.452101707458496,
    "floor_predicted": 0.23085489211244828,
    "mse_interp": 25.709349617346593,
-   "nonlinearity": 0.11376778036355972
+   "nonlinearity": 0.11376778036355972,
+   "err_top5_gauss": 0.5083750486373901,
+   "err_top5_network": 0.5446590185165405
   },
   {
    "region": "north_america",
    "lat": 31.066666666666663,
    "lon": -78.75,
    "beta": 6.167677145259125,
+   "top_octave_excess": 0.30870948734516285,
    "rms_nT": 75.50738814566199,
    "kurtosis": 4.25938172398588,
    "mse_network": 19.79121208190918,
@@ -2117,13 +2538,16 @@
    "mse_wiener_beta35_stationary": 2.969240188598633,
    "floor_predicted": 0.15242466757215523,
    "mse_interp": 41.32572673413817,
-   "nonlinearity": 0.06516365706920624
+   "nonlinearity": 0.06516365706920624,
+   "err_top5_gauss": 0.6521071195602417,
+   "err_top5_network": 0.5871837735176086
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -116.13333333333333,
    "beta": 3.4652898481432537,
+   "top_octave_excess": 0.17648335024046677,
    "rms_nT": 100.84889155692834,
    "kurtosis": 5.108590962545377,
    "mse_network": 62.09735107421875,
@@ -2132,13 +2556,16 @@
    "mse_wiener_beta35_stationary": 18.79834747314453,
    "floor_predicted": 2.5175861975552647,
    "mse_interp": 59.336135062069125,
-   "nonlinearity": 0.08223568648099899
+   "nonlinearity": 0.08223568648099899,
+   "err_top5_gauss": 0.6330824494361877,
+   "err_top5_network": 0.6657315492630005
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -113.6,
    "beta": 4.404210829755217,
+   "top_octave_excess": 0.24422495422150625,
    "rms_nT": 66.21929171226839,
    "kurtosis": 3.781786349014037,
    "mse_network": 74.68086242675781,
@@ -2147,13 +2574,16 @@
    "mse_wiener_beta35_stationary": 15.344738960266113,
    "floor_predicted": 0.7052483493193086,
    "mse_interp": 78.80104142879944,
-   "nonlinearity": 0.10857867449522018
+   "nonlinearity": 0.10857867449522018,
+   "err_top5_gauss": 0.5334188938140869,
+   "err_top5_network": 0.6206688284873962
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -111.06666666666666,
    "beta": 3.795019752446877,
+   "top_octave_excess": 0.1743388394785255,
    "rms_nT": 99.37473623611291,
    "kurtosis": 2.5177021420682464,
    "mse_network": 60.9723014831543,
@@ -2162,13 +2592,16 @@
    "mse_wiener_beta35_stationary": 17.98317527770996,
    "floor_predicted": 1.4609234223370666,
    "mse_interp": 65.89778450267154,
-   "nonlinearity": 0.08963961899280548
+   "nonlinearity": 0.08963961899280548,
+   "err_top5_gauss": 0.514686107635498,
+   "err_top5_network": 0.460781067609787
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -108.53333333333333,
    "beta": 2.6083623998492254,
+   "top_octave_excess": 0.1239842671913552,
    "rms_nT": 75.89211178937406,
    "kurtosis": 3.184375219607954,
    "mse_network": 131.45130920410156,
@@ -2177,13 +2610,16 @@
    "mse_wiener_beta35_stationary": 37.59732437133789,
    "floor_predicted": 13.866531946869548,
    "mse_interp": 120.19376287407509,
-   "nonlinearity": 0.12710680067539215
+   "nonlinearity": 0.12710680067539215,
+   "err_top5_gauss": 0.5229249000549316,
+   "err_top5_network": 0.4707159996032715
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -106.0,
    "beta": 3.4870479962438066,
+   "top_octave_excess": 0.15429472916863182,
    "rms_nT": 108.40517909510292,
    "kurtosis": 11.137951937797938,
    "mse_network": 193.1331787109375,
@@ -2192,13 +2628,16 @@
    "mse_wiener_beta35_stationary": 16.333293914794922,
    "floor_predicted": 2.2726956637844253,
    "mse_interp": 95.06383007251038,
-   "nonlinearity": 0.1656501442193985
+   "nonlinearity": 0.1656501442193985,
+   "err_top5_gauss": 0.6445751190185547,
+   "err_top5_network": 0.8210945129394531
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -103.46666666666667,
    "beta": 5.896404987141483,
+   "top_octave_excess": 0.6855299371736105,
    "rms_nT": 98.88882593933971,
    "kurtosis": 3.801516043467591,
    "mse_network": 21.719261169433594,
@@ -2207,13 +2646,16 @@
    "mse_wiener_beta35_stationary": 3.724637269973755,
    "floor_predicted": 0.18405921344160148,
    "mse_interp": 46.52558767276304,
-   "nonlinearity": 0.15283752977848053
+   "nonlinearity": 0.15283752977848053,
+   "err_top5_gauss": 0.5232171416282654,
+   "err_top5_network": 0.5977476239204407
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -100.93333333333334,
    "beta": 6.005038161401024,
+   "top_octave_excess": 0.9904939115857166,
    "rms_nT": 203.35868564682653,
    "kurtosis": 7.136837472878329,
    "mse_network": 87.87964630126953,
@@ -2222,13 +2664,16 @@
    "mse_wiener_beta35_stationary": 2.695995330810547,
    "floor_predicted": 0.1696977188298264,
    "mse_interp": 18.494024252700523,
-   "nonlinearity": 0.12469460070133209
+   "nonlinearity": 0.12469460070133209,
+   "err_top5_gauss": 0.43512970209121704,
+   "err_top5_network": 0.8753567337989807
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -98.4,
    "beta": 4.53151485338914,
+   "top_octave_excess": 0.1089657382932405,
    "rms_nT": 118.63071711649519,
    "kurtosis": 4.234614225324482,
    "mse_network": 70.69815826416016,
@@ -2237,13 +2682,16 @@
    "mse_wiener_beta35_stationary": 7.514706134796143,
    "floor_predicted": 0.5878445272394385,
    "mse_interp": 40.17103431628981,
-   "nonlinearity": 0.11852427572011948
+   "nonlinearity": 0.11852427572011948,
+   "err_top5_gauss": 0.5041152238845825,
+   "err_top5_network": 0.721476137638092
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -95.86666666666666,
    "beta": 6.345834097452869,
+   "top_octave_excess": 1.1534288376471988,
    "rms_nT": 66.51930412376264,
    "kurtosis": 4.324694252045165,
    "mse_network": 80.05838775634766,
@@ -2252,13 +2700,16 @@
    "mse_wiener_beta35_stationary": 7.945674896240234,
    "floor_predicted": 0.1428512124736323,
    "mse_interp": 77.89751454411615,
-   "nonlinearity": 0.17770972847938538
+   "nonlinearity": 0.17770972847938538,
+   "err_top5_gauss": 0.7834293842315674,
+   "err_top5_network": 0.779570996761322
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -93.33333333333333,
    "beta": 5.825498518694221,
+   "top_octave_excess": 0.40885286499034074,
    "rms_nT": 45.30329600246999,
    "kurtosis": 64.38307765400417,
    "mse_network": 699.7697143554688,
@@ -2267,13 +2718,16 @@
    "mse_wiener_beta35_stationary": 56.64695739746094,
    "floor_predicted": 0.19616320577241206,
    "mse_interp": 128.59883159945846,
-   "nonlinearity": 0.2457381635904312
+   "nonlinearity": 0.2457381635904312,
+   "err_top5_gauss": 0.977098286151886,
+   "err_top5_network": 0.9811395406723022
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -90.8,
    "beta": 3.8740491691914207,
+   "top_octave_excess": 0.14601155336328556,
    "rms_nT": 73.78034878414591,
    "kurtosis": 5.811591845161221,
    "mse_network": 174.11424255371094,
@@ -2282,13 +2736,16 @@
    "mse_wiener_beta35_stationary": 13.15109920501709,
    "floor_predicted": 1.2705320839246064,
    "mse_interp": 81.02617886751183,
-   "nonlinearity": 0.3266449570655823
+   "nonlinearity": 0.3266449570655823,
+   "err_top5_gauss": 0.7687623500823975,
+   "err_top5_network": 0.7865241765975952
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -88.26666666666667,
    "beta": 6.204288766129455,
+   "top_octave_excess": 0.5535110278803093,
    "rms_nT": 103.26157035070071,
    "kurtosis": 3.317173042632171,
    "mse_network": 43.3660888671875,
@@ -2297,13 +2754,16 @@
    "mse_wiener_beta35_stationary": 6.472787857055664,
    "floor_predicted": 0.1552131579302657,
    "mse_interp": 66.06138547751998,
-   "nonlinearity": 0.16073709726333618
+   "nonlinearity": 0.16073709726333618,
+   "err_top5_gauss": 0.7265207767486572,
+   "err_top5_network": 0.7051601409912109
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -80.66666666666667,
    "beta": 4.18114741783592,
+   "top_octave_excess": 0.2990240336830497,
    "rms_nT": 127.25992398307471,
    "kurtosis": 2.5136948729498747,
    "mse_network": 34.781036376953125,
@@ -2312,13 +2772,16 @@
    "mse_wiener_beta35_stationary": 10.308566093444824,
    "floor_predicted": 0.8877973505665531,
    "mse_interp": 35.802864005385516,
-   "nonlinearity": 0.10720807313919067
+   "nonlinearity": 0.10720807313919067,
+   "err_top5_gauss": 0.5789488554000854,
+   "err_top5_network": 0.5496866106987
   },
   {
    "region": "north_america",
    "lat": 33.2,
    "lon": -78.13333333333334,
    "beta": 4.674994324326187,
+   "top_octave_excess": 0.1926094837296943,
    "rms_nT": 95.21519380984562,
    "kurtosis": 2.236009088526598,
    "mse_network": 44.7125129699707,
@@ -2327,13 +2790,16 @@
    "mse_wiener_beta35_stationary": 8.756217002868652,
    "floor_predicted": 0.500757131759535,
    "mse_interp": 40.053224599000394,
-   "nonlinearity": 0.07751932740211487
+   "nonlinearity": 0.07751932740211487,
+   "err_top5_gauss": 0.6502959132194519,
+   "err_top5_network": 0.47689229249954224
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -118.5,
    "beta": 3.5542276165252824,
+   "top_octave_excess": 0.23803234150868122,
    "rms_nT": 86.34047056543288,
    "kurtosis": 5.045854425868842,
    "mse_network": 169.39210510253906,
@@ -2342,13 +2808,16 @@
    "mse_wiener_beta35_stationary": 27.382308959960938,
    "floor_predicted": 2.115939406044557,
    "mse_interp": 82.7006129301012,
-   "nonlinearity": 0.11251907050609589
+   "nonlinearity": 0.11251907050609589,
+   "err_top5_gauss": 0.6370666027069092,
+   "err_top5_network": 0.7441009879112244
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -115.9,
    "beta": 3.2401355851784794,
+   "top_octave_excess": 0.1976638058089542,
    "rms_nT": 81.78179897599723,
    "kurtosis": 4.9688539889873775,
    "mse_network": 120.58843994140625,
@@ -2357,13 +2826,16 @@
    "mse_wiener_beta35_stationary": 37.201629638671875,
    "floor_predicted": 4.494732481294515,
    "mse_interp": 109.04176545133309,
-   "nonlinearity": 0.17273233830928802
+   "nonlinearity": 0.17273233830928802,
+   "err_top5_gauss": 0.6281448602676392,
+   "err_top5_network": 0.6265848278999329
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -113.3,
    "beta": 3.5431542935111504,
+   "top_octave_excess": 0.13454184742481132,
    "rms_nT": 94.48198755832162,
    "kurtosis": 3.2487289042778893,
    "mse_network": 190.2186279296875,
@@ -2372,13 +2844,16 @@
    "mse_wiener_beta35_stationary": 33.08597946166992,
    "floor_predicted": 2.54961122828953,
    "mse_interp": 151.38452888459236,
-   "nonlinearity": 0.15405751764774323
+   "nonlinearity": 0.15405751764774323,
+   "err_top5_gauss": 0.4997009336948395,
+   "err_top5_network": 0.44085410237312317
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -110.7,
    "beta": 3.8563199327832867,
+   "top_octave_excess": 0.1476186114791582,
    "rms_nT": 93.49642056819408,
    "kurtosis": 3.2720442658147992,
    "mse_network": 74.65752410888672,
@@ -2387,13 +2862,16 @@
    "mse_wiener_beta35_stationary": 20.600719451904297,
    "floor_predicted": 1.324927605236131,
    "mse_interp": 77.20529627710012,
-   "nonlinearity": 0.12070654332637787
+   "nonlinearity": 0.12070654332637787,
+   "err_top5_gauss": 0.6005738377571106,
+   "err_top5_network": 0.4679282009601593
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -108.1,
    "beta": 3.7749931244905444,
+   "top_octave_excess": 0.2157940403795697,
    "rms_nT": 86.17690174181803,
    "kurtosis": 2.7037181357832294,
    "mse_network": 107.37792205810547,
@@ -2402,13 +2880,16 @@
    "mse_wiener_beta35_stationary": 31.365503311157227,
    "floor_predicted": 1.4941048861376904,
    "mse_interp": 94.06008459181673,
-   "nonlinearity": 0.11628809571266174
+   "nonlinearity": 0.11628809571266174,
+   "err_top5_gauss": 0.7019482851028442,
+   "err_top5_network": 0.5998185276985168
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -105.5,
    "beta": 3.419241557518222,
+   "top_octave_excess": 0.156848579243014,
    "rms_nT": 117.0834347042638,
    "kurtosis": 3.2627918742723763,
    "mse_network": 71.17765045166016,
@@ -2417,13 +2898,16 @@
    "mse_wiener_beta35_stationary": 19.040752410888672,
    "floor_predicted": 3.0311069722673945,
    "mse_interp": 78.18944487120943,
-   "nonlinearity": 0.10070468485355377
+   "nonlinearity": 0.10070468485355377,
+   "err_top5_gauss": 0.46154481172561646,
+   "err_top5_network": 0.4616089463233948
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -102.9,
    "beta": 5.436630178896917,
+   "top_octave_excess": 0.38678914915350054,
    "rms_nT": 149.5499678274942,
    "kurtosis": 9.271363010914012,
    "mse_network": 53.73048782348633,
@@ -2432,13 +2916,16 @@
    "mse_wiener_beta35_stationary": 4.749324321746826,
    "floor_predicted": 0.2635536005575612,
    "mse_interp": 23.774392024419086,
-   "nonlinearity": 0.09322050958871841
+   "nonlinearity": 0.09322050958871841,
+   "err_top5_gauss": 0.563395619392395,
+   "err_top5_network": 0.8213402032852173
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -100.3,
    "beta": 4.693976375320829,
+   "top_octave_excess": 0.23961028165661388,
    "rms_nT": 100.78262072514902,
    "kurtosis": 4.434816686464934,
    "mse_network": 51.82180404663086,
@@ -2447,13 +2934,16 @@
    "mse_wiener_beta35_stationary": 9.819844245910645,
    "floor_predicted": 0.49553198526726855,
    "mse_interp": 53.354583301209935,
-   "nonlinearity": 0.1351054608821869
+   "nonlinearity": 0.1351054608821869,
+   "err_top5_gauss": 0.6638565063476562,
+   "err_top5_network": 0.6629869937896729
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -97.7,
    "beta": 5.134839997366016,
+   "top_octave_excess": 0.2876730644135871,
    "rms_nT": 113.59775753932422,
    "kurtosis": 4.848707840004284,
    "mse_network": 69.89746856689453,
@@ -2462,13 +2952,16 @@
    "mse_wiener_beta35_stationary": 13.797511100769043,
    "floor_predicted": 0.3346173547477325,
    "mse_interp": 85.06292489943213,
-   "nonlinearity": 0.09134501218795776
+   "nonlinearity": 0.09134501218795776,
+   "err_top5_gauss": 0.7378727197647095,
+   "err_top5_network": 0.7340249419212341
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -95.1,
    "beta": 4.680470695651594,
+   "top_octave_excess": 0.21829896036326785,
    "rms_nT": 72.52590714781635,
    "kurtosis": 4.049173465818871,
    "mse_network": 37.9870719909668,
@@ -2477,13 +2970,16 @@
    "mse_wiener_beta35_stationary": 5.676751613616943,
    "floor_predicted": 0.5214544136761137,
    "mse_interp": 40.332248478435844,
-   "nonlinearity": 0.07753434777259827
+   "nonlinearity": 0.07753434777259827,
+   "err_top5_gauss": 0.5416411757469177,
+   "err_top5_network": 0.5588318705558777
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -92.5,
    "beta": 4.9183593476478835,
+   "top_octave_excess": 0.3471586404673067,
    "rms_nT": 126.0660740458131,
    "kurtosis": 5.931667313102897,
    "mse_network": 163.5392303466797,
@@ -2492,13 +2988,16 @@
    "mse_wiener_beta35_stationary": 14.650395393371582,
    "floor_predicted": 0.4059836958413299,
    "mse_interp": 75.30269064196575,
-   "nonlinearity": 0.2074974626302719
+   "nonlinearity": 0.2074974626302719,
+   "err_top5_gauss": 0.7708073258399963,
+   "err_top5_network": 0.7610820531845093
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -89.9,
    "beta": 4.620084877364936,
+   "top_octave_excess": 0.30532381721269325,
    "rms_nT": 107.50963260011773,
    "kurtosis": 2.5153902764235756,
    "mse_network": 46.91347122192383,
@@ -2507,13 +3006,16 @@
    "mse_wiener_beta35_stationary": 9.347416877746582,
    "floor_predicted": 0.5532689010533939,
    "mse_interp": 52.75485799267275,
-   "nonlinearity": 0.2803870439529419
+   "nonlinearity": 0.2803870439529419,
+   "err_top5_gauss": 0.5392361879348755,
+   "err_top5_network": 0.46874287724494934
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -87.3,
    "beta": 4.508098856515527,
+   "top_octave_excess": 0.24799315293461935,
    "rms_nT": 160.76830632014125,
    "kurtosis": 2.709671927312267,
    "mse_network": 69.36241149902344,
@@ -2522,13 +3024,16 @@
    "mse_wiener_beta35_stationary": 15.122796058654785,
    "floor_predicted": 0.6171306241729742,
    "mse_interp": 73.28012682998258,
-   "nonlinearity": 0.08459058403968811
+   "nonlinearity": 0.08459058403968811,
+   "err_top5_gauss": 0.5266820192337036,
+   "err_top5_network": 0.41482844948768616
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -84.7,
    "beta": 4.789634285046554,
+   "top_octave_excess": 0.266959278276056,
    "rms_nT": 225.13531985404185,
    "kurtosis": 4.028005411493983,
    "mse_network": 33.68260192871094,
@@ -2537,13 +3042,16 @@
    "mse_wiener_beta35_stationary": 5.650684833526611,
    "floor_predicted": 0.4611432107564443,
    "mse_interp": 43.13539623322928,
-   "nonlinearity": 0.08313433080911636
+   "nonlinearity": 0.08313433080911636,
+   "err_top5_gauss": 0.5816324353218079,
+   "err_top5_network": 0.6334214806556702
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -82.1,
    "beta": 3.31582210984988,
+   "top_octave_excess": 0.22799589129801764,
    "rms_nT": 96.329870143454,
    "kurtosis": 3.849229020838987,
    "mse_network": 123.82083892822266,
@@ -2552,13 +3060,16 @@
    "mse_wiener_beta35_stationary": 34.18134689331055,
    "floor_predicted": 3.5267991488580903,
    "mse_interp": 63.99035190649361,
-   "nonlinearity": 0.10176212340593338
+   "nonlinearity": 0.10176212340593338,
+   "err_top5_gauss": 0.8734395503997803,
+   "err_top5_network": 0.8455082774162292
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -79.5,
    "beta": 3.2185355726181664,
+   "top_octave_excess": 0.23658888809834264,
    "rms_nT": 99.5520684847883,
    "kurtosis": 4.525017681926578,
    "mse_network": 208.06919860839844,
@@ -2567,13 +3078,16 @@
    "mse_wiener_beta35_stationary": 44.78691482543945,
    "floor_predicted": 4.165386221534504,
    "mse_interp": 118.89238840248765,
-   "nonlinearity": 0.1591370403766632
+   "nonlinearity": 0.1591370403766632,
+   "err_top5_gauss": 0.6672852039337158,
+   "err_top5_network": 0.7720954418182373
   },
   {
    "region": "north_america",
    "lat": 35.33333333333333,
    "lon": -74.3,
    "beta": 6.468889477579915,
+   "top_octave_excess": 1.3028924082163826,
    "rms_nT": 76.81065943736635,
    "kurtosis": 3.979400303941062,
    "mse_network": 7.146396160125732,
@@ -2582,13 +3096,16 @@
    "mse_wiener_beta35_stationary": 1.8394283056259155,
    "floor_predicted": 0.12272192584225883,
    "mse_interp": 13.033779466253,
-   "nonlinearity": 0.2168889194726944
+   "nonlinearity": 0.2168889194726944,
+   "err_top5_gauss": 0.6118245124816895,
+   "err_top5_network": 0.6297095417976379
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -120.95,
    "beta": 4.009817994620105,
+   "top_octave_excess": 0.2986339410857118,
    "rms_nT": 168.978666874223,
    "kurtosis": 3.3459309027171935,
    "mse_network": 62.70449447631836,
@@ -2597,13 +3114,16 @@
    "mse_wiener_beta35_stationary": 14.730269432067871,
    "floor_predicted": 1.2250460538064123,
    "mse_interp": 66.30002199093069,
-   "nonlinearity": 0.054761145263910294
+   "nonlinearity": 0.054761145263910294,
+   "err_top5_gauss": 0.6355579495429993,
+   "err_top5_network": 0.6961581110954285
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -118.25,
    "beta": 2.834167884796949,
+   "top_octave_excess": 0.18193766667664837,
    "rms_nT": 99.74660764813852,
    "kurtosis": 13.634144883100173,
    "mse_network": 296.29736328125,
@@ -2612,13 +3132,16 @@
    "mse_wiener_beta35_stationary": 58.269866943359375,
    "floor_predicted": 9.431429582935074,
    "mse_interp": 213.26165028393334,
-   "nonlinearity": 0.237651988863945
+   "nonlinearity": 0.237651988863945,
+   "err_top5_gauss": 0.6197238564491272,
+   "err_top5_network": 0.807148814201355
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -115.55,
    "beta": 3.0673225431709774,
+   "top_octave_excess": 0.24569800831681535,
    "rms_nT": 54.14853459347726,
    "kurtosis": 4.076912381214128,
    "mse_network": 156.75709533691406,
@@ -2627,13 +3150,16 @@
    "mse_wiener_beta35_stationary": 45.60371017456055,
    "floor_predicted": 5.427277482813447,
    "mse_interp": 212.47041263691492,
-   "nonlinearity": 0.2328723967075348
+   "nonlinearity": 0.2328723967075348,
+   "err_top5_gauss": 0.63443523645401,
+   "err_top5_network": 0.5717718601226807
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -112.85,
    "beta": 3.8705815906835603,
+   "top_octave_excess": 0.31952287308948424,
    "rms_nT": 92.42192365186212,
    "kurtosis": 2.531869240795722,
    "mse_network": 59.68305969238281,
@@ -2642,13 +3168,16 @@
    "mse_wiener_beta35_stationary": 16.223073959350586,
    "floor_predicted": 1.2986205872278889,
    "mse_interp": 69.20585032164371,
-   "nonlinearity": 0.13985291123390198
+   "nonlinearity": 0.13985291123390198,
+   "err_top5_gauss": 0.560957133769989,
+   "err_top5_network": 0.5187942981719971
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -110.15,
    "beta": 3.208136014219541,
+   "top_octave_excess": 0.14519602702471332,
    "rms_nT": 102.99972466874321,
    "kurtosis": 5.055495361223457,
    "mse_network": 135.50469970703125,
@@ -2657,13 +3186,16 @@
    "mse_wiener_beta35_stationary": 22.673086166381836,
    "floor_predicted": 3.8721015945927086,
    "mse_interp": 83.46764277130262,
-   "nonlinearity": 0.11449151486158371
+   "nonlinearity": 0.11449151486158371,
+   "err_top5_gauss": 0.5442155599594116,
+   "err_top5_network": 0.6777647733688354
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -107.45,
    "beta": 3.2478336738910794,
+   "top_octave_excess": 0.3513723133634644,
    "rms_nT": 103.90105863900585,
    "kurtosis": 6.294617445999998,
    "mse_network": 274.5492858886719,
@@ -2672,13 +3204,16 @@
    "mse_wiener_beta35_stationary": 56.6572151184082,
    "floor_predicted": 4.592510824734436,
    "mse_interp": 170.73579641236645,
-   "nonlinearity": 0.1680818498134613
+   "nonlinearity": 0.1680818498134613,
+   "err_top5_gauss": 0.7714979648590088,
+   "err_top5_network": 0.6310040950775146
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -104.75,
    "beta": 3.462205288530468,
+   "top_octave_excess": 0.28980238414778914,
    "rms_nT": 183.96029467092256,
    "kurtosis": 3.0886100432106462,
    "mse_network": 44.25546646118164,
@@ -2687,13 +3222,16 @@
    "mse_wiener_beta35_stationary": 12.09930419921875,
    "floor_predicted": 2.3660882012070448,
    "mse_interp": 50.91691094737089,
-   "nonlinearity": 0.1469579041004181
+   "nonlinearity": 0.1469579041004181,
+   "err_top5_gauss": 0.49289050698280334,
+   "err_top5_network": 0.4713280498981476
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -102.05,
    "beta": 4.909631882740625,
+   "top_octave_excess": 0.4402114019457633,
    "rms_nT": 117.4569652810486,
    "kurtosis": 3.2973423599594756,
    "mse_network": 38.19988250732422,
@@ -2702,13 +3240,16 @@
    "mse_wiener_beta35_stationary": 8.911847114562988,
    "floor_predicted": 0.4058193124994854,
    "mse_interp": 53.03206532341426,
-   "nonlinearity": 0.06771253794431686
+   "nonlinearity": 0.06771253794431686,
+   "err_top5_gauss": 0.5293577313423157,
+   "err_top5_network": 0.4649645686149597
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -99.35,
    "beta": 4.69224296169344,
+   "top_octave_excess": 0.2845093382388853,
    "rms_nT": 105.01502708908133,
    "kurtosis": 2.907962225687203,
    "mse_network": 40.230224609375,
@@ -2717,13 +3258,16 @@
    "mse_wiener_beta35_stationary": 12.301173210144043,
    "floor_predicted": 0.511929597498507,
    "mse_interp": 54.946817643250085,
-   "nonlinearity": 0.04552845284342766
+   "nonlinearity": 0.04552845284342766,
+   "err_top5_gauss": 0.6348314881324768,
+   "err_top5_network": 0.5445796847343445
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -96.65,
    "beta": 4.395576565572126,
+   "top_octave_excess": 0.2531076214519404,
    "rms_nT": 166.57499142792827,
    "kurtosis": 3.8480880364566277,
    "mse_network": 9.89126205444336,
@@ -2732,13 +3276,16 @@
    "mse_wiener_beta35_stationary": 4.664422512054443,
    "floor_predicted": 0.682449158081695,
    "mse_interp": 28.69688856018278,
-   "nonlinearity": 0.0492427684366703
+   "nonlinearity": 0.0492427684366703,
+   "err_top5_gauss": 0.5304497480392456,
+   "err_top5_network": 0.4842495322227478
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -93.95,
    "beta": 3.933565266755557,
+   "top_octave_excess": 0.2994566053126307,
    "rms_nT": 144.11209461804017,
    "kurtosis": 2.547531319391288,
    "mse_network": 40.57362365722656,
@@ -2747,13 +3294,16 @@
    "mse_wiener_beta35_stationary": 14.037108421325684,
    "floor_predicted": 1.348003107720914,
    "mse_interp": 45.65426237014657,
-   "nonlinearity": 0.03780275955796242
+   "nonlinearity": 0.03780275955796242,
+   "err_top5_gauss": 0.5691313743591309,
+   "err_top5_network": 0.4948640465736389
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -91.25,
    "beta": 3.216516035045046,
+   "top_octave_excess": 0.20746677717537323,
    "rms_nT": 123.92499798726551,
    "kurtosis": 3.796467365173552,
    "mse_network": 169.3992462158203,
@@ -2762,13 +3312,16 @@
    "mse_wiener_beta35_stationary": 40.566986083984375,
    "floor_predicted": 4.313891984121979,
    "mse_interp": 113.6419035403725,
-   "nonlinearity": 0.13188664615154266
+   "nonlinearity": 0.13188664615154266,
+   "err_top5_gauss": 0.5864054560661316,
+   "err_top5_network": 0.6393159627914429
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -88.55,
    "beta": 5.609771264463656,
+   "top_octave_excess": 0.4971685952325748,
    "rms_nT": 161.99536317285435,
    "kurtosis": 4.324370063203355,
    "mse_network": 29.150489807128906,
@@ -2777,13 +3330,16 @@
    "mse_wiener_beta35_stationary": 6.977895259857178,
    "floor_predicted": 0.2256716927006666,
    "mse_interp": 38.87731706088278,
-   "nonlinearity": 0.12513932585716248
+   "nonlinearity": 0.12513932585716248,
+   "err_top5_gauss": 0.5910354852676392,
+   "err_top5_network": 0.6379514932632446
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -85.85,
    "beta": 4.484013242269487,
+   "top_octave_excess": 0.32910912514783625,
    "rms_nT": 286.44974477858204,
    "kurtosis": 2.7758517929165807,
    "mse_network": 22.5145320892334,
@@ -2792,13 +3348,16 @@
    "mse_wiener_beta35_stationary": 5.941610813140869,
    "floor_predicted": 0.6449142080982526,
    "mse_interp": 34.89424352222101,
-   "nonlinearity": 0.0766197219491005
+   "nonlinearity": 0.0766197219491005,
+   "err_top5_gauss": 0.521318793296814,
+   "err_top5_network": 0.48225000500679016
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -83.15,
    "beta": 4.193833172844929,
+   "top_octave_excess": 0.2562735065557716,
    "rms_nT": 254.38881234296565,
    "kurtosis": 2.809647153740965,
    "mse_network": 27.193735122680664,
@@ -2807,13 +3366,16 @@
    "mse_wiener_beta35_stationary": 16.340404510498047,
    "floor_predicted": 0.8985299993656438,
    "mse_interp": 44.01679554179697,
-   "nonlinearity": 0.06465388834476471
+   "nonlinearity": 0.06465388834476471,
+   "err_top5_gauss": 0.7615816593170166,
+   "err_top5_network": 0.5411328673362732
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -80.45,
    "beta": 4.9268971905400605,
+   "top_octave_excess": 0.8397614692080065,
    "rms_nT": 124.42550628706216,
    "kurtosis": 2.7394498120756103,
    "mse_network": 28.034683227539062,
@@ -2822,13 +3384,16 @@
    "mse_wiener_beta35_stationary": 6.076147079467773,
    "floor_predicted": 0.42993923535473955,
    "mse_interp": 58.70176836783046,
-   "nonlinearity": 0.05448289215564728
+   "nonlinearity": 0.05448289215564728,
+   "err_top5_gauss": 0.6712511777877808,
+   "err_top5_network": 0.5165154337882996
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -77.75,
    "beta": 2.6608442143845226,
+   "top_octave_excess": 0.20539609443716614,
    "rms_nT": 128.60900253453738,
    "kurtosis": 4.1151185642475845,
    "mse_network": 105.29113006591797,
@@ -2837,13 +3402,16 @@
    "mse_wiener_beta35_stationary": 30.280656814575195,
    "floor_predicted": 11.223864594060009,
    "mse_interp": 62.6862700382056,
-   "nonlinearity": 0.0942184180021286
+   "nonlinearity": 0.0942184180021286,
+   "err_top5_gauss": 0.6403775215148926,
+   "err_top5_network": 0.5231838226318359
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -75.05,
    "beta": 5.054591711363695,
+   "top_octave_excess": 0.6960079956379184,
    "rms_nT": 53.06331562036285,
    "kurtosis": 3.425924541124904,
    "mse_network": 65.88858795166016,
@@ -2852,13 +3420,16 @@
    "mse_wiener_beta35_stationary": 13.435441017150879,
    "floor_predicted": 0.3410591077490603,
    "mse_interp": 53.37619180806163,
-   "nonlinearity": 0.11974749714136124
+   "nonlinearity": 0.11974749714136124,
+   "err_top5_gauss": 0.7778408527374268,
+   "err_top5_network": 0.6079789996147156
   },
   {
    "region": "north_america",
    "lat": 37.46666666666667,
    "lon": -72.35,
    "beta": 6.410756491745823,
+   "top_octave_excess": 2.960907846201312,
    "rms_nT": 31.760478087967677,
    "kurtosis": 6.537505386524941,
    "mse_network": 15.328536033630371,
@@ -2867,13 +3438,16 @@
    "mse_wiener_beta35_stationary": 1.468709945678711,
    "floor_predicted": 0.12973762798579438,
    "mse_interp": 21.652209697858506,
-   "nonlinearity": 0.08127794414758682
+   "nonlinearity": 0.08127794414758682,
+   "err_top5_gauss": 0.5244499444961548,
+   "err_top5_network": 0.8679733276367188
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -120.85,
    "beta": 2.4179539692843117,
+   "top_octave_excess": 0.23336802769287873,
    "rms_nT": 160.6716616242602,
    "kurtosis": 3.449031288472298,
    "mse_network": 161.91685485839844,
@@ -2882,13 +3456,16 @@
    "mse_wiener_beta35_stationary": 54.17649459838867,
    "floor_predicted": 20.388757271311615,
    "mse_interp": 157.8429333839142,
-   "nonlinearity": 0.09360761195421219
+   "nonlinearity": 0.09360761195421219,
+   "err_top5_gauss": 0.5959456562995911,
+   "err_top5_network": 0.5656250715255737
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -118.08333333333334,
    "beta": 2.5624786890364275,
+   "top_octave_excess": 0.21466776988434905,
    "rms_nT": 47.409161754059134,
    "kurtosis": 3.590883755277596,
    "mse_network": 325.3284606933594,
@@ -2897,13 +3474,16 @@
    "mse_wiener_beta35_stationary": 105.0068588256836,
    "floor_predicted": 13.778910236450614,
    "mse_interp": 241.58237152825757,
-   "nonlinearity": 0.21000075340270996
+   "nonlinearity": 0.21000075340270996,
+   "err_top5_gauss": 0.5465317368507385,
+   "err_top5_network": 0.48932844400405884
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -115.31666666666666,
    "beta": 2.6882490606103246,
+   "top_octave_excess": 0.21021452895016587,
    "rms_nT": 27.131602239595498,
    "kurtosis": 3.687275536054403,
    "mse_network": 248.58837890625,
@@ -2912,13 +3492,16 @@
    "mse_wiener_beta35_stationary": 61.87286376953125,
    "floor_predicted": 11.255678516628238,
    "mse_interp": 165.74181471432243,
-   "nonlinearity": 0.17968091368675232
+   "nonlinearity": 0.17968091368675232,
+   "err_top5_gauss": 0.612902045249939,
+   "err_top5_network": 0.5998510122299194
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -112.55,
    "beta": 3.945716637836461,
+   "top_octave_excess": 0.20567188946577247,
    "rms_nT": 65.59170093419405,
    "kurtosis": 3.7483696356725447,
    "mse_network": 102.27387237548828,
@@ -2927,13 +3510,16 @@
    "mse_wiener_beta35_stationary": 12.659095764160156,
    "floor_predicted": 1.3592627558551136,
    "mse_interp": 68.60240311963658,
-   "nonlinearity": 0.14729979634284973
+   "nonlinearity": 0.14729979634284973,
+   "err_top5_gauss": 0.7212861180305481,
+   "err_top5_network": 0.6880899667739868
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -109.78333333333333,
    "beta": 5.084877369770402,
+   "top_octave_excess": 0.43380276009454805,
    "rms_nT": 109.12776023915615,
    "kurtosis": 3.4086993200323765,
    "mse_network": 41.45833206176758,
@@ -2942,13 +3528,16 @@
    "mse_wiener_beta35_stationary": 7.4913482666015625,
    "floor_predicted": 0.3394487507876857,
    "mse_interp": 52.03680528235214,
-   "nonlinearity": 0.11127301305532455
+   "nonlinearity": 0.11127301305532455,
+   "err_top5_gauss": 0.5713269710540771,
+   "err_top5_network": 0.5564669370651245
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -107.01666666666667,
    "beta": 3.6150674310491095,
+   "top_octave_excess": 0.3212258798056419,
    "rms_nT": 126.54999311894247,
    "kurtosis": 3.8043004232178728,
    "mse_network": 99.0497817993164,
@@ -2957,13 +3546,16 @@
    "mse_wiener_beta35_stationary": 35.02399444580078,
    "floor_predicted": 2.020768802192627,
    "mse_interp": 100.87712385993098,
-   "nonlinearity": 0.07496476918458939
+   "nonlinearity": 0.07496476918458939,
+   "err_top5_gauss": 0.5839786529541016,
+   "err_top5_network": 0.4313752055168152
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -104.25,
    "beta": 5.060078183646631,
+   "top_octave_excess": 0.46583124651219066,
    "rms_nT": 130.862786847134,
    "kurtosis": 3.2316350520290604,
    "mse_network": 62.26814270019531,
@@ -2972,13 +3564,16 @@
    "mse_wiener_beta35_stationary": 15.630154609680176,
    "floor_predicted": 0.3361776929332722,
    "mse_interp": 56.68744328570153,
-   "nonlinearity": 0.08340338617563248
+   "nonlinearity": 0.08340338617563248,
+   "err_top5_gauss": 0.6555026173591614,
+   "err_top5_network": 0.5440608859062195
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -101.48333333333333,
    "beta": 3.8076776767099707,
+   "top_octave_excess": 0.2833561881749423,
    "rms_nT": 127.11497945278842,
    "kurtosis": 4.21163156965425,
    "mse_network": 57.3565788269043,
@@ -2987,13 +3582,16 @@
    "mse_wiener_beta35_stationary": 13.628832817077637,
    "floor_predicted": 1.5046647671283893,
    "mse_interp": 61.34566724822022,
-   "nonlinearity": 0.07952209562063217
+   "nonlinearity": 0.07952209562063217,
+   "err_top5_gauss": 0.5925890803337097,
+   "err_top5_network": 0.592665433883667
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -98.71666666666667,
    "beta": 3.960458857299567,
+   "top_octave_excess": 0.24623674738222787,
    "rms_nT": 134.76597903012066,
    "kurtosis": 2.942997106104958,
    "mse_network": 51.771358489990234,
@@ -3002,13 +3600,16 @@
    "mse_wiener_beta35_stationary": 12.643570899963379,
    "floor_predicted": 1.0912903190388263,
    "mse_interp": 58.917308224959356,
-   "nonlinearity": 0.09174437820911407
+   "nonlinearity": 0.09174437820911407,
+   "err_top5_gauss": 0.5675678849220276,
+   "err_top5_network": 0.5459176301956177
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -95.95,
    "beta": 3.5348606026928975,
+   "top_octave_excess": 0.2855822224388425,
    "rms_nT": 174.48483951044514,
    "kurtosis": 3.6813195667173226,
    "mse_network": 64.41719818115234,
@@ -3017,13 +3618,16 @@
    "mse_wiener_beta35_stationary": 10.761650085449219,
    "floor_predicted": 2.393643676014634,
    "mse_interp": 66.85492283818594,
-   "nonlinearity": 0.09524115920066833
+   "nonlinearity": 0.09524115920066833,
+   "err_top5_gauss": 0.48191311955451965,
+   "err_top5_network": 0.5988970398902893
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -93.18333333333334,
    "beta": 3.5449318428948593,
+   "top_octave_excess": 0.23115766087771636,
    "rms_nT": 149.48228960872342,
    "kurtosis": 2.4211849018899496,
    "mse_network": 57.77008056640625,
@@ -3032,13 +3636,16 @@
    "mse_wiener_beta35_stationary": 23.009302139282227,
    "floor_predicted": 2.3760291235579856,
    "mse_interp": 74.93199684778462,
-   "nonlinearity": 0.06494918465614319
+   "nonlinearity": 0.06494918465614319,
+   "err_top5_gauss": 0.5895894765853882,
+   "err_top5_network": 0.467916339635849
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -90.41666666666667,
    "beta": 4.667186273686478,
+   "top_octave_excess": 0.3115613482677152,
    "rms_nT": 131.223861251518,
    "kurtosis": 2.5602319638995437,
    "mse_network": 52.98858642578125,
@@ -3047,13 +3654,16 @@
    "mse_wiener_beta35_stationary": 13.07806396484375,
    "floor_predicted": 0.5098007878558471,
    "mse_interp": 56.09856576287876,
-   "nonlinearity": 0.07914751023054123
+   "nonlinearity": 0.07914751023054123,
+   "err_top5_gauss": 0.524347722530365,
+   "err_top5_network": 0.5236124396324158
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -87.65,
    "beta": 5.905612538557735,
+   "top_octave_excess": 1.5560827550950478,
    "rms_nT": 95.18460945332465,
    "kurtosis": 3.1385751258371877,
    "mse_network": 41.64833068847656,
@@ -3062,13 +3672,16 @@
    "mse_wiener_beta35_stationary": 8.900038719177246,
    "floor_predicted": 0.18680294182519266,
    "mse_interp": 48.86145811168449,
-   "nonlinearity": 0.0648278221487999
+   "nonlinearity": 0.0648278221487999,
+   "err_top5_gauss": 0.6981658339500427,
+   "err_top5_network": 0.5561304688453674
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -84.88333333333334,
    "beta": 4.19636313811533,
+   "top_octave_excess": 0.37949581668677673,
    "rms_nT": 138.3532130330821,
    "kurtosis": 2.735866469172102,
    "mse_network": 123.72164154052734,
@@ -3077,13 +3690,16 @@
    "mse_wiener_beta35_stationary": 33.119510650634766,
    "floor_predicted": 0.8949767716197533,
    "mse_interp": 95.25324642651184,
-   "nonlinearity": 0.09825878590345383
+   "nonlinearity": 0.09825878590345383,
+   "err_top5_gauss": 0.7477495670318604,
+   "err_top5_network": 0.5965085625648499
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -82.11666666666666,
    "beta": 3.740512621952931,
+   "top_octave_excess": 0.40312009461596315,
    "rms_nT": 186.7477702082505,
    "kurtosis": 3.4903272770706324,
    "mse_network": 58.468353271484375,
@@ -3092,13 +3708,16 @@
    "mse_wiener_beta35_stationary": 13.704659461975098,
    "floor_predicted": 1.911834485241993,
    "mse_interp": 68.72547281762236,
-   "nonlinearity": 0.08932517468929291
+   "nonlinearity": 0.08932517468929291,
+   "err_top5_gauss": 0.6491320133209229,
+   "err_top5_network": 0.6314322352409363
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -79.35,
    "beta": 5.756260939399565,
+   "top_octave_excess": 1.3892850780591517,
    "rms_nT": 123.0876886375916,
    "kurtosis": 3.556655746591075,
    "mse_network": 17.689287185668945,
@@ -3107,13 +3726,16 @@
    "mse_wiener_beta35_stationary": 4.417792797088623,
    "floor_predicted": 0.20803597929700438,
    "mse_interp": 27.313133812691586,
-   "nonlinearity": 0.061678312718868256
+   "nonlinearity": 0.061678312718868256,
+   "err_top5_gauss": 0.7225129008293152,
+   "err_top5_network": 0.760597288608551
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -76.58333333333333,
    "beta": 3.125015887346406,
+   "top_octave_excess": 0.38362757470064207,
    "rms_nT": 132.2077728308861,
    "kurtosis": 3.6014597997087536,
    "mse_network": 62.464752197265625,
@@ -3122,13 +3744,16 @@
    "mse_wiener_beta35_stationary": 19.469995498657227,
    "floor_predicted": 5.541528889276795,
    "mse_interp": 58.60356803516174,
-   "nonlinearity": 0.07326283305883408
+   "nonlinearity": 0.07326283305883408,
+   "err_top5_gauss": 0.6213356256484985,
+   "err_top5_network": 0.5458583831787109
   },
   {
    "region": "north_america",
    "lat": 39.599999999999994,
    "lon": -73.81666666666666,
    "beta": 4.640056662159748,
+   "top_octave_excess": 0.4849514654141582,
    "rms_nT": 78.41912079770651,
    "kurtosis": 4.217954632373373,
    "mse_network": 34.28269958496094,
@@ -3137,13 +3762,16 @@
    "mse_wiener_beta35_stationary": 11.294602394104004,
    "floor_predicted": 0.5658014511950739,
    "mse_interp": 38.25153106685943,
-   "nonlinearity": 0.08043885231018066
+   "nonlinearity": 0.08043885231018066,
+   "err_top5_gauss": 0.7072086334228516,
+   "err_top5_network": 0.6831040382385254
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -120.7,
    "beta": 2.026930192602494,
+   "top_octave_excess": 0.176796249194288,
    "rms_nT": 98.77798917485389,
    "kurtosis": 3.804906236496663,
    "mse_network": 337.8315734863281,
@@ -3152,13 +3780,16 @@
    "mse_wiener_beta35_stationary": 128.37945556640625,
    "floor_predicted": 44.423059201734,
    "mse_interp": 249.95549512852884,
-   "nonlinearity": 0.1528092622756958
+   "nonlinearity": 0.1528092622756958,
+   "err_top5_gauss": 0.5311644077301025,
+   "err_top5_network": 0.425910085439682
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -117.83333333333334,
    "beta": 3.0460285191501635,
+   "top_octave_excess": 0.28211732199894507,
    "rms_nT": 84.20120726744733,
    "kurtosis": 3.343736085321316,
    "mse_network": 185.08428955078125,
@@ -3167,13 +3798,16 @@
    "mse_wiener_beta35_stationary": 43.79325866699219,
    "floor_predicted": 5.596935455972005,
    "mse_interp": 132.91917362879758,
-   "nonlinearity": 0.19110554456710815
+   "nonlinearity": 0.19110554456710815,
+   "err_top5_gauss": 0.5243381857872009,
+   "err_top5_network": 0.4518537223339081
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -114.96666666666667,
    "beta": 3.4127549840192346,
+   "top_octave_excess": 0.23643774193074749,
    "rms_nT": 70.83467126932285,
    "kurtosis": 4.72960599568516,
    "mse_network": 85.91583251953125,
@@ -3182,13 +3816,16 @@
    "mse_wiener_beta35_stationary": 27.190155029296875,
    "floor_predicted": 2.9732581432109733,
    "mse_interp": 73.15389095062667,
-   "nonlinearity": 0.11470817029476166
+   "nonlinearity": 0.11470817029476166,
+   "err_top5_gauss": 0.5863749384880066,
+   "err_top5_network": 0.5823066830635071
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -112.1,
    "beta": 4.251593110183282,
+   "top_octave_excess": 0.6022831082302919,
    "rms_nT": 55.083532140639434,
    "kurtosis": 3.076523595433205,
    "mse_network": 76.72217559814453,
@@ -3197,13 +3834,16 @@
    "mse_wiener_beta35_stationary": 14.976244926452637,
    "floor_predicted": 0.8140752788982596,
    "mse_interp": 71.68184567611262,
-   "nonlinearity": 0.13501282036304474
+   "nonlinearity": 0.13501282036304474,
+   "err_top5_gauss": 0.7075356841087341,
+   "err_top5_network": 0.776570737361908
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -109.23333333333333,
    "beta": 3.846738786444136,
+   "top_octave_excess": 0.37518452267485863,
    "rms_nT": 81.69495504238294,
    "kurtosis": 7.340654512432807,
    "mse_network": 133.7698211669922,
@@ -3212,13 +3852,16 @@
    "mse_wiener_beta35_stationary": 15.210843086242676,
    "floor_predicted": 1.4974415700786075,
    "mse_interp": 46.27769980140733,
-   "nonlinearity": 0.18561293184757233
+   "nonlinearity": 0.18561293184757233,
+   "err_top5_gauss": 0.8297222852706909,
+   "err_top5_network": 0.676692545413971
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -106.36666666666666,
    "beta": 2.6285088909129066,
+   "top_octave_excess": 0.20318979806722398,
    "rms_nT": 95.25738794399857,
    "kurtosis": 6.7235075145217955,
    "mse_network": 95.84500885009766,
@@ -3227,13 +3870,16 @@
    "mse_wiener_beta35_stationary": 24.65667152404785,
    "floor_predicted": 13.738904382390151,
    "mse_interp": 98.45363444759563,
-   "nonlinearity": 0.17547352612018585
+   "nonlinearity": 0.17547352612018585,
+   "err_top5_gauss": 0.7674219012260437,
+   "err_top5_network": 0.7274633646011353
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -103.5,
    "beta": 4.779503803143565,
+   "top_octave_excess": 0.941933917880478,
    "rms_nT": 92.61419152082324,
    "kurtosis": 3.6908308626457202,
    "mse_network": 116.64917755126953,
@@ -3242,13 +3888,16 @@
    "mse_wiener_beta35_stationary": 23.618261337280273,
    "floor_predicted": 0.44877522684256316,
    "mse_interp": 108.26910381173838,
-   "nonlinearity": 0.18232057988643646
+   "nonlinearity": 0.18232057988643646,
+   "err_top5_gauss": 0.7185198068618774,
+   "err_top5_network": 0.6586176156997681
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -100.63333333333334,
    "beta": 3.9779055184631527,
+   "top_octave_excess": 0.25630097461528384,
    "rms_nT": 111.11881608229626,
    "kurtosis": 3.5291662935657873,
    "mse_network": 110.02392578125,
@@ -3257,13 +3906,16 @@
    "mse_wiener_beta35_stationary": 15.252312660217285,
    "floor_predicted": 1.1148898355054813,
    "mse_interp": 73.6094982591756,
-   "nonlinearity": 0.11551789939403534
+   "nonlinearity": 0.11551789939403534,
+   "err_top5_gauss": 0.5323482155799866,
+   "err_top5_network": 0.7312172055244446
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -97.76666666666667,
    "beta": 3.586265758287954,
+   "top_octave_excess": 0.23128800531178878,
    "rms_nT": 149.63996139491138,
    "kurtosis": 2.737393356601043,
    "mse_network": 110.40567779541016,
@@ -3272,13 +3924,16 @@
    "mse_wiener_beta35_stationary": 28.23291015625,
    "floor_predicted": 2.11764908351933,
    "mse_interp": 89.30578844941756,
-   "nonlinearity": 0.20640574395656586
+   "nonlinearity": 0.20640574395656586,
+   "err_top5_gauss": 0.6388819217681885,
+   "err_top5_network": 0.551625669002533
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -94.9,
    "beta": 3.8581185869696757,
+   "top_octave_excess": 0.28510156244998935,
    "rms_nT": 191.3508996474034,
    "kurtosis": 2.3753160314445947,
    "mse_network": 70.28773498535156,
@@ -3287,13 +3942,16 @@
    "mse_wiener_beta35_stationary": 15.517788887023926,
    "floor_predicted": 1.3580782290930138,
    "mse_interp": 67.62142625824244,
-   "nonlinearity": 0.12813279032707214
+   "nonlinearity": 0.12813279032707214,
+   "err_top5_gauss": 0.5543419122695923,
+   "err_top5_network": 0.46926048398017883
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -92.03333333333333,
    "beta": 3.2888266604654826,
+   "top_octave_excess": 0.21573090292282257,
    "rms_nT": 186.7187557451664,
    "kurtosis": 5.004868693055205,
    "mse_network": 168.5806427001953,
@@ -3302,13 +3960,16 @@
    "mse_wiener_beta35_stationary": 43.13773727416992,
    "floor_predicted": 3.66507299991288,
    "mse_interp": 220.8766444095223,
-   "nonlinearity": 0.12073326855897903
+   "nonlinearity": 0.12073326855897903,
+   "err_top5_gauss": 0.7330124974250793,
+   "err_top5_network": 0.7068315148353577
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -80.56666666666666,
    "beta": 2.7524531789087097,
+   "top_octave_excess": 4.030358285304073,
    "rms_nT": 97.02326380333709,
    "kurtosis": 3.378912279989979,
    "mse_network": 123.11190795898438,
@@ -3317,13 +3978,16 @@
    "mse_wiener_beta35_stationary": 42.62857437133789,
    "floor_predicted": 8.967931491758113,
    "mse_interp": 84.32726949207074,
-   "nonlinearity": 0.09121719747781754
+   "nonlinearity": 0.09121719747781754,
+   "err_top5_gauss": 0.7218033671379089,
+   "err_top5_network": 0.5629845857620239
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -77.7,
    "beta": 4.898937156684188,
+   "top_octave_excess": 0.5429718330220441,
    "rms_nT": 140.4125973051596,
    "kurtosis": 2.802673008938823,
    "mse_network": 43.76506423950195,
@@ -3332,13 +3996,16 @@
    "mse_wiener_beta35_stationary": 11.581214904785156,
    "floor_predicted": 0.40650563551899427,
    "mse_interp": 39.744561127713986,
-   "nonlinearity": 0.09582427144050598
+   "nonlinearity": 0.09582427144050598,
+   "err_top5_gauss": 0.6301378011703491,
+   "err_top5_network": 0.48495402932167053
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -74.83333333333333,
    "beta": 4.007620192338982,
+   "top_octave_excess": 0.43520077197162127,
    "rms_nT": 110.67629926090608,
    "kurtosis": 3.4317685614987448,
    "mse_network": 93.5443115234375,
@@ -3347,13 +4014,16 @@
    "mse_wiener_beta35_stationary": 37.338600158691406,
    "floor_predicted": 1.1405423053175883,
    "mse_interp": 76.47797159689597,
-   "nonlinearity": 0.08899535238742828
+   "nonlinearity": 0.08899535238742828,
+   "err_top5_gauss": 0.7284140586853027,
+   "err_top5_network": 0.5192120671272278
   },
   {
    "region": "north_america",
    "lat": 41.73333333333332,
    "lon": -71.96666666666667,
    "beta": 2.5542133351965,
+   "top_octave_excess": 0.37232618924038097,
    "rms_nT": 85.72240957209293,
    "kurtosis": 4.832386726980067,
    "mse_network": 182.07568359375,
@@ -3362,13 +4032,16 @@
    "mse_wiener_beta35_stationary": 17.213930130004883,
    "floor_predicted": 14.146518512912273,
    "mse_interp": 64.03704595771438,
-   "nonlinearity": 0.0639212504029274
+   "nonlinearity": 0.0639212504029274,
+   "err_top5_gauss": 0.4793240427970886,
+   "err_top5_network": 0.8679121136665344
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -123.51666666666667,
    "beta": 3.1292407219235954,
+   "top_octave_excess": 0.26424270718750714,
    "rms_nT": 114.76595321490872,
    "kurtosis": 5.275023594355221,
    "mse_network": 100.08419036865234,
@@ -3377,13 +4050,16 @@
    "mse_wiener_beta35_stationary": 55.37638854980469,
    "floor_predicted": 5.109885988454974,
    "mse_interp": 99.76338618684436,
-   "nonlinearity": 0.101437509059906
+   "nonlinearity": 0.101437509059906,
+   "err_top5_gauss": 0.7041483521461487,
+   "err_top5_network": 0.5616872906684875
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -120.55,
    "beta": 2.5116613505660306,
+   "top_octave_excess": 0.2217655764953363,
    "rms_nT": 100.57890880886411,
    "kurtosis": 4.150229808215748,
    "mse_network": 301.5483703613281,
@@ -3392,13 +4068,16 @@
    "mse_wiener_beta35_stationary": 128.72662353515625,
    "floor_predicted": 16.911727378869184,
    "mse_interp": 215.1163681373849,
-   "nonlinearity": 0.14520253241062164
+   "nonlinearity": 0.14520253241062164,
+   "err_top5_gauss": 0.5791932344436646,
+   "err_top5_network": 0.44196006655693054
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -117.58333333333334,
    "beta": 2.58136268427075,
+   "top_octave_excess": 0.22949840123339302,
    "rms_nT": 117.27859453805277,
    "kurtosis": 4.074174589871653,
    "mse_network": 137.42214965820312,
@@ -3407,13 +4086,16 @@
    "mse_wiener_beta35_stationary": 37.27642822265625,
    "floor_predicted": 13.56732671224548,
    "mse_interp": 132.72565015023082,
-   "nonlinearity": 0.1463799774646759
+   "nonlinearity": 0.1463799774646759,
+   "err_top5_gauss": 0.4256226420402527,
+   "err_top5_network": 0.48644816875457764
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -114.61666666666666,
    "beta": 2.9263975667678626,
+   "top_octave_excess": 0.2530946693498813,
    "rms_nT": 64.58676756607706,
    "kurtosis": 3.4713051481991917,
    "mse_network": 196.9269561767578,
@@ -3422,13 +4104,16 @@
    "mse_wiener_beta35_stationary": 63.891971588134766,
    "floor_predicted": 7.622629050225709,
    "mse_interp": 144.72186563140608,
-   "nonlinearity": 0.14450348913669586
+   "nonlinearity": 0.14450348913669586,
+   "err_top5_gauss": 0.5256580114364624,
+   "err_top5_network": 0.4910878837108612
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -111.65,
    "beta": 2.6645714224852126,
+   "top_octave_excess": 0.20037933084420204,
    "rms_nT": 77.56056581092899,
    "kurtosis": 3.2903220050470314,
    "mse_network": 140.0758056640625,
@@ -3437,13 +4122,16 @@
    "mse_wiener_beta35_stationary": 33.277530670166016,
    "floor_predicted": 11.699476853901125,
    "mse_interp": 131.61827524025355,
-   "nonlinearity": 0.14716970920562744
+   "nonlinearity": 0.14716970920562744,
+   "err_top5_gauss": 0.5180098414421082,
+   "err_top5_network": 0.5613179206848145
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -108.68333333333334,
    "beta": 3.9094782979423934,
+   "top_octave_excess": 0.28535891304002564,
    "rms_nT": 115.51997308921644,
    "kurtosis": 4.087879622493472,
    "mse_network": 70.83295440673828,
@@ -3452,13 +4140,16 @@
    "mse_wiener_beta35_stationary": 27.32660484313965,
    "floor_predicted": 1.4468429278126298,
    "mse_interp": 91.77992501945953,
-   "nonlinearity": 0.11329471319913864
+   "nonlinearity": 0.11329471319913864,
+   "err_top5_gauss": 0.6980214715003967,
+   "err_top5_network": 0.5763623118400574
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -105.71666666666667,
    "beta": 4.5241408029164365,
+   "top_octave_excess": 0.4468490050443526,
    "rms_nT": 108.40190503538899,
    "kurtosis": 3.6106679389313676,
    "mse_network": 22.858736038208008,
@@ -3467,13 +4158,16 @@
    "mse_wiener_beta35_stationary": 6.2682037353515625,
    "floor_predicted": 0.6757765804293939,
    "mse_interp": 39.350648621874065,
-   "nonlinearity": 0.057785771787166595
+   "nonlinearity": 0.057785771787166595,
+   "err_top5_gauss": 0.6116575002670288,
+   "err_top5_network": 0.6171872019767761
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -102.75,
    "beta": 3.153330211829174,
+   "top_octave_excess": 0.19521866438038202,
    "rms_nT": 69.58924467280602,
    "kurtosis": 4.599894031881877,
    "mse_network": 152.1091766357422,
@@ -3482,13 +4176,16 @@
    "mse_wiener_beta35_stationary": 32.76629638671875,
    "floor_predicted": 4.3653968712431555,
    "mse_interp": 175.37526853162478,
-   "nonlinearity": 0.08551394939422607
+   "nonlinearity": 0.08551394939422607,
+   "err_top5_gauss": 0.7080382108688354,
+   "err_top5_network": 0.6529194712638855
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -99.78333333333333,
    "beta": 3.5479392358376742,
+   "top_octave_excess": 0.2354111835964412,
    "rms_nT": 117.32964943667977,
    "kurtosis": 7.859274120134361,
    "mse_network": 215.5199432373047,
@@ -3497,13 +4194,16 @@
    "mse_wiener_beta35_stationary": 61.2410888671875,
    "floor_predicted": 2.4515009431843793,
    "mse_interp": 159.7444850070773,
-   "nonlinearity": 0.13481073081493378
+   "nonlinearity": 0.13481073081493378,
+   "err_top5_gauss": 0.8919152021408081,
+   "err_top5_network": 0.8188982009887695
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -96.81666666666666,
    "beta": 3.389679896918779,
+   "top_octave_excess": 0.2401565577050286,
    "rms_nT": 158.08573219484833,
    "kurtosis": 4.006357911935221,
    "mse_network": 93.05191040039062,
@@ -3512,13 +4212,16 @@
    "mse_wiener_beta35_stationary": 26.813817977905273,
    "floor_predicted": 3.119235707766005,
    "mse_interp": 93.72653158283435,
-   "nonlinearity": 0.16827435791492462
+   "nonlinearity": 0.16827435791492462,
+   "err_top5_gauss": 0.710321843624115,
+   "err_top5_network": 0.6362323760986328
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -93.85,
    "beta": 4.039731007056139,
+   "top_octave_excess": 0.6066638380656556,
    "rms_nT": 249.66259066220587,
    "kurtosis": 3.566607340175709,
    "mse_network": 70.47513580322266,
@@ -3527,13 +4230,16 @@
    "mse_wiener_beta35_stationary": 11.919967651367188,
    "floor_predicted": 1.0948094160872943,
    "mse_interp": 33.76871202234639,
-   "nonlinearity": 0.11239579319953918
+   "nonlinearity": 0.11239579319953918,
+   "err_top5_gauss": 0.6563490033149719,
+   "err_top5_network": 0.5404208898544312
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -90.88333333333334,
    "beta": 2.1947978848853285,
+   "top_octave_excess": 0.3512872122530422,
    "rms_nT": 149.7624034856959,
    "kurtosis": 16.422418211980865,
    "mse_network": 199.1094970703125,
@@ -3542,13 +4248,16 @@
    "mse_wiener_beta35_stationary": 30.70654296875,
    "floor_predicted": 30.539930848751748,
    "mse_interp": 88.04368607032245,
-   "nonlinearity": 0.14583826065063477
+   "nonlinearity": 0.14583826065063477,
+   "err_top5_gauss": 0.5965403318405151,
+   "err_top5_network": 0.8115296363830566
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -87.91666666666667,
    "beta": 3.256615053584362,
+   "top_octave_excess": 0.3212440132637982,
    "rms_nT": 166.39016548053752,
    "kurtosis": 2.8603798794870716,
    "mse_network": 64.32434844970703,
@@ -3557,13 +4266,16 @@
    "mse_wiener_beta35_stationary": 26.113296508789062,
    "floor_predicted": 3.3884740366406234,
    "mse_interp": 70.70899760321882,
-   "nonlinearity": 0.1261189877986908
+   "nonlinearity": 0.1261189877986908,
+   "err_top5_gauss": 0.6173161864280701,
+   "err_top5_network": 0.571101188659668
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -84.95,
    "beta": 5.807836380489132,
+   "top_octave_excess": 2.1417529078751043,
    "rms_nT": 124.39056503556515,
    "kurtosis": 2.9785063464742647,
    "mse_network": 55.16998291015625,
@@ -3572,13 +4284,16 @@
    "mse_wiener_beta35_stationary": 5.795591831207275,
    "floor_predicted": 0.1917558893114465,
    "mse_interp": 52.56790870212939,
-   "nonlinearity": 0.07818570733070374
+   "nonlinearity": 0.07818570733070374,
+   "err_top5_gauss": 0.6112765669822693,
+   "err_top5_network": 0.762134850025177
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -81.98333333333333,
    "beta": 3.7774394468677013,
+   "top_octave_excess": 0.3676774447975785,
    "rms_nT": 150.9725615696958,
    "kurtosis": 4.360101057460139,
    "mse_network": 70.34119415283203,
@@ -3587,13 +4302,16 @@
    "mse_wiener_beta35_stationary": 13.644122123718262,
    "floor_predicted": 1.469877636894959,
    "mse_interp": 54.34436999342399,
-   "nonlinearity": 0.10989082604646683
+   "nonlinearity": 0.10989082604646683,
+   "err_top5_gauss": 0.6274874210357666,
+   "err_top5_network": 0.7430959343910217
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -79.01666666666667,
    "beta": 2.0626983169111495,
+   "top_octave_excess": 0.3020972752968632,
    "rms_nT": 100.59969073603088,
    "kurtosis": 3.3815010358063335,
    "mse_network": 292.9117736816406,
@@ -3602,13 +4320,16 @@
    "mse_wiener_beta35_stationary": 119.09646606445312,
    "floor_predicted": 39.66379295545028,
    "mse_interp": 210.5917889282056,
-   "nonlinearity": 0.13549377024173737
+   "nonlinearity": 0.13549377024173737,
+   "err_top5_gauss": 0.5895586609840393,
+   "err_top5_network": 0.4530912935733795
   },
   {
    "region": "north_america",
    "lat": 43.866666666666674,
    "lon": -73.08333333333333,
    "beta": 2.7215205888436875,
+   "top_octave_excess": 0.24450995348951163,
    "rms_nT": 146.86442899443065,
    "kurtosis": 6.9482567360200855,
    "mse_network": 125.26721954345703,
@@ -3617,13 +4338,16 @@
    "mse_wiener_beta35_stationary": 51.087799072265625,
    "floor_predicted": 11.23215708119019,
    "mse_interp": 112.96015269056409,
-   "nonlinearity": 0.1643225997686386
+   "nonlinearity": 0.1643225997686386,
+   "err_top5_gauss": 0.7486688494682312,
+   "err_top5_network": 0.7824273109436035
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -120.4,
    "beta": 2.3230628454137747,
+   "top_octave_excess": 0.27482545637441913,
    "rms_nT": 92.47846068728145,
    "kurtosis": 2.820738007298474,
    "mse_network": 222.9898681640625,
@@ -3632,13 +4356,16 @@
    "mse_wiener_beta35_stationary": 77.19536590576172,
    "floor_predicted": 24.037124821469604,
    "mse_interp": 168.4130343010722,
-   "nonlinearity": 0.14154289662837982
+   "nonlinearity": 0.14154289662837982,
+   "err_top5_gauss": 0.5682793855667114,
+   "err_top5_network": 0.49333637952804565
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -117.33333333333334,
    "beta": 2.6615274258487918,
+   "top_octave_excess": 0.31473394366077656,
    "rms_nT": 101.56652910088374,
    "kurtosis": 3.345225063590584,
    "mse_network": 164.5345001220703,
@@ -3647,13 +4374,16 @@
    "mse_wiener_beta35_stationary": 53.551116943359375,
    "floor_predicted": 12.256944449022882,
    "mse_interp": 141.54093720189584,
-   "nonlinearity": 0.12336608022451401
+   "nonlinearity": 0.12336608022451401,
+   "err_top5_gauss": 0.5085526704788208,
+   "err_top5_network": 0.49885883927345276
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -114.26666666666667,
    "beta": 3.3014714611983327,
+   "top_octave_excess": 0.33761518523524164,
    "rms_nT": 55.17184087205807,
    "kurtosis": 5.0986966555236926,
    "mse_network": 216.8987579345703,
@@ -3662,13 +4392,16 @@
    "mse_wiener_beta35_stationary": 68.4588851928711,
    "floor_predicted": 3.440349929050439,
    "mse_interp": 160.7917109649476,
-   "nonlinearity": 0.17181938886642456
+   "nonlinearity": 0.17181938886642456,
+   "err_top5_gauss": 0.6346269845962524,
+   "err_top5_network": 0.5943788886070251
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -111.2,
    "beta": 2.5020545977129687,
+   "top_octave_excess": 0.2265755111866721,
    "rms_nT": 98.4574177454012,
    "kurtosis": 5.861670557285279,
    "mse_network": 206.53468322753906,
@@ -3677,13 +4410,16 @@
    "mse_wiener_beta35_stationary": 70.74040985107422,
    "floor_predicted": 16.774117182913532,
    "mse_interp": 187.0588362840261,
-   "nonlinearity": 0.19646140933036804
+   "nonlinearity": 0.19646140933036804,
+   "err_top5_gauss": 0.6119375824928284,
+   "err_top5_network": 0.5790044665336609
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -108.13333333333334,
    "beta": 3.8176734986528618,
+   "top_octave_excess": 0.2643109853040217,
    "rms_nT": 135.14001289176952,
    "kurtosis": 8.166490510124014,
    "mse_network": 65.4892807006836,
@@ -3692,13 +4428,16 @@
    "mse_wiener_beta35_stationary": 14.823954582214355,
    "floor_predicted": 1.675891813631096,
    "mse_interp": 72.1180826122217,
-   "nonlinearity": 0.15153293311595917
+   "nonlinearity": 0.15153293311595917,
+   "err_top5_gauss": 0.7321711778640747,
+   "err_top5_network": 0.744712233543396
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -105.06666666666666,
    "beta": 4.365550724752661,
+   "top_octave_excess": 0.5584777074799099,
    "rms_nT": 117.67757294332543,
    "kurtosis": 6.11104630575012,
    "mse_network": 158.49209594726562,
@@ -3707,13 +4446,16 @@
    "mse_wiener_beta35_stationary": 33.165042877197266,
    "floor_predicted": 0.6714030019322138,
    "mse_interp": 125.34623952995446,
-   "nonlinearity": 0.11992079764604568
+   "nonlinearity": 0.11992079764604568,
+   "err_top5_gauss": 0.908277153968811,
+   "err_top5_network": 0.9013542532920837
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -102.0,
    "beta": 3.8619670875151795,
+   "top_octave_excess": 0.2742411016916427,
    "rms_nT": 110.88142951739604,
    "kurtosis": 2.8094055305064147,
    "mse_network": 58.56389236450195,
@@ -3722,13 +4464,16 @@
    "mse_wiener_beta35_stationary": 16.505367279052734,
    "floor_predicted": 1.4064057516007553,
    "mse_interp": 68.07700680711103,
-   "nonlinearity": 0.11038526147603989
+   "nonlinearity": 0.11038526147603989,
+   "err_top5_gauss": 0.6949140429496765,
+   "err_top5_network": 0.640540361404419
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -98.93333333333334,
    "beta": 2.9422524073493737,
+   "top_octave_excess": 0.05202743408561278,
    "rms_nT": 104.68198517359536,
    "kurtosis": 4.236158756747434,
    "mse_network": 218.9667205810547,
@@ -3737,13 +4482,16 @@
    "mse_wiener_beta35_stationary": 29.128503799438477,
    "floor_predicted": 7.185817299629662,
    "mse_interp": 97.47200190910986,
-   "nonlinearity": 0.12017221748828888
+   "nonlinearity": 0.12017221748828888,
+   "err_top5_gauss": 0.7010526657104492,
+   "err_top5_network": 0.7157675623893738
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -95.86666666666666,
    "beta": 2.919075137938247,
+   "top_octave_excess": 0.3680457537791525,
    "rms_nT": 129.90003125627828,
    "kurtosis": 4.092588554271036,
    "mse_network": 87.0723648071289,
@@ -3752,13 +4500,16 @@
    "mse_wiener_beta35_stationary": 22.758249282836914,
    "floor_predicted": 7.621325263212024,
    "mse_interp": 59.391798772085565,
-   "nonlinearity": 0.12386056035757065
+   "nonlinearity": 0.12386056035757065,
+   "err_top5_gauss": 0.5434667468070984,
+   "err_top5_network": 0.6037630438804626
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -92.8,
    "beta": 3.985019974207236,
+   "top_octave_excess": 1.0622755127585142,
    "rms_nT": 290.3450057070474,
    "kurtosis": 3.9107872486964745,
    "mse_network": 23.722436904907227,
@@ -3767,13 +4518,16 @@
    "mse_wiener_beta35_stationary": 9.968018531799316,
    "floor_predicted": 1.2330345305041572,
    "mse_interp": 36.51735656022741,
-   "nonlinearity": 0.07096303999423981
+   "nonlinearity": 0.07096303999423981,
+   "err_top5_gauss": 0.5475936532020569,
+   "err_top5_network": 0.5228390097618103
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -89.73333333333333,
    "beta": 2.5911303312975993,
+   "top_octave_excess": 0.22188804410004323,
    "rms_nT": 182.67807105429753,
    "kurtosis": 5.288429272990174,
    "mse_network": 154.29466247558594,
@@ -3782,13 +4536,16 @@
    "mse_wiener_beta35_stationary": 44.29206466674805,
    "floor_predicted": 14.917390642381832,
    "mse_interp": 109.55928626835227,
-   "nonlinearity": 0.11886774748563766
+   "nonlinearity": 0.11886774748563766,
+   "err_top5_gauss": 0.6591567993164062,
+   "err_top5_network": 0.5769125819206238
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -86.66666666666667,
    "beta": 1.9699011562773865,
+   "top_octave_excess": 0.37167073997369343,
    "rms_nT": 155.45835532602175,
    "kurtosis": 5.754391887979535,
    "mse_network": 304.7568664550781,
@@ -3797,13 +4554,16 @@
    "mse_wiener_beta35_stationary": 94.31214141845703,
    "floor_predicted": 47.36867743510677,
    "mse_interp": 173.07324349075625,
-   "nonlinearity": 0.1755407303571701
+   "nonlinearity": 0.1755407303571701,
+   "err_top5_gauss": 0.7945750951766968,
+   "err_top5_network": 0.7790603041648865
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -83.6,
    "beta": 3.3927015199593162,
+   "top_octave_excess": 0.3559419973171988,
    "rms_nT": 182.13312985211908,
    "kurtosis": 3.091860831173354,
    "mse_network": 72.0172348022461,
@@ -3812,13 +4572,16 @@
    "mse_wiener_beta35_stationary": 16.218738555908203,
    "floor_predicted": 2.755794841671543,
    "mse_interp": 56.30022572358001,
-   "nonlinearity": 0.16549937427043915
+   "nonlinearity": 0.16549937427043915,
+   "err_top5_gauss": 0.6204902529716492,
+   "err_top5_network": 0.6044563055038452
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -80.53333333333333,
    "beta": 2.89282610121951,
+   "top_octave_excess": 0.4482700908715503,
    "rms_nT": 185.38757387938875,
    "kurtosis": 28.536233976469155,
    "mse_network": 416.8589172363281,
@@ -3827,13 +4590,16 @@
    "mse_wiener_beta35_stationary": 41.187217712402344,
    "floor_predicted": 7.288408166404988,
    "mse_interp": 112.09192494018703,
-   "nonlinearity": 0.18913620710372925
+   "nonlinearity": 0.18913620710372925,
+   "err_top5_gauss": 0.7878945469856262,
+   "err_top5_network": 0.9426071643829346
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -77.46666666666667,
    "beta": 2.4587626796365263,
+   "top_octave_excess": 0.3060118617093349,
    "rms_nT": 83.43061769454509,
    "kurtosis": 3.7600986409188,
    "mse_network": 166.16929626464844,
@@ -3842,13 +4608,16 @@
    "mse_wiener_beta35_stationary": 73.83257293701172,
    "floor_predicted": 16.406521728714946,
    "mse_interp": 130.96224703751065,
-   "nonlinearity": 0.3563039302825928
+   "nonlinearity": 0.3563039302825928,
+   "err_top5_gauss": 0.6360405683517456,
+   "err_top5_network": 0.5379512310028076
   },
   {
    "region": "north_america",
    "lat": 46.0,
    "lon": -74.4,
    "beta": 1.9713981326508958,
+   "top_octave_excess": 0.4062292396059569,
    "rms_nT": 167.71661012862975,
    "kurtosis": 4.266652494310508,
    "mse_network": 216.8505401611328,
@@ -3857,13 +4626,16 @@
    "mse_wiener_beta35_stationary": 93.53211212158203,
    "floor_predicted": 48.240283987595774,
    "mse_interp": 152.002623502613,
-   "nonlinearity": 0.13636229932308197
+   "nonlinearity": 0.13636229932308197,
+   "err_top5_gauss": 0.5245054364204407,
+   "err_top5_network": 0.5112854242324829
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -123.4,
    "beta": 2.5906721776440857,
+   "top_octave_excess": 0.22097874933349107,
    "rms_nT": 76.77660497879282,
    "kurtosis": 3.3613752870236544,
    "mse_network": 82.56533813476562,
@@ -3872,13 +4644,16 @@
    "mse_wiener_beta35_stationary": 28.488245010375977,
    "floor_predicted": 14.019996326032178,
    "mse_interp": 87.13535600059565,
-   "nonlinearity": 0.1222202479839325
+   "nonlinearity": 0.1222202479839325,
+   "err_top5_gauss": 0.6004968881607056,
+   "err_top5_network": 0.535145103931427
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -120.2,
    "beta": 2.5844613675840664,
+   "top_octave_excess": 0.24207783083892687,
    "rms_nT": 88.81094141220963,
    "kurtosis": 4.551801426221407,
    "mse_network": 251.2512969970703,
@@ -3887,13 +4662,16 @@
    "mse_wiener_beta35_stationary": 89.75560760498047,
    "floor_predicted": 15.08293701519448,
    "mse_interp": 160.74997649398497,
-   "nonlinearity": 0.13286855816841125
+   "nonlinearity": 0.13286855816841125,
+   "err_top5_gauss": 0.620768129825592,
+   "err_top5_network": 0.6274521946907043
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -117.0,
    "beta": 2.5875664625254142,
+   "top_octave_excess": 0.3355048306307883,
    "rms_nT": 65.58974365351071,
    "kurtosis": 4.368526348124919,
    "mse_network": 218.564697265625,
@@ -3902,13 +4680,16 @@
    "mse_wiener_beta35_stationary": 93.87328338623047,
    "floor_predicted": 15.059088151582992,
    "mse_interp": 166.20592663405301,
-   "nonlinearity": 0.18008102476596832
+   "nonlinearity": 0.18008102476596832,
+   "err_top5_gauss": 0.5963609218597412,
+   "err_top5_network": 0.5513225197792053
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -113.8,
    "beta": 4.931686725001133,
+   "top_octave_excess": 0.9091407684750175,
    "rms_nT": 200.9993835442873,
    "kurtosis": 8.313243661030992,
    "mse_network": 79.43869018554688,
@@ -3917,13 +4698,16 @@
    "mse_wiener_beta35_stationary": 8.49008846282959,
    "floor_predicted": 0.4051986651381609,
    "mse_interp": 48.33372513447541,
-   "nonlinearity": 0.1268622875213623
+   "nonlinearity": 0.1268622875213623,
+   "err_top5_gauss": 0.7585848569869995,
+   "err_top5_network": 0.8182792067527771
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -110.6,
    "beta": 3.417041914976009,
+   "top_octave_excess": 0.16801254604271107,
    "rms_nT": 118.5817159080401,
    "kurtosis": 2.4942953529546936,
    "mse_network": 131.7195281982422,
@@ -3932,13 +4716,16 @@
    "mse_wiener_beta35_stationary": 35.79762268066406,
    "floor_predicted": 3.004272169172084,
    "mse_interp": 129.9821442470357,
-   "nonlinearity": 0.13347625732421875
+   "nonlinearity": 0.13347625732421875,
+   "err_top5_gauss": 0.6109212636947632,
+   "err_top5_network": 0.47367557883262634
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -107.4,
    "beta": 4.833777717467999,
+   "top_octave_excess": 0.22042248627362623,
    "rms_nT": 95.86064049906642,
    "kurtosis": 3.189465795374538,
    "mse_network": 73.9693832397461,
@@ -3947,13 +4734,16 @@
    "mse_wiener_beta35_stationary": 8.769615173339844,
    "floor_predicted": 0.44502791754127413,
    "mse_interp": 69.99746875466849,
-   "nonlinearity": 0.12885281443595886
+   "nonlinearity": 0.12885281443595886,
+   "err_top5_gauss": 0.5223589539527893,
+   "err_top5_network": 0.5259628891944885
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -104.2,
    "beta": 4.054415421533485,
+   "top_octave_excess": 0.14374043749514748,
    "rms_nT": 63.983361672005046,
    "kurtosis": 5.50266834161467,
    "mse_network": 85.67232513427734,
@@ -3962,13 +4752,16 @@
    "mse_wiener_beta35_stationary": 8.11532974243164,
    "floor_predicted": 0.9594956755599302,
    "mse_interp": 54.047770973227074,
-   "nonlinearity": 0.14317737519741058
+   "nonlinearity": 0.14317737519741058,
+   "err_top5_gauss": 0.6789143681526184,
+   "err_top5_network": 0.7257127165794373
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -101.0,
    "beta": 4.876145409753321,
+   "top_octave_excess": 0.1629045212142942,
    "rms_nT": 94.93647967796407,
    "kurtosis": 2.9730193164370355,
    "mse_network": 81.1926498413086,
@@ -3977,13 +4770,16 @@
    "mse_wiener_beta35_stationary": 9.222725868225098,
    "floor_predicted": 0.41424694673294554,
    "mse_interp": 61.15501112744954,
-   "nonlinearity": 0.1135769784450531
+   "nonlinearity": 0.1135769784450531,
+   "err_top5_gauss": 0.6003931760787964,
+   "err_top5_network": 0.688226580619812
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -97.8,
    "beta": 2.1582401560206286,
+   "top_octave_excess": 0.5030761435406402,
    "rms_nT": 99.85777224787688,
    "kurtosis": 6.133747589524025,
    "mse_network": 150.8826904296875,
@@ -3992,13 +4788,16 @@
    "mse_wiener_beta35_stationary": 44.88654708862305,
    "floor_predicted": 30.680872738531065,
    "mse_interp": 114.05314850126626,
-   "nonlinearity": 0.13587749004364014
+   "nonlinearity": 0.13587749004364014,
+   "err_top5_gauss": 0.698479950428009,
+   "err_top5_network": 0.7047833204269409
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -94.6,
    "beta": 1.7451681565625083,
+   "top_octave_excess": 0.19445751974952735,
    "rms_nT": 102.43255984689237,
    "kurtosis": 7.508378846719168,
    "mse_network": 306.9919128417969,
@@ -4007,13 +4806,16 @@
    "mse_wiener_beta35_stationary": 132.35862731933594,
    "floor_predicted": 80.74602247730868,
    "mse_interp": 237.88851613379168,
-   "nonlinearity": 0.16995815932750702
+   "nonlinearity": 0.16995815932750702,
+   "err_top5_gauss": 0.779859185218811,
+   "err_top5_network": 0.7577735781669617
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -88.2,
    "beta": 3.4105771481158307,
+   "top_octave_excess": 0.363109564976419,
    "rms_nT": 219.03887285227142,
    "kurtosis": 3.081160237030081,
    "mse_network": 78.3805160522461,
@@ -4022,13 +4824,16 @@
    "mse_wiener_beta35_stationary": 24.0635986328125,
    "floor_predicted": 2.8646422394522184,
    "mse_interp": 78.36622509520365,
-   "nonlinearity": 0.34808939695358276
+   "nonlinearity": 0.34808939695358276,
+   "err_top5_gauss": 0.7402889132499695,
+   "err_top5_network": 0.7435526847839355
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -85.0,
    "beta": 2.5236806156633564,
+   "top_octave_excess": 0.49081705670811476,
    "rms_nT": 157.90382629990523,
    "kurtosis": 10.021944126063485,
    "mse_network": 102.24787139892578,
@@ -4037,13 +4842,16 @@
    "mse_wiener_beta35_stationary": 18.754169464111328,
    "floor_predicted": 16.350629097337865,
    "mse_interp": 78.51434507396586,
-   "nonlinearity": 0.14043815433979034
+   "nonlinearity": 0.14043815433979034,
+   "err_top5_gauss": 0.7374176383018494,
+   "err_top5_network": 0.8708106875419617
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -81.8,
    "beta": 1.9324782983824094,
+   "top_octave_excess": 0.37676371824753885,
    "rms_nT": 76.69176288864438,
    "kurtosis": 4.2426571053555575,
    "mse_network": 325.5470886230469,
@@ -4052,13 +4860,16 @@
    "mse_wiener_beta35_stationary": 108.57563018798828,
    "floor_predicted": 56.52105298667297,
    "mse_interp": 215.21159387148577,
-   "nonlinearity": 0.22075393795967102
+   "nonlinearity": 0.22075393795967102,
+   "err_top5_gauss": 0.6052581667900085,
+   "err_top5_network": 0.5770668387413025
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -78.6,
    "beta": 2.0012132039487214,
+   "top_octave_excess": 0.24823433565765568,
    "rms_nT": 98.821020825428,
    "kurtosis": 4.445917295644661,
    "mse_network": 186.8740234375,
@@ -4067,13 +4878,16 @@
    "mse_wiener_beta35_stationary": 68.50545501708984,
    "floor_predicted": 49.94323956752904,
    "mse_interp": 118.67807887993183,
-   "nonlinearity": 0.2021399289369583
+   "nonlinearity": 0.2021399289369583,
+   "err_top5_gauss": 0.6545659303665161,
+   "err_top5_network": 0.5623277425765991
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -75.4,
    "beta": 2.9039787009646063,
+   "top_octave_excess": 0.427142274963722,
    "rms_nT": 119.63489944848946,
    "kurtosis": 5.594958669329139,
    "mse_network": 143.6186981201172,
@@ -4082,13 +4896,16 @@
    "mse_wiener_beta35_stationary": 33.22287368774414,
    "floor_predicted": 7.342518498419641,
    "mse_interp": 88.7328880466978,
-   "nonlinearity": 0.134363055229187
+   "nonlinearity": 0.134363055229187,
+   "err_top5_gauss": 0.5322903394699097,
+   "err_top5_network": 0.6410914063453674
   },
   {
    "region": "north_america",
    "lat": 48.133333333333326,
    "lon": -72.2,
    "beta": 1.8859002391158446,
+   "top_octave_excess": 0.28156317365694117,
    "rms_nT": 169.58968234646287,
    "kurtosis": 4.02308166835929,
    "mse_network": 325.8011474609375,
@@ -4097,13 +4914,16 @@
    "mse_wiener_beta35_stationary": 110.20401000976562,
    "floor_predicted": 55.529531843708604,
    "mse_interp": 201.61533232786005,
-   "nonlinearity": 0.17855794727802277
+   "nonlinearity": 0.17855794727802277,
+   "err_top5_gauss": 0.4748322665691376,
+   "err_top5_network": 0.476659893989563
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -120.0,
    "beta": 1.8880823156057849,
+   "top_octave_excess": 0.3089737175878592,
    "rms_nT": 100.3454521882279,
    "kurtosis": 3.4893288637764264,
    "mse_network": 191.07867431640625,
@@ -4112,13 +4932,16 @@
    "mse_wiener_beta35_stationary": 88.93499755859375,
    "floor_predicted": 55.061510362466436,
    "mse_interp": 194.4445056049528,
-   "nonlinearity": 0.177543506026268
+   "nonlinearity": 0.177543506026268,
+   "err_top5_gauss": 0.548121452331543,
+   "err_top5_network": 0.4628105163574219
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -116.66666666666666,
    "beta": 2.8449561074470573,
+   "top_octave_excess": 0.5039106349370331,
    "rms_nT": 63.34031284594461,
    "kurtosis": 6.781778328929335,
    "mse_network": 154.41810607910156,
@@ -4127,13 +4950,16 @@
    "mse_wiener_beta35_stationary": 56.166259765625,
    "floor_predicted": 8.752228707973126,
    "mse_interp": 125.5423662571316,
-   "nonlinearity": 0.14292407035827637
+   "nonlinearity": 0.14292407035827637,
+   "err_top5_gauss": 0.7316258549690247,
+   "err_top5_network": 0.7386304140090942
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -113.33333333333333,
    "beta": 5.013481351846607,
+   "top_octave_excess": 0.6463267657230134,
    "rms_nT": 112.52357403933209,
    "kurtosis": 2.9014135136604797,
    "mse_network": 34.86442947387695,
@@ -4142,13 +4968,16 @@
    "mse_wiener_beta35_stationary": 4.98704195022583,
    "floor_predicted": 0.38271750865217563,
    "mse_interp": 33.919753937998564,
-   "nonlinearity": 0.11353855580091476
+   "nonlinearity": 0.11353855580091476,
+   "err_top5_gauss": 0.5234361886978149,
+   "err_top5_network": 0.5093626379966736
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -110.0,
    "beta": 3.9089925527164744,
+   "top_octave_excess": 0.4367964459714569,
    "rms_nT": 130.48060227586427,
    "kurtosis": 3.0942626040704617,
    "mse_network": 67.78179931640625,
@@ -4157,13 +4986,16 @@
    "mse_wiener_beta35_stationary": 13.317771911621094,
    "floor_predicted": 1.3532067787664825,
    "mse_interp": 66.38458575410004,
-   "nonlinearity": 0.07926706969738007
+   "nonlinearity": 0.07926706969738007,
+   "err_top5_gauss": 0.51790851354599,
+   "err_top5_network": 0.4774303734302521
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -106.66666666666667,
    "beta": 3.8517633888616687,
+   "top_octave_excess": 0.36505811701402857,
    "rms_nT": 112.5914190547564,
    "kurtosis": 3.257899221780129,
    "mse_network": 67.94989013671875,
@@ -4172,13 +5004,16 @@
    "mse_wiener_beta35_stationary": 11.562492370605469,
    "floor_predicted": 1.2587137763552574,
    "mse_interp": 48.07771059765087,
-   "nonlinearity": 0.10579358786344528
+   "nonlinearity": 0.10579358786344528,
+   "err_top5_gauss": 0.5230109691619873,
+   "err_top5_network": 0.48712730407714844
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -103.33333333333333,
    "beta": 3.4189717552768983,
+   "top_octave_excess": 0.2774690115067238,
    "rms_nT": 102.09853773659385,
    "kurtosis": 5.346305463944894,
    "mse_network": 109.52217864990234,
@@ -4187,13 +5022,16 @@
    "mse_wiener_beta35_stationary": 19.842119216918945,
    "floor_predicted": 2.896671545602427,
    "mse_interp": 105.56983213337715,
-   "nonlinearity": 0.0997951477766037
+   "nonlinearity": 0.0997951477766037,
+   "err_top5_gauss": 0.6004784107208252,
+   "err_top5_network": 0.5649168491363525
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -100.0,
    "beta": 2.168735899655963,
+   "top_octave_excess": 0.1706402731029444,
    "rms_nT": 149.57616194447326,
    "kurtosis": 13.142991192364137,
    "mse_network": 344.5963439941406,
@@ -4202,13 +5040,16 @@
    "mse_wiener_beta35_stationary": 100.14337158203125,
    "floor_predicted": 31.9429925518322,
    "mse_interp": 194.04218725508485,
-   "nonlinearity": 0.22982686758041382
+   "nonlinearity": 0.22982686758041382,
+   "err_top5_gauss": 0.8279617428779602,
+   "err_top5_network": 0.847557783126831
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -96.66666666666667,
    "beta": 2.9324762278757,
+   "top_octave_excess": 0.36794238596462087,
    "rms_nT": 138.83009879435062,
    "kurtosis": 4.0484517970501495,
    "mse_network": 93.49874877929688,
@@ -4217,13 +5058,16 @@
    "mse_wiener_beta35_stationary": 41.347835540771484,
    "floor_predicted": 7.732254343375996,
    "mse_interp": 93.68367012188457,
-   "nonlinearity": 0.26350897550582886
+   "nonlinearity": 0.26350897550582886,
+   "err_top5_gauss": 0.6719015836715698,
+   "err_top5_network": 0.570188045501709
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -93.33333333333333,
    "beta": 2.817394423136242,
+   "top_octave_excess": 0.5696857397470547,
    "rms_nT": 144.17413929908116,
    "kurtosis": 3.5386619363747998,
    "mse_network": 159.88954162597656,
@@ -4232,13 +5076,16 @@
    "mse_wiener_beta35_stationary": 49.32258605957031,
    "floor_predicted": 9.547063334648913,
    "mse_interp": 116.40643884154885,
-   "nonlinearity": 0.1417911946773529
+   "nonlinearity": 0.1417911946773529,
+   "err_top5_gauss": 0.6296645402908325,
+   "err_top5_network": 0.6753353476524353
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -90.0,
    "beta": 1.7871201473488432,
+   "top_octave_excess": 0.23347597944113457,
    "rms_nT": 162.67701790539874,
    "kurtosis": 29.0381834750672,
    "mse_network": 805.8687133789062,
@@ -4247,13 +5094,16 @@
    "mse_wiener_beta35_stationary": 369.4757080078125,
    "floor_predicted": 70.71304815405112,
    "mse_interp": 480.1630066760531,
-   "nonlinearity": 0.19596298038959503
+   "nonlinearity": 0.19596298038959503,
+   "err_top5_gauss": 0.9388343691825867,
+   "err_top5_network": 0.9152300953865051
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -86.66666666666667,
    "beta": 1.8550651371790283,
+   "top_octave_excess": 0.3585448478998683,
    "rms_nT": 106.1733233300653,
    "kurtosis": 12.902899442583319,
    "mse_network": 296.43548583984375,
@@ -4262,13 +5112,16 @@
    "mse_wiener_beta35_stationary": 60.54953384399414,
    "floor_predicted": 56.521878750361346,
    "mse_interp": 155.5596908830182,
-   "nonlinearity": 0.2704108655452728
+   "nonlinearity": 0.2704108655452728,
+   "err_top5_gauss": 0.8196346759796143,
+   "err_top5_network": 0.862757682800293
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -83.33333333333333,
    "beta": 2.6695748845729086,
+   "top_octave_excess": 0.45852976191250744,
    "rms_nT": 145.2323707955504,
    "kurtosis": 7.395196604564303,
    "mse_network": 401.6427307128906,
@@ -4277,13 +5130,16 @@
    "mse_wiener_beta35_stationary": 60.7114143371582,
    "floor_predicted": 10.90148133730264,
    "mse_interp": 133.82156504590773,
-   "nonlinearity": 0.2776957154273987
+   "nonlinearity": 0.2776957154273987,
+   "err_top5_gauss": 0.8295681476593018,
+   "err_top5_network": 0.8982619643211365
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -76.66666666666667,
    "beta": 2.161201213012278,
+   "top_octave_excess": 0.44999461856483974,
    "rms_nT": 87.15999672930496,
    "kurtosis": 7.770634335989274,
    "mse_network": 275.7635803222656,
@@ -4292,13 +5148,16 @@
    "mse_wiener_beta35_stationary": 105.7509536743164,
    "floor_predicted": 30.742792504790106,
    "mse_interp": 363.32390103413536,
-   "nonlinearity": 0.20390534400939941
+   "nonlinearity": 0.20390534400939941,
+   "err_top5_gauss": 0.6662469506263733,
+   "err_top5_network": 0.7128169536590576
   },
   {
    "region": "north_america",
    "lat": 50.26666666666668,
    "lon": -73.33333333333333,
    "beta": 2.399769375744885,
+   "top_octave_excess": 0.43743113811615153,
    "rms_nT": 117.07929032757225,
    "kurtosis": 5.551412672333073,
    "mse_network": 134.77711486816406,
@@ -4307,13 +5166,16 @@
    "mse_wiener_beta35_stationary": 93.58868408203125,
    "floor_predicted": 20.633095196997264,
    "mse_interp": 145.21296050822625,
-   "nonlinearity": 0.14638780057430267
+   "nonlinearity": 0.14638780057430267,
+   "err_top5_gauss": 0.8321840167045593,
+   "err_top5_network": 0.7519721388816833
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -123.25,
    "beta": 2.938450249282626,
+   "top_octave_excess": 0.7496949183693492,
    "rms_nT": 61.730422947781165,
    "kurtosis": 4.098144786622871,
    "mse_network": 70.16753387451172,
@@ -4322,13 +5184,16 @@
    "mse_wiener_beta35_stationary": 14.039555549621582,
    "floor_predicted": 7.2895976179581785,
    "mse_interp": 91.9459378399877,
-   "nonlinearity": 0.10284414887428284
+   "nonlinearity": 0.10284414887428284,
+   "err_top5_gauss": 0.5881661772727966,
+   "err_top5_network": 0.6797882318496704
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -119.75,
    "beta": 1.9609043062293403,
+   "top_octave_excess": 0.5837121427089124,
    "rms_nT": 68.98333961974606,
    "kurtosis": 9.648608648701359,
    "mse_network": 91.1404800415039,
@@ -4337,13 +5202,16 @@
    "mse_wiener_beta35_stationary": 38.064151763916016,
    "floor_predicted": 43.76505789562316,
    "mse_interp": 66.60028031514331,
-   "nonlinearity": 0.09759891033172607
+   "nonlinearity": 0.09759891033172607,
+   "err_top5_gauss": 0.8322200179100037,
+   "err_top5_network": 0.815797746181488
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -116.25,
    "beta": 6.17063376669491,
+   "top_octave_excess": 1.8789288919716525,
    "rms_nT": 74.9082862692823,
    "kurtosis": 2.8996724447961557,
    "mse_network": 19.84648323059082,
@@ -4352,13 +5220,16 @@
    "mse_wiener_beta35_stationary": 3.3629367351531982,
    "floor_predicted": 0.15569903498493173,
    "mse_interp": 26.56698155035159,
-   "nonlinearity": 0.08541492372751236
+   "nonlinearity": 0.08541492372751236,
+   "err_top5_gauss": 0.632399320602417,
+   "err_top5_network": 0.59272700548172
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -112.75,
    "beta": 2.9228465417964102,
+   "top_octave_excess": 0.2813170910825614,
    "rms_nT": 68.6309675536682,
    "kurtosis": 4.080143138116232,
    "mse_network": 106.8857192993164,
@@ -4367,13 +5238,16 @@
    "mse_wiener_beta35_stationary": 21.84821128845215,
    "floor_predicted": 7.655677664243503,
    "mse_interp": 69.34405738051125,
-   "nonlinearity": 0.13173222541809082
+   "nonlinearity": 0.13173222541809082,
+   "err_top5_gauss": 0.6131065487861633,
+   "err_top5_network": 0.5204123258590698
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -109.25,
    "beta": 3.6340257369620157,
+   "top_octave_excess": 0.3806088952857687,
    "rms_nT": 152.69014661687692,
    "kurtosis": 3.9101842220019174,
    "mse_network": 117.53487396240234,
@@ -4382,13 +5256,16 @@
    "mse_wiener_beta35_stationary": 18.889150619506836,
    "floor_predicted": 2.0158285053980394,
    "mse_interp": 82.91521694763003,
-   "nonlinearity": 0.13392658531665802
+   "nonlinearity": 0.13392658531665802,
+   "err_top5_gauss": 0.499272882938385,
+   "err_top5_network": 0.5069682598114014
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -105.75,
    "beta": 3.3434842713581494,
+   "top_octave_excess": 0.705836513018063,
    "rms_nT": 224.03722788757096,
    "kurtosis": 3.4498155154685533,
    "mse_network": 56.13093948364258,
@@ -4397,13 +5274,16 @@
    "mse_wiener_beta35_stationary": 20.56730842590332,
    "floor_predicted": 3.3559148848504012,
    "mse_interp": 68.94511693470521,
-   "nonlinearity": 0.1288355588912964
+   "nonlinearity": 0.1288355588912964,
+   "err_top5_gauss": 0.737007200717926,
+   "err_top5_network": 0.6768964529037476
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -102.25,
    "beta": 2.1996539200951135,
+   "top_octave_excess": 0.42532615059502704,
    "rms_nT": 153.86027298592245,
    "kurtosis": 3.8349995154055114,
    "mse_network": 165.94993591308594,
@@ -4412,13 +5292,16 @@
    "mse_wiener_beta35_stationary": 56.60826110839844,
    "floor_predicted": 31.893228304686108,
    "mse_interp": 150.55404211398,
-   "nonlinearity": 0.09987969696521759
+   "nonlinearity": 0.09987969696521759,
+   "err_top5_gauss": 0.637134850025177,
+   "err_top5_network": 0.5143501162528992
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -98.75,
    "beta": 2.3440073592119974,
+   "top_octave_excess": 0.3346675420068516,
    "rms_nT": 155.6685326483939,
    "kurtosis": 3.5145992726115693,
    "mse_network": 86.7762451171875,
@@ -4427,13 +5310,16 @@
    "mse_wiener_beta35_stationary": 17.22711753845215,
    "floor_predicted": 26.401397861022534,
    "mse_interp": 57.45354945868414,
-   "nonlinearity": 0.1633959412574768
+   "nonlinearity": 0.1633959412574768,
+   "err_top5_gauss": 0.5036704540252686,
+   "err_top5_network": 0.6397734880447388
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -95.25,
    "beta": 2.4995668911073845,
+   "top_octave_excess": 0.45956630913920066,
    "rms_nT": 123.94869095248963,
    "kurtosis": 4.522433706780706,
    "mse_network": 107.3622055053711,
@@ -4442,13 +5328,16 @@
    "mse_wiener_beta35_stationary": 33.30928421020508,
    "floor_predicted": 17.245848507038616,
    "mse_interp": 102.68345868295648,
-   "nonlinearity": 0.12187360972166061
+   "nonlinearity": 0.12187360972166061,
+   "err_top5_gauss": 0.6174455285072327,
+   "err_top5_network": 0.5768066644668579
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -91.75,
    "beta": 2.0609552761291665,
+   "top_octave_excess": 0.3393630411283542,
    "rms_nT": 156.3081352000834,
    "kurtosis": 11.731875886289092,
    "mse_network": 551.31298828125,
@@ -4457,13 +5346,16 @@
    "mse_wiener_beta35_stationary": 221.9976806640625,
    "floor_predicted": 39.0175978853054,
    "mse_interp": 327.8650520809194,
-   "nonlinearity": 0.24030081927776337
+   "nonlinearity": 0.24030081927776337,
+   "err_top5_gauss": 0.774078905582428,
+   "err_top5_network": 0.7670877575874329
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -88.25,
    "beta": 1.7002275124094812,
+   "top_octave_excess": 0.2737940761372532,
    "rms_nT": 91.05786615297417,
    "kurtosis": 11.45326679970367,
    "mse_network": 564.8430786132812,
@@ -4472,13 +5364,16 @@
    "mse_wiener_beta35_stationary": 252.9232635498047,
    "floor_predicted": 82.44107099912364,
    "mse_interp": 399.68861948578024,
-   "nonlinearity": 0.2679385542869568
+   "nonlinearity": 0.2679385542869568,
+   "err_top5_gauss": 0.8509529829025269,
+   "err_top5_network": 0.8393006324768066
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -84.75,
    "beta": 2.72581021534722,
+   "top_octave_excess": 0.6495725133555845,
    "rms_nT": 65.57522517530565,
    "kurtosis": 4.062237938446856,
    "mse_network": 109.41771697998047,
@@ -4487,13 +5382,16 @@
    "mse_wiener_beta35_stationary": 51.74273681640625,
    "floor_predicted": 10.847935604105507,
    "mse_interp": 98.49184372306956,
-   "nonlinearity": 0.3011898398399353
+   "nonlinearity": 0.3011898398399353,
+   "err_top5_gauss": 0.6210578083992004,
+   "err_top5_network": 0.49865037202835083
   },
   {
    "region": "north_america",
    "lat": 52.400000000000006,
    "lon": -74.25,
    "beta": 2.2005390601954025,
+   "top_octave_excess": 0.44141150486514164,
    "rms_nT": 69.81283957834748,
    "kurtosis": 4.714356397291049,
    "mse_network": 277.6395263671875,
@@ -4502,13 +5400,19 @@
    "mse_wiener_beta35_stationary": 76.53157806396484,
    "floor_predicted": 32.23867809521619,
    "mse_interp": 169.8335574480494,
-   "nonlinearity": 0.20242320001125336
+   "nonlinearity": 0.20242320001125336,
+   "err_top5_gauss": 0.5573664903640747,
+   "err_top5_network": 0.6304606199264526
   }
  ],
  "summary": {
   "australia": {
    "tiles": 128,
    "nonlinearity_median": 0.1091424897313118,
+   "err_top5_gauss_median": 0.6486105620861053,
+   "err_top5_network_median": 0.6413316428661346,
+   "top_octave_excess_median": 0.37165618477859386,
+   "top_octave_excess_q90": 0.7270920370589904,
    "frac_beta_clipped": 0.0390625,
    "beta_median": 2.9295718379892817,
    "beta_q10": 1.725631245367307,
@@ -4530,6 +5434,10 @@
   "north_america": {
    "tiles": 172,
    "nonlinearity_median": 0.12427758052945137,
+   "err_top5_gauss_median": 0.6185846924781799,
+   "err_top5_network_median": 0.5998347699642181,
+   "top_octave_excess_median": 0.2992403194978402,
+   "top_octave_excess_q90": 0.7453090778342208,
    "frac_beta_clipped": 0.01744186046511628,
    "beta_median": 3.544043068203005,
    "beta_q10": 2.195283488406307,
@@ -4551,6 +5459,10 @@
   "all": {
    "tiles": 300,
    "nonlinearity_median": 0.11695203930139542,
+   "err_top5_gauss_median": 0.6300923824310303,
+   "err_top5_network_median": 0.6264230012893677,
+   "top_octave_excess_median": 0.331292593178819,
+   "top_octave_excess_q90": 0.7451161677080959,
    "frac_beta_clipped": 0.02666666666666667,
    "beta_median": 3.3389351055060814,
    "beta_q10": 2.0190134263901363,

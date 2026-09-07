@@ -201,7 +201,7 @@ For comparison the 5M model trained on sampled targets with one fixed mask reach
 
 Medians over tiles; MSE in nT^2 after rescaling each tile to the training amplitude. Gaussian / own floor is the realised error of the exact estimator for the tile's fitted beta divided by the floor it predicts for itself; on Gaussian tiles this is about 1.1 (calibration below). Fitted slopes outside [1.5, 6.5] use the prior at the boundary. The mixing-test nonlinearity is |f(0.5 y1 + 0.5 y2) - 0.5 f(y1) - 0.5 f(y2)| / |0.5 f(y1) + 0.5 f(y2)| on hidden pixels for consecutive tiles under one mask; the synthetic table gives the same quantity on Gaussian tiles.
 
-Tile kurtosis: median 4.0, 90th percentile 8.3 (3 for a Gaussian field). Top-octave excess (power above 24 cycles per tile relative to the fitted power law): median nan, 90th percentile nan (1 for a power law). Network / Gaussian (beta 3.5) by kurtosis bin:
+Tile kurtosis: median 4.0, 90th percentile 8.3 (3 for a Gaussian field). Top-octave excess (power above 24 cycles per tile relative to the fitted power law): median 0.33, 90th percentile 0.75 (1 for a power law). Network / Gaussian (beta 3.5) by kurtosis bin:
 
 | kurtosis | tiles | network / Gaussian (3.5) median |
 |---|---|---|
@@ -233,7 +233,7 @@ Calibration on seamless Gaussian tiles at the same equivalent altitude:
 
 | evaluation | model | regions | tiles | network MSE | Gaussian (beta 3.5) | interpolation | network / Gaussian | beats interpolation | beats Gaussian | nonlinearity | error in worst 5% (network / Gaussian) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| base | vitxxl_b3.5_hmix_D131072_s0_noalt | australia, north_america | 300 | 79.8 | 18.4 | 69.3 | 3.88 | 0.38 | 0.06 | 0.117 | nan / nan |
+| base | vitxxl_b3.5_hmix_D131072_s0_noalt | australia, north_america | 300 | 79.8 | 18.4 | 69.3 | 3.88 | 0.38 | 0.06 | 0.117 | 0.63 / 0.63 |
 | base_eu_za | vitxxl_b3.5_hmix_D131072_s0_noalt | europe, southern_africa | 158 | 71.7 | 12.4 | 57.3 | 4.86 | 0.39 | 0.05 | 0.119 | 0.63 / 0.62 |
 | ft_aus | vitxxl_finetune_australia | north_america | 172 | 35.0 | 21.8 | 81.8 | 1.54 | 0.99 | 0.29 | 0.038 | nan / nan |
 | ft_ausna | vitxxl_finetune_ausna | europe, southern_africa | 158 | 17.7 | 12.4 | 57.3 | 1.47 | 0.99 | 0.48 | 0.056 | 0.61 / 0.62 |

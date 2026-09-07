@@ -219,9 +219,62 @@ def altitude_difficulty(out):
     fig.tight_layout(); fig.savefig(out, dpi=130); plt.close(fig)
 
 
+def extension(out):
+    """Part F in one figure: the ratio to the Gaussian estimator across the models evaluated on
+    the same real tiles, the per-tile picture before and after, and the tail statistics the
+    generator was built to match."""
+    import numpy as np
+    order = [("emag2.json", "v1, 14k\n(submitted)"), ("emag2_gen1_24k.json", "v1, 24k"), ("emag2_gen2_5M.json", "v2, 5M\n8k"),
+             ("emag2_gen2.json", "v2, 24k"), ("emag2_gen2_72k.json", "v2, 72k"),
+             ("emag2_ft_aus.json", "tuned AU\ntest NA"), ("emag2_ft_na.json", "tuned NA\ntest AU"), ("emag2_ft_ausna.json", "tuned AU+NA\ntest EU+ZA")]
+    rows = [(lab, json.load(open("results/" + f))) for f, lab in order if os.path.exists("results/" + f)]
+    if len(rows) < 2:
+        print("extension figure needs the tagged EMAG2 results"); return
+    fig, ax = plt.subplots(1, 3, figsize=(16, 4.4))
+    labs = [r[0] for r in rows]; s = [r[1]["summary"]["all"] for r in rows]
+    x = np.arange(len(rows))
+    cols = ["#9e9e9e" if "v1" in l else "#0b5c5c" if "v2" in l else "#b04a2e" for l in labs]
+    ax[0].bar(x, [v["network_over_wiener_beta35_median"] for v in s], color=cols)
+    ax[0].axhline(1.0, color="k", lw=1, ls="--")
+    for i, v in enumerate(s):
+        ax[0].text(i, v["network_over_wiener_beta35_median"] + 0.05, f"{v['frac_network_beats_interp']*100:.0f}%", ha="center", fontsize=8)
+    ax[0].set_xticks(x); ax[0].set_xticklabels(labs, fontsize=7.5); ax[0].set_ylabel("network error / Gaussian estimator (beta 3.5), median over tiles")
+    ax[0].set_title("real EMAG2 tiles; the number above each bar is the fraction of tiles where\nthe network beats interpolation; grey synthetic Gaussian, teal synthetic with tails, red fine-tuned on real tiles", fontsize=8)
+    # per tile, before and after, on the same 300 tiles
+    base = json.load(open("results/emag2.json"))["tiles"]
+    after = json.load(open("results/emag2_gen2_72k.json"))["tiles"] if os.path.exists("results/emag2_gen2_72k.json") else None
+    g = np.array([t["mse_wiener_beta35"] for t in base]); nb = np.array([t["mse_network"] for t in base])
+    ax[1].loglog(g, nb, ".", ms=4, alpha=0.5, color="#9e9e9e", label="submitted model (synthetic Gaussian)")
+    if after:
+        na = np.array([t["mse_network"] for t in after]); ga = np.array([t["mse_wiener_beta35"] for t in after])
+        ax[1].loglog(ga, na, ".", ms=4, alpha=0.6, color="#0b5c5c", label="trained on generator v2, 72k steps, no real data")
+    lim = [g.min() * 0.7, max(nb.max(), g.max()) * 1.3]
+    ax[1].plot(lim, lim, "k--", lw=1); ax[1].set_xlabel("Gaussian estimator error [nT^2]"); ax[1].set_ylabel("network error [nT^2]")
+    ax[1].set_title("per tile; below the line the network is better", fontsize=9); ax[1].legend(fontsize=8)
+    # tails: kurtosis of real tiles against generator v2 tiles at the same altitude
+    kr = np.array([t["kurtosis"] for t in base])
+    try:
+        import torch
+        from .gen2 import sample_fields_v2
+        from .emag2 import detrend, H_EQ, DX
+        cfg = dict(beta_range=(2.0, 5.0), mod_range=(0.2, 0.9), aniso_max=2.5)
+        c, _ = sample_fields_v2(300, 64, H_EQ, cfg, DX, 50.0, torch.Generator().manual_seed(5))
+        kv = np.array([((d - d.mean()) ** 4).mean() / d.var() ** 2 for d in (detrend(t.double().numpy()) for t in c)])
+        bins = np.linspace(2, 16, 36)
+        ax[2].hist(kr, bins=bins, alpha=0.6, color="#b04a2e", label=f"real tiles (median {np.median(kr):.1f})", density=True)
+        ax[2].hist(kv, bins=bins, alpha=0.6, color="#0b5c5c", label=f"generator v2 (median {np.median(kv):.1f})", density=True)
+        ax[2].axvline(3, color="k", lw=1, ls="--"); ax[2].text(3.1, ax[2].get_ylim()[1] * 0.92, "Gaussian", fontsize=8)
+        ax[2].set_xlabel("tile kurtosis"); ax[2].set_ylabel("density"); ax[2].legend(fontsize=8)
+        t5 = np.nanmedian([t.get("err_top5_gauss", np.nan) for t in base])
+        ax[2].set_title(f"the tails the generator reproduces; the seams it does not:\nworst 5% of pixels carry {t5:.2f} of the error on real tiles (0.28 on a Gaussian field)", fontsize=8)
+    except Exception as e:                       # the figure is still useful without the generator panel
+        ax[2].text(0.5, 0.5, f"generator panel unavailable: {e}", ha="center", transform=ax[2].transAxes, fontsize=8)
+    fig.tight_layout(); fig.savefig(out, dpi=130); plt.close(fig)
+
+
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("what", choices=["curves", "arch", "altitude", "linear", "widths", "difficulty", "all"])
+    p.add_argument("what", choices=["curves", "arch", "altitude", "linear", "widths", "difficulty", "extension", "all"])
     p.add_argument("paths", nargs="*")
     p.add_argument("--pattern", default="runs/*b3.5_h200_D131072*.json")
     p.add_argument("--h", default="200.0")
@@ -240,6 +293,8 @@ def main():
         altitude_difficulty(f"{a.out}/altitude_difficulty.png")
     if a.what in ("widths", "all") and os.path.exists("results/width_sweep.json"):
         widths("results/width_sweep.json", f"{a.out}/width_sweep.png")
+    if a.what in ("extension", "all") and os.path.exists("results/emag2.json"):
+        extension(f"{a.out}/extension_real_data.png")
     if a.what in ("altitude", "all"):
         paths = a.paths or ["runs/vitxxl_b3.5_hmix_D131072_s0_alt.json", "runs/vitxxl_b3.5_hmix_D131072_s0_noalt.json"]
         if all(os.path.exists(q) for q in paths):
