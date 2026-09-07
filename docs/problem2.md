@@ -461,12 +461,15 @@ with the Gaussian estimator carrying its training prior of beta 3.5):
 
 - The submitted model, trained on v1 Gaussian fields: 3.9x the estimator, better than
   interpolation on 38% of tiles, nonlinearity 12%.
-- The same architecture trained on generator v2 for 24k steps, never having seen a real tile:
-  1.85x the estimator, better than interpolation on 99.7% of tiles, nonlinearity 3.5%. Matching
-  the tails alone halves the deficit. On its own training distribution this model is at 1.4x the
-  Gaussian reference and 2.7x the oracle after 24k steps, so it has not learned that
-  distribution to the level of a linear estimator; the same budget argument as in Part B
-  applies, and a longer run should improve both numbers. (The 5M model at 8k steps: 3.1x.)
+- The same architecture trained on generator v2, never having seen a real tile: 1.85x the
+  estimator after 24k steps and 1.43x after 72k, better than interpolation on 99.7% and then
+  100% of tiles, better than the estimator on 18% and then 25%, nonlinearity 3.5% and then
+  3.2%. On its own training distribution the 24k model was at 1.4x the Gaussian reference and
+  2.7x the oracle, so it had not learned that distribution to the level of a linear estimator;
+  the 72k model beats the linear estimator on its own data (1.32 against 1.89 at 200 m, 152
+  against 182 at ground level) and sits at 2x the oracle. The same budget argument as in Part B
+  applies, and here it was tested: tripling the steps moved the real-tile number from 1.85 to
+  1.43, which is where the fine-tuned models are. (The 5M model at 8k steps: 3.1x.)
 - The submitted model fine-tuned for 2000 steps on a few hundred real tiles from one continent,
   tested on a continent it never saw: 1.54x (Australia to North America), 1.42x (North America
   to Australia); fine-tuned on both for 4000 steps and tested on Europe and southern Africa:
@@ -475,15 +478,15 @@ with the Gaussian estimator carrying its training prior of beta 3.5):
   and southern Africa: 4.9x.
 
 **What this says.** The Gaussian model is right about the spectrum and wrong about the tails,
-and the tails are the learnable part: a synthetic generator that reproduces them takes a network
-from losing to interpolation to beating it on every tile, and a few hundred real tiles take it
-to within 1.4x of a linear estimator whose prior is itself not optimal for these tiles. The
+and the tails are the learnable part: a synthetic generator that reproduces them, trained long
+enough, takes a network from losing to interpolation to beating it on every tile and to within
+1.4x of a linear estimator whose prior is itself not optimal for these tiles; a few hundred real
+tiles reach the same 1.4x by fine-tuning. The two routes meet at the same number without any
+real data on the first. The
 residual, concentrated in a few pixels per tile, is the compilation's seams, and the right
 response to it is a floor that is no longer one number: a per-tile, per-region reference from
 the kind of oracle used here, fitted to each survey's own statistics. The next experiments, in
-order: a longer run on generator v2 (it is optimisation-limited, and the generator is now single
-precision, so it is cheap), the same statistics pipeline over the higher-resolution national
-grids (Geoscience Australia, NRCan, USGS, BGS, GTK, ADMAP-2), with the generator's parameter
+order: the same statistics pipeline over the higher-resolution national grids (Geoscience Australia, NRCan, USGS, BGS, GTK, ADMAP-2), with the generator's parameter
 distributions fitted per province, and a model trained on those and tested on a held-out grid.
 
 ## Limitations
