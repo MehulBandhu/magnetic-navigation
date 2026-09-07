@@ -107,7 +107,7 @@ columns depend on the optimiser and can differ in the last digit.
 Full sweep commands, checkpoint downloads and the EMAG2 data step are in
 [`docs/reproduce.md`](docs/reproduce.md).
 
-## Where the detail is
+## Contents
 
 | | |
 |---|---|
