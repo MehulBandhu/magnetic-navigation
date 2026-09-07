@@ -272,9 +272,36 @@ def extension(out):
     fig.tight_layout(); fig.savefig(out, dpi=130); plt.close(fig)
 
 
+def scale(out):
+    """Part G in one figure: the same real survey grid across pixel size (h/dx fixed) and
+    across altitude (pixel fixed): the fitted slope, the Gaussian estimator against its own
+    floor, and the network against the estimator"""
+    import numpy as np
+    files = [("results/grid_gawler.json", "dx", "pixel size [m], h/dx fixed", "scale"), ("results/grid_gawler_alt.json", "h", "altitude [m], 45 m pixels", "altitude")]
+    have = [(f, k, lab, name) for f, k, lab, name in files if os.path.exists(f)]
+    if not have:
+        print("scale figure needs results/grid_gawler*.json"); return
+    fig, ax = plt.subplots(1, 3, figsize=(15, 4.2))
+    for f, key, lab, name in have:
+        r = json.load(open(f)); alts = sorted(r["per_altitude"], key=float)
+        x = [r["per_altitude"][h]["summary"]["dx"] if key == "dx" else float(h) for h in alts]
+        s = [r["per_altitude"][h]["summary"] for h in alts]
+        ax[0].plot(x, [v["beta_median"] for v in s], "o-", label=name)
+        ax[1].semilogy(x, [v["wiener_over_own_floor_median"] for v in s], "o-", label=name)
+        ax[2].plot(x, [v["network_over_wiener_beta35_median"] for v in s], "o-", label=name)
+    for a_ in ax:
+        a_.set_xscale("log"); a_.legend(fontsize=8)
+    ax[0].axhspan(2.5, 4.0, color="orange", alpha=0.15); ax[0].set_ylabel("fitted spectral slope"); ax[0].set_title("the crust's slope (shaded: assumed 2.5 to 4)\nappears once the pixel exceeds the line spacing", fontsize=9)
+    ax[1].axhline(1.1, color="k", lw=1, ls="--"); ax[1].set_ylabel("Gaussian estimator error / its own predicted floor"); ax[1].set_title("a Gaussian prior fitted below the line spacing\nmispredicts its error by two orders of magnitude", fontsize=9)
+    ax[2].axhline(1.0, color="k", lw=1, ls="--"); ax[2].set_ylabel("network error / Gaussian estimator (beta 3.5)"); ax[2].set_title("the generator-trained network, 100 m pixels in training,\nat 45 m to 445 m pixels on a real survey", fontsize=9)
+    ax[0].set_xlabel("pixel size [m] (scale) or altitude [m] (altitude)"); ax[1].set_xlabel("pixel size [m] (scale) or altitude [m] (altitude)"); ax[2].set_xlabel("pixel size [m] (scale) or altitude [m] (altitude)")
+    fig.suptitle("Gawler Craton Airborne Survey, 200 m lines, 60 m clearance, gridded at 45 m; upward continued by exp(-kh) and either resampled (scale) or not (altitude)", fontsize=9)
+    fig.tight_layout(); fig.savefig(out, dpi=130); plt.close(fig)
+
+
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("what", choices=["curves", "arch", "altitude", "linear", "widths", "difficulty", "extension", "all"])
+    p.add_argument("what", choices=["curves", "arch", "altitude", "linear", "widths", "difficulty", "extension", "scale", "all"])
     p.add_argument("paths", nargs="*")
     p.add_argument("--pattern", default="runs/*b3.5_h200_D131072*.json")
     p.add_argument("--h", default="200.0")
@@ -295,6 +322,8 @@ def main():
         widths("results/width_sweep.json", f"{a.out}/width_sweep.png")
     if a.what in ("extension", "all") and os.path.exists("results/emag2.json"):
         extension(f"{a.out}/extension_real_data.png")
+    if a.what in ("scale", "all") and os.path.exists("results/grid_gawler.json"):
+        scale(f"{a.out}/scale_transfer.png")
     if a.what in ("altitude", "all"):
         paths = a.paths or ["runs/vitxxl_b3.5_hmix_D131072_s0_alt.json", "runs/vitxxl_b3.5_hmix_D131072_s0_noalt.json"]
         if all(os.path.exists(q) for q in paths):
