@@ -224,13 +224,13 @@ def extension(out):
     the same real tiles, the per-tile picture before and after, and the tail statistics the
     generator was built to match."""
     import numpy as np
-    order = [("emag2.json", "v1, 14k\n(submitted)"), ("emag2_gen1_24k.json", "v1, 24k"), ("emag2_gen2_5M.json", "v2, 5M\n8k"),
-             ("emag2_gen2.json", "v2, 24k"), ("emag2_gen2_72k.json", "v2, 72k"),
-             ("emag2_ft_aus.json", "tuned AU\ntest NA"), ("emag2_ft_na.json", "tuned NA\ntest AU"), ("emag2_ft_ausna.json", "tuned AU+NA\ntest EU+ZA")]
+    order = [("emag2.json", "v1 14k\n(submitted)"), ("emag2_gen1_24k.json", "v1 24k"), ("emag2_gen2_5M.json", "v2 5M\n8k"),
+             ("emag2_gen2.json", "v2 24k"), ("emag2_gen2_72k.json", "v2 72k"),
+             ("emag2_ft_aus.json", "AU to NA"), ("emag2_ft_na.json", "NA to AU"), ("emag2_ft_ausna.json", "AU+NA to\nEU+ZA")]
     rows = [(lab, json.load(open("results/" + f))) for f, lab in order if os.path.exists("results/" + f)]
     if len(rows) < 2:
         print("extension figure needs the tagged EMAG2 results"); return
-    fig, ax = plt.subplots(1, 3, figsize=(16, 4.4))
+    fig, ax = plt.subplots(1, 3, figsize=(16, 4.8))
     labs = [r[0] for r in rows]; s = [r[1]["summary"]["all"] for r in rows]
     x = np.arange(len(rows))
     cols = ["#9e9e9e" if "v1" in l else "#0b5c5c" if "v2" in l else "#b04a2e" for l in labs]
@@ -238,8 +238,8 @@ def extension(out):
     ax[0].axhline(1.0, color="k", lw=1, ls="--")
     for i, v in enumerate(s):
         ax[0].text(i, v["network_over_wiener_beta35_median"] + 0.05, f"{v['frac_network_beats_interp']*100:.0f}%", ha="center", fontsize=8)
-    ax[0].set_xticks(x); ax[0].set_xticklabels(labs, fontsize=7.5); ax[0].set_ylabel("network error / Gaussian estimator (beta 3.5), median over tiles")
-    ax[0].set_title("real EMAG2 tiles; the number above each bar is the fraction of tiles where\nthe network beats interpolation; grey synthetic Gaussian, teal synthetic with tails, red fine-tuned on real tiles", fontsize=8)
+    ax[0].set_xticks(x); ax[0].set_xticklabels(labs, fontsize=7.5); ax[0].set_ylabel("network / Gaussian estimator error, median over tiles", fontsize=9)
+    ax[0].set_title("real EMAG2 tiles. grey: trained on Gaussian fields; teal: on generator v2;\nred: fine-tuned on real tiles, tested on the other continents. Above each bar:\nthe fraction of tiles where the network beats interpolation", fontsize=8)
     # per tile, before and after, on the same 300 tiles
     base = json.load(open("results/emag2.json"))["tiles"]
     after = json.load(open("results/emag2_gen2_72k.json"))["tiles"] if os.path.exists("results/emag2_gen2_72k.json") else None
