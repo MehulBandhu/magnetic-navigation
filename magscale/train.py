@@ -7,6 +7,7 @@ import time
 import torch
 
 from .grf import sample_fields, add_noise, make_mask, observe
+from .gen2 import sample_fields_v2, reference_floors, parse_cfg
 from .floor import exact_floor, prior_variance, effective_modes, patch_covariance, conditional_floor, wiener_matrix
 from .models import build, count_params
 
@@ -24,6 +25,12 @@ def get_args():
     p.add_argument("--ratio", type=float, default=0.75)
     p.add_argument("--spacing", type=int, default=4)
     p.add_argument("--D", type=int, default=0, help="dataset size in patches; 0 = fresh data every step")
+    p.add_argument("--gen", default="v1", choices=["v1", "v2"],
+                   help="v1: Gaussian field with one beta (the scaling study); v2: scale mixture with per-patch beta, "
+                        "lognormal modulation and anisotropy (magscale/gen2.py)")
+    p.add_argument("--beta_range", default="2.0,5.0", help="v2: per-patch spectral slope, uniform")
+    p.add_argument("--mod_range", default="0.2,0.9", help="v2: per-patch modulation sigma_s, uniform; kurtosis 3 exp(4 sigma_s^2) at ground")
+    p.add_argument("--aniso_max", type=float, default=2.5, help="v2: largest stretch of the correlation length along a random strike")
     p.add_argument("--teacher", type=int, default=0,
                    help="train against the exact conditional mean W_M y_O on this many fixed masks instead of the "
                         "sampled field; the loss then has no floor and measures approximation + optimisation only")
@@ -58,6 +65,13 @@ def get_args():
     return p.parse_args()
 
 
+def sample_any(a, batch, h, gen, device):
+    """clean fields from the generator the run uses; v2 also returns its latents"""
+    if a.gen == "v2":
+        return sample_fields_v2(batch, a.n, h, parse_cfg(a), a.dx, a.sigma0, gen, device)
+    return sample_fields(batch, a.n, a.beta, h, a.dx, a.sigma0, gen, device), None
+
+
 class Pool:
     """A dataset of D patches that is never stored: block j is regenerated from
     seed (seed, j), noise included, so every epoch sees the same data. Masks
@@ -73,7 +87,7 @@ class Pool:
         gen = torch.Generator(device=self.device).manual_seed(self.seed * 1000003 + j)
         hidx = torch.randint(0, len(self.hs), (self.a.batch,), generator=gen, device=self.device)
         h = torch.tensor(self.hs, device=self.device)[hidx]
-        clean = sample_fields(self.a.batch, self.a.n, self.a.beta, h, self.a.dx, self.a.sigma0, gen, self.device)
+        clean, _ = sample_any(self.a, self.a.batch, h, gen, self.device)
         noisy = add_noise(clean, self.a.sigma, gen)
         return clean, noisy, h
 
@@ -131,10 +145,11 @@ def fixed_mask(a, device):
 def make_val(a, hs, device, fmask=None, teacher=None):
     # fixed validation set: fresh fields, fixed masks, one batch per altitude per index
     gen = torch.Generator(device=device).manual_seed(10_000 + a.seed)
-    batches = []
+    batches, latents = [], []
     for _ in range(a.eval_batches):
         for h in hs:
-            clean = sample_fields(a.batch, a.n, a.beta, float(h), a.dx, a.sigma0, gen, device)
+            clean, lat = sample_any(a, a.batch, float(h), gen, device)
+            latents.append(lat)
             noisy = add_noise(clean, a.sigma, gen)
             if teacher is not None:
                 mask, idx = teacher.batch_masks(a.batch, gen)
@@ -143,6 +158,7 @@ def make_val(a, hs, device, fmask=None, teacher=None):
                 mask = make_mask(a.mask, a.batch, a.n, a.ratio, a.spacing, gen, device) if fmask is None \
                     else fmask[None].expand(a.batch, -1, -1)
             batches.append((clean, noisy, mask, h))
+    make_val.latents = latents          # kept for the v2 reference floors
     return batches
 
 
@@ -235,6 +251,17 @@ def main():
 
     pool = Pool(a, hs, a.seed, device)
     val = make_val(a, hs, device, fmask, teacher)
+    if a.gen == "v2":
+        # no closed-form floor on v2 data: the oracle (modulation known) is a lower bound and the
+        # Gaussian estimator's realised error is the upper reference, both by Monte Carlo on the
+        # first validation batch at each altitude; the logged "floor" is the oracle
+        info["gen2"] = parse_cfg(a); info["floor_gauss_realised"] = {}; info["floor_gauss_predicted"] = {}
+        for i, h in enumerate(hs):
+            clean, noisy, mask, _ = val[i]
+            ref = reference_floors(clean, noisy, mask, make_val.latents[i], float(h), a.dx, a.sigma0, a.sigma, max_patches=32)
+            info["floor"][str(h)] = ref["oracle"]; info["floor_gauss_realised"][str(h)] = ref["gauss_realised"]
+            info["floor_gauss_predicted"][str(h)] = ref["gauss_predicted"]
+        print(f"v2 references: oracle {info['floor']}  gaussian estimator realised {info['floor_gauss_realised']}")
     train_eval = make_train_eval(a, pool, hs, device, fmask)
     mask_gen = torch.Generator(device=device).manual_seed(a.seed + 99)
     log, best = [], {str(h): float("inf") for h in hs}

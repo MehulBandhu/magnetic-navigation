@@ -424,6 +424,68 @@ distance of real tiles from any Gaussian model is measured. A model for real dat
 trained on real data or on a generator with the right tails, and evaluated against a floor that
 is no longer one number.
 
+## F. After submission: training on realistic tails, and fine-tuning on real tiles
+
+Part E left two questions: what real anomalies have that Gaussian fields lack, and whether a
+network can be given it. Both were tested after the submission, on Cuillin, with the runs in
+`scripts/sweeps/gen2.txt`, `finetune.txt` and `eval_gen2.txt`; the table is generated into
+`docs/results_tables.md` under "models compared on the same real tiles".
+
+**What the real tiles have.** Three candidates were measured. The spectrum's high-frequency
+end is not it: the power above 24 cycles per tile is 0.3 to 0.4 of the fitted power law's
+extrapolation (a noise floor would give a value far above 1), so EMAG2's gridding and the 4 km
+continuation leave a deficit there, not a plateau. Smooth amplitude modulation is part of it:
+the tile kurtosis (3.9, 90th percentile near 10) is reproduced by a Gaussian scale mixture,
+described below, but that generator's tiles put the Gaussian estimator at only 1.1x its own
+predicted floor where real tiles put it at 2.4x to 10x. The rest is concentrated: the worst 5% of
+hidden pixels carry 0.61 to 0.65 of the squared error on real tiles, for the Gaussian estimator
+and for every network, before and after fine-tuning, against 0.28 on a Gaussian field. That is
+the signature of seams and artefacts in a compilation stitched from surveys of different
+resolution and vintage, and it is a floor that no estimator with a stationary prior, linear or
+not, gets under.
+
+**Generator v2** (`magscale/gen2.py`). m_0(x) = s(x) g(x), with g a Gaussian field whose spectral
+slope is drawn per patch from U[2, 5] and whose correlation length is stretched by a random
+factor up to 2.5 along a random strike, and s = exp(sigma_s z - sigma_s^2) with z a smooth field
+of unit variance over the patch and sigma_s drawn from U[0.2, 0.9], which gives kurtosis
+3 exp(4 sigma_s^2) at ground level and matches the real distribution at the EMAG2-equivalent
+altitude (median 4.2, 90th percentile 8.7 against 3.9 and 9.6). The product is continued upward
+as a source field. Conditional on its latents the field is Gaussian, so two references exist by
+Monte Carlo: the oracle floor (the conditional mean with s known, a lower bound on any
+estimator) and the realised error of the v1 Gaussian estimator (the upper reference). At 200 m
+the oracle is 0.60 nT^2 and the Gaussian estimator 1.13, so a model that learns the modulation
+has a factor of about two to gain over a linear estimator on this data.
+
+**Results on real tiles** (300 land tiles, square pixels, as in Part E; the network is compared
+with the Gaussian estimator carrying its training prior of beta 3.5):
+
+- The submitted model, trained on v1 Gaussian fields: 3.9x the estimator, better than
+  interpolation on 38% of tiles, nonlinearity 12%.
+- The same architecture trained on generator v2 for 24k steps, never having seen a real tile:
+  1.85x the estimator, better than interpolation on 99.7% of tiles, nonlinearity 3.5%. Matching
+  the tails alone halves the deficit. On its own training distribution this model is at 1.4x the
+  Gaussian reference and 2.7x the oracle after 24k steps, so it has not learned that
+  distribution to the level of a linear estimator; the same budget argument as in Part B
+  applies, and a longer run should improve both numbers. (The 5M model at 8k steps: 3.1x.)
+- The submitted model fine-tuned for 2000 steps on a few hundred real tiles from one continent,
+  tested on a continent it never saw: 1.54x (Australia to North America), 1.42x (North America
+  to Australia); fine-tuned on both for 4000 steps and tested on Europe and southern Africa:
+  1.47x, better than interpolation on 99 to 100% of tiles in every case, better than the
+  estimator outright on 10% to 48% of tiles, nonlinearity 4% to 6%. The untuned model on Europe
+  and southern Africa: 4.9x.
+
+**What this says.** The Gaussian model is right about the spectrum and wrong about the tails,
+and the tails are the learnable part: a synthetic generator that reproduces them takes a network
+from losing to interpolation to beating it on every tile, and a few hundred real tiles take it
+to within 1.4x of a linear estimator whose prior is itself not optimal for these tiles. The
+residual, concentrated in a few pixels per tile, is the compilation's seams, and the right
+response to it is a floor that is no longer one number: a per-tile, per-region reference from
+the kind of oracle used here, fitted to each survey's own statistics. The next experiments, in
+order: a longer run on generator v2 (it is optimisation-limited, and the generator is now single
+precision, so it is cheap), the same statistics pipeline over the higher-resolution national
+grids (Geoscience Australia, NRCan, USGS, BGS, GTK, ADMAP-2), with the generator's parameter
+distributions fitted per province, and a model trained on those and tested on a held-out grid.
+
 ## Limitations
 
 - The scaling slopes are protocol slopes: the budget grows with size, most large runs were still

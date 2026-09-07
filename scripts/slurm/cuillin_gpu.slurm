@@ -13,7 +13,7 @@
 
 cd "$SLURM_SUBMIT_DIR"
 mkdir -p logs runs
-source .venv/bin/activate
+module load anaconda/3.13 2>/dev/null; source .venv_gpu/bin/activate
 
 LIST=${LIST:-scripts/sweeps/colab_main.txt}
 CMD=$(sed -n "${SLURM_ARRAY_TASK_ID}p" "$LIST")

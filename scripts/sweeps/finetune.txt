@@ -1,0 +1,3 @@
+python -m magscale.finetune --run runs/vitxxl_b3.5_hmix_D131072_s0_noalt.json --train north_america --steps 2000 --out runs/vitxxl_finetune_na.json && python -m magscale.emag2 run --run runs/vitxxl_finetune_na.json --regions australia --tag _ft_na
+python -m magscale.finetune --run runs/vitxxl_b3.5_hmix_D131072_s0_noalt.json --train australia,north_america --steps 4000 --out runs/vitxxl_finetune_ausna.json && python -m magscale.emag2 run --run runs/vitxxl_finetune_ausna.json --regions europe,southern_africa --tag _ft_ausna
+python -m magscale.emag2 run --run runs/vitxxl_b3.5_hmix_D131072_s0_noalt.json --regions europe,southern_africa --tag _base_eu_za

@@ -1,0 +1,25 @@
+{
+ "cfg": {
+  "beta_range": [
+   2.0,
+   5.0
+  ],
+  "mod_range": [
+   0.2,
+   0.9
+  ],
+  "aniso_max": 2.5
+ },
+ "tiles": 300,
+ "beta_median": 3.096108154081255,
+ "beta_q10": 2.382018816489852,
+ "beta_q90": 3.588848796298967,
+ "kurtosis_median": 4.17396264926151,
+ "kurtosis_q90": 8.732243517841422,
+ "wiener_over_own_floor_median": 1.1319669312110134,
+ "network_over_wiener_beta35_median": 2.320495767426855,
+ "network_over_wiener_median": 2.398571291246361,
+ "mse_network_median": 18.277894020080566,
+ "mse_wiener_median": 6.732017517089844,
+ "mse_wiener_beta35_median": 6.91795802116394
+}

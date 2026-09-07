@@ -109,3 +109,28 @@ def test_gradient_power_exponent():
         g.append(float((A ** 2 * k2).sum().sqrt()))
     slope = math.log(g[1] / g[0]) / math.log(2.0)
     assert abs(slope - (beta - 4) / 2) < 0.1, slope
+
+
+def test_gen2_degenerate_case_is_v1():
+    # with no modulation, no anisotropy and one beta, generator v2 is the v1 field and the oracle
+    # floor equals the Gaussian floor
+    import torch
+    from magscale.gen2 import sample_fields_v2, reference_floors
+    from magscale.grf import add_noise, random_mask
+    cfg = dict(beta_range=(3.5, 3.5), mod_range=(0.0, 0.0), aniso_max=1.0)
+    gen = torch.Generator().manual_seed(3)
+    clean, lat = sample_fields_v2(4, 32, 200.0, cfg, gen=gen)
+    noisy = add_noise(clean, 1.0, gen); mask = random_mask(4, 32, 0.75, gen)
+    ref = reference_floors(clean, noisy, mask, lat, 200.0, max_patches=2)
+    assert abs(ref["oracle"] - ref["gauss_predicted"]) < 1e-9
+    assert torch.allclose(lat["s"], torch.ones_like(lat["s"]))
+
+
+def test_gen2_kurtosis_rises_with_modulation():
+    import torch
+    from magscale.gen2 import sample_fields_v2
+    def kurt(ms):
+        cfg = dict(beta_range=(3.0, 3.0), mod_range=(ms, ms), aniso_max=1.0)
+        c, _ = sample_fields_v2(32, 32, 0.0, cfg, gen=torch.Generator().manual_seed(1))
+        return float((((c - c.mean(dim=(1, 2), keepdim=True)) ** 4).mean(dim=(1, 2)) / c.var(dim=(1, 2)) ** 2).median())
+    assert kurt(0.0) < 3.6 and kurt(0.8) > kurt(0.0) + 1.0

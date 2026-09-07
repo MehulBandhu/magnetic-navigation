@@ -1,0 +1,3 @@
+python -m magscale.emag2 run --run runs/vitxxl_gen2_hmix_D0_s0.json --tag _gen2
+python -m magscale.emag2 run --run runs/vitxxl_gen1_hmix_D0_s0_24k.json --tag _gen1_24k
+python -m magscale.emag2 run --run runs/vitl_gen2_hmix_D0_s0.json --tag _gen2_5M

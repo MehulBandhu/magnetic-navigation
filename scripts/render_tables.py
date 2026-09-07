@@ -129,7 +129,8 @@ if os.path.exists("results/emag2.json"):
     import numpy as _np
     tl = em["tiles"]
     kk = _np.array([t["kurtosis"] for t in tl]); rr = _np.array([t["mse_network"] / t["mse_wiener_beta35"] for t in tl])
-    out += [f"\nTile kurtosis: median {_np.median(kk):.1f}, 90th percentile {_np.quantile(kk, 0.9):.1f} (3 for a Gaussian field). Network / Gaussian (beta 3.5) by kurtosis bin:\n",
+    te = _np.array([t.get("top_octave_excess", _np.nan) for t in tl])
+    out += [f"\nTile kurtosis: median {_np.median(kk):.1f}, 90th percentile {_np.quantile(kk, 0.9):.1f} (3 for a Gaussian field). Top-octave excess (power above 24 cycles per tile relative to the fitted power law): median {_np.nanmedian(te):.2f}, 90th percentile {_np.nanquantile(te, 0.9):.2f} (1 for a power law). Network / Gaussian (beta 3.5) by kurtosis bin:\n",
             "| kurtosis | tiles | network / Gaussian (3.5) median |", "|---|---|---|"]
     for lo, hi, lab in [(0, 3.5, "below 3.5"), (3.5, 5, "3.5 to 5"), (5, 8, "5 to 8"), (8, 1e9, "above 8")]:
         m = (kk >= lo) & (kk < hi)
@@ -146,6 +147,18 @@ if os.path.exists("results/emag2.json"):
         out += ["\nCalibration on seamless Gaussian tiles at the same equivalent altitude:\n", "| true beta | fitted beta median (q10, q90) | realised / predicted floor median (q10, q90) |", "|---|---|---|"]
         for b, v in cal.items():
             out.append(f"| {b} | {v['beta_fitted_median']:.2f} ({v['beta_q10']:.2f}, {v['beta_q90']:.2f}) | {v['ratio_median']:.2f} ({v['ratio_q10']:.2f}, {v['ratio_q90']:.2f}) |")
+tagged = sorted(f for f in glob.glob("results/emag2_*.json") if "synthetic" not in f and "calibration" not in f)
+if tagged:
+    out += ["\n## EMAG2: models compared on the same real tiles\n",
+            "| evaluation | model | regions | tiles | network MSE | Gaussian (beta 3.5) | interpolation | network / Gaussian | beats interpolation | beats Gaussian | nonlinearity | error in worst 5% (network / Gaussian) |",
+            "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for f in ["results/emag2.json"] + tagged:
+        if not os.path.exists(f):
+            continue
+        em = json.load(open(f)); v = em["summary"].get("all", {})
+        regs = ", ".join(k for k in em["summary"] if k != "all")
+        out.append(f"| {os.path.basename(f)[6:-5] or 'base'} | {em['run']} | {regs} | {v.get('tiles', 0)} | {v.get('mse_network_median', float('nan')):.1f} | {v.get('mse_wiener_beta35_median', float('nan')):.1f} | {v.get('mse_interp_median', float('nan')):.1f} | {v.get('network_over_wiener_beta35_median', float('nan')):.2f} | {v.get('frac_network_beats_interp', float('nan')):.2f} | {v.get('frac_network_beats_wiener', float('nan')):.2f} | {v.get('nonlinearity_median', float('nan')):.3f} | {v.get('err_top5_network_median', float('nan')):.2f} / {v.get('err_top5_gauss_median', float('nan')):.2f} |")
+    out.append("\nA fine-tuned model is evaluated on the region it did not see. On a Gaussian field with a matched prior the worst 5% of hidden pixels carry about 0.28 of the squared error.")
 nt = "runs/vitl_b3.5_h200_D32768_s0_noisytarget.json"
 if os.path.exists(nt) and os.path.exists("runs/vitl_b3.5_h200_D32768_s0.json"):
     a = json.load(open(nt)); b = json.load(open("runs/vitl_b3.5_h200_D32768_s0.json"))

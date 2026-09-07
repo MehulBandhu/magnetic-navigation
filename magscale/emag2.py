@@ -40,6 +40,8 @@ DX, H_EQ = 100.0, 100.0 * 4.0 / 3.706          # the study's units
 REGIONS = {
     "australia": dict(lat=(-40, -12), lon=(113, 154)),
     "north_america": dict(lat=(30, 55), lon=(-125, -70)),
+    "europe": dict(lat=(43, 70), lon=(-10, 40)),          # Fennoscandia, western and central Europe compilations
+    "southern_africa": dict(lat=(-35, -15), lon=(15, 35)),
 }
 MISSING = 99999.0
 
@@ -112,20 +114,34 @@ def detrend(t):
     return t - (A @ coef).reshape(n, n)
 
 
-def fit_beta(t, h_over_dx=H_OVER_DX, fmin=3, fmax=24):
-    """slope of the radial power spectrum with the continuation factor divided out:
-    log P(k) + 2 k h = log C - beta log k, over integer radial frequencies fmin..fmax (cycles/tile)"""
+def radial_spectrum(t):
     n = t.shape[0]
     w = np.hanning(n)[:, None] * np.hanning(n)[None, :]
     P = np.abs(np.fft.fft2(t * w)) ** 2
     f = np.fft.fftfreq(n) * n
     fr = np.sqrt(f[:, None] ** 2 + f[None, :] ** 2)
-    bins = np.arange(fmin, fmax + 1)
-    Pr = np.array([P[(fr >= b - 0.5) & (fr < b + 0.5)].mean() for b in bins])
+    bins = np.arange(1, n // 2)
+    return bins, np.array([P[(fr >= b - 0.5) & (fr < b + 0.5)].mean() for b in bins])
+
+
+def fit_beta(t, h_over_dx=H_OVER_DX, fmin=3, fmax=24, return_excess=False):
+    """slope of the radial power spectrum with the continuation factor divided out:
+    log P(k) + 2 k h = log C - beta log k, over integer radial frequencies fmin..fmax (cycles/tile).
+    With return_excess, also the top-octave excess: the mean power at frequencies above fmax
+    relative to the power law extrapolated from the fit. Hidden-pixel interpolation under a
+    75% mask is governed by that octave, so a real tile whose spectrum flattens there breaks a
+    Gaussian estimator whose prior was fitted below it."""
+    n = t.shape[0]
+    bins, Pr_all = radial_spectrum(t)
+    sel = (bins >= fmin) & (bins <= fmax)
     k = 2 * np.pi * bins / n                    # radians per pixel
-    y = np.log(Pr) + 2 * k * h_over_dx
-    slope, intercept = np.polyfit(np.log(k), y, 1)
-    return float(-slope)
+    y = np.log(Pr_all[sel]) + 2 * k[sel] * h_over_dx
+    slope, intercept = np.polyfit(np.log(k[sel]), y, 1)
+    if not return_excess:
+        return float(-slope)
+    top = bins > fmax
+    pred = np.exp(intercept + slope * np.log(k[top]) - 2 * k[top] * h_over_dx)
+    return float(-slope), float(np.mean(Pr_all[top] / pred))
 
 
 # ----------------------------------------------------------------------------- reconstructions
@@ -225,7 +241,7 @@ def run(a):
                 rms = float(t.std())
                 if rms < 1.0:
                     continue
-                beta = fit_beta(t)
+                beta, top_excess = fit_beta(t, return_excess=True)
                 # rescale to the amplitude the network trained on at this altitude
                 target_rms = math.sqrt(prior_variance(a.n, 3.5, H_EQ, DX, 50.0))
                 scale = target_rms / rms
@@ -255,12 +271,18 @@ def run(a):
                 interp = torch.from_numpy(interpolate(noisy.numpy(), mask.numpy()))
                 m = mask
                 err = lambda p: float(((p - clean) ** 2)[m].mean())
+                def top5(p):
+                    # on a Gaussian field with a matched prior the worst 5% of pixels carry about
+                    # 28% of the squared error; seams and spikes push this far higher
+                    se = ((p - clean) ** 2)[m].flatten().sort(descending=True).values
+                    return float(se[: max(1, int(0.05 * len(se)))].sum() / se.sum())
                 w_full = noisy.clone().flatten(); w_full[hid] = torch.from_numpy(w_pred).float(); w_full = w_full.view(a.n, a.n)
                 w35_full = noisy.clone().flatten(); w35_full[hid] = torch.from_numpy(w35_pred).float(); w35_full = w35_full.view(a.n, a.n)
                 w35s_full = noisy.clone().flatten(); w35s_full[hid] = torch.from_numpy(w35s_pred).float(); w35s_full = w35s_full.view(a.n, a.n)
                 rec = dict(region=region, lat=float(lat), lon=float(-180 + (cs.start + j + wcols / 2) / 30),
-                           beta=beta, rms_nT=rms, kurtosis=float(((t - t.mean()) ** 4).mean() / t.var() ** 2),
-                           mse_network=err(net), mse_wiener=err(w_full), mse_wiener_beta35=err(w35_full), mse_wiener_beta35_stationary=err(w35s_full), floor_predicted=floor_pred, mse_interp=err(interp), nonlinearity=nonlin)
+                           beta=beta, top_octave_excess=top_excess, rms_nT=rms, kurtosis=float(((t - t.mean()) ** 4).mean() / t.var() ** 2),
+                           mse_network=err(net), mse_wiener=err(w_full), mse_wiener_beta35=err(w35_full), mse_wiener_beta35_stationary=err(w35s_full), floor_predicted=floor_pred, mse_interp=err(interp), nonlinearity=nonlin,
+                           err_top5_gauss=top5(w35_full), err_top5_network=top5(net))
                 rows.append(rec)
                 candidates.append((clean, noisy, mask, net, w_full, interp, rec))
         print(f"{region}: {sum(r['region'] == region for r in rows)} tiles")
@@ -270,10 +292,10 @@ def run(a):
     os.makedirs("results", exist_ok=True); os.makedirs("figures", exist_ok=True)
     summary = summarise(rows)
     json.dump(dict(run=os.path.basename(a.run)[:-5], h_equivalent_m=H_EQ, sigma=a.sigma, n=a.n, tiles=rows, summary=summary),
-              open("results/emag2.json", "w"), indent=1)
-    plot_beta_map(rows, grid, "figures/emag2_beta_map.png")
-    plot_summary(rows, summary, "figures/emag2_summary.png")
-    plot_examples(examples, "figures/emag2_tiles.png")
+              open(f"results/emag2{a.tag}.json", "w"), indent=1)
+    plot_beta_map(rows, grid, f"figures/emag2_beta_map{a.tag}.png")
+    plot_summary(rows, summary, f"figures/emag2_summary{a.tag}.png")
+    plot_examples(examples, f"figures/emag2_tiles{a.tag}.png")
     for k, v in summary.items():
         print(f"{k}: " + ", ".join(f"{kk} {vv:.3f}" if isinstance(vv, float) else f"{kk} {vv}" for kk, vv in v.items()))
     # the figures depend on the map regions; the resampled tiles are plotted at their centre
@@ -290,7 +312,11 @@ def summarise(rows):
         fl = np.array([r["floor_predicted"] for r in rs]); it = np.array([r["mse_interp"] for r in rs])
         w35 = np.array([r["mse_wiener_beta35"] for r in rs]); w35s = np.array([r["mse_wiener_beta35_stationary"] for r in rs])
         nl = np.array([r["nonlinearity"] for r in rs if r.get("nonlinearity") == r.get("nonlinearity")])
+        te = np.array([r.get("top_octave_excess", float("nan")) for r in rs])
+        t5g = np.array([r.get("err_top5_gauss", float("nan")) for r in rs]); t5n = np.array([r.get("err_top5_network", float("nan")) for r in rs])
         out[region] = dict(tiles=len(rs), nonlinearity_median=float(np.median(nl)) if len(nl) else float("nan"),
+                           err_top5_gauss_median=float(np.nanmedian(t5g)), err_top5_network_median=float(np.nanmedian(t5n)),
+                           top_octave_excess_median=float(np.nanmedian(te)), top_octave_excess_q90=float(np.nanquantile(te, 0.9)),
                            frac_beta_clipped=float(np.mean((b < 1.5) | (b > 6.5))), beta_median=float(np.median(b)), beta_q10=float(np.quantile(b, 0.1)), beta_q90=float(np.quantile(b, 0.9)),
                            frac_beta_in_2p5_4=float(np.mean((b >= 2.5) & (b <= 4.0))),
                            mse_network_median=float(np.median(net)), mse_wiener_median=float(np.median(wie)),
@@ -383,13 +409,19 @@ def calibrate(n=64, sigma=1.0):
     json.dump(out, open("results/emag2_calibration.json", "w"), indent=1)
 
 
-def synthetic(run, n=64, sigma=1.0):
-    """the identical pipeline on Gaussian tiles at the EMAG2 equivalent altitude with spectral
-    slopes on and off the network's training value: separates the effect of an unfamiliar
-    spectrum from the effect of non-Gaussian structure"""
+def synthetic(run, n=64, sigma=1.0, gen_kind="v1", tag=""):
+    """the identical pipeline on synthetic tiles at the EMAG2 equivalent altitude.
+    v1: Gaussian tiles with spectral slopes on and off the network's training value, which
+        separates the effect of an unfamiliar spectrum from the effect of non-Gaussian structure.
+    v2: tiles from the scale-mixture generator (magscale/gen2.py); the same statistics the real
+        tiles are summarised by (fitted slope, kurtosis, the Gaussian estimator over its own
+        floor) say how close the generator is to the real thing."""
     from .grf import sample_fields
+    from .gen2 import sample_fields_v2
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model, c = load_model(run, device)
+    if gen_kind == "v2":
+        return synthetic_v2(model, c, n, sigma, device, tag)
     train_hs = [float(x) for x in str(c["h"]).split(",")]
     h_in = torch.tensor([H_EQ / max(800.0, max(train_hs))], device=device)
     sigma0 = c["sigma0"]; wiener = Wiener(n, sigma)
@@ -425,6 +457,31 @@ def synthetic(run, n=64, sigma=1.0):
     json.dump(out, open("results/emag2_synthetic.json", "w"), indent=1)
 
 
+def stats(grid_path="data/emag2_upcont.npy", regions="australia,north_america", n=64):
+    """per-tile spectral statistics of the real tiles without any model: slope, kurtosis,
+    top-octave excess; the fast way to ask what real tiles have that the generator lacks"""
+    grid = np.load(grid_path); code = np.load(grid_path.replace("upcont", "code"))
+    for region in regions.split(","):
+        rs, cs = region_slice(region); sub = grid[rs, cs]; subcode = code[rs, cs]
+        betas, kurts, tops = [], [], []
+        for i in range(0, sub.shape[0] - n + 1, n):
+            lat = -90 + (rs.start + i + n / 2) / 30
+            wcols = int(round(n / math.cos(math.radians(lat))))
+            for j in range(0, sub.shape[1] - wcols + 1, wcols):
+                raw = sub[i:i + n, j:j + wcols]; cc = subcode[i:i + n, j:j + wcols]
+                if np.isnan(raw).any() or np.mean((cc > 0) & (cc < 100)) < 0.95:
+                    continue
+                t = zoom(raw.astype(np.float64), (1.0, n / wcols), order=1)[:, :n]
+                if t.shape != (n, n) or t.std() < 1.0:
+                    continue
+                t = detrend(t)
+                b, te = fit_beta(t, return_excess=True)
+                betas.append(b); tops.append(te); kurts.append(((t - t.mean()) ** 4).mean() / t.var() ** 2)
+        b, k, te = map(np.array, (betas, kurts, tops))
+        print(f"{region}: {len(b)} tiles; beta {np.median(b):.2f} ({np.quantile(b,.1):.2f}, {np.quantile(b,.9):.2f}); "
+              f"kurtosis {np.median(k):.2f} (q90 {np.quantile(k,.9):.2f}); top-octave excess {np.median(te):.2f} (q90 {np.quantile(te,.9):.2f})")
+
+
 def replot(grid_path="data/emag2_upcont.npy"):
     """regenerate the map and summary figures from results/emag2.json (the example-tile figure
     needs the reconstructions and is only written by `run`)"""
@@ -435,13 +492,64 @@ def replot(grid_path="data/emag2_upcont.npy"):
     print("rewrote figures/emag2_beta_map.png and figures/emag2_summary.png")
 
 
+def synthetic_v2(model, c, n, sigma, device, tag):
+    from .gen2 import sample_fields_v2
+    cfg = c.get("gen2") or dict(beta_range=(2.0, 5.0), mod_range=(0.2, 0.9), aniso_max=2.5)
+    train_hs = [float(x) for x in str(c["h"]).split(",")]
+    h_in = torch.tensor([H_EQ / max(800.0, max(train_hs))], device=device)
+    sigma0 = c["sigma0"]; wiener = Wiener(n, sigma)
+    gen = torch.Generator().manual_seed(5)
+    target_rms = math.sqrt(prior_variance(n, 3.5, H_EQ, DX, 50.0))
+    rows = []
+    for b in range(0, 300, 50):
+        clean_b, lat = sample_fields_v2(50, n, H_EQ, cfg, DX, 50.0, gen)
+        for i in range(50):
+            t = detrend(clean_b[i].double().numpy()); rms = t.std(); t = t * (target_rms / rms)
+            beta, top_excess = fit_beta(t, return_excess=True)
+            clean = torch.tensor(t, dtype=torch.float32); noisy = clean + sigma * torch.randn(clean.shape, generator=gen)
+            mask = random_mask(1, n, 0.75, gen)[0]; hid = mask.flatten()
+            with torch.no_grad():
+                net = (model(observe(noisy[None].to(device), mask[None].to(device), sigma0), h_in)[0] * sigma0).cpu()
+            w, fl = wiener(noisy.double(), hid, beta, float(clean.var()))
+            w35, _ = wiener(noisy.double(), hid, 3.5, float(clean.var()))
+            full = noisy.clone().flatten(); full[hid] = torch.from_numpy(w).float(); full = full.view(n, n)
+            f35 = noisy.clone().flatten(); f35[hid] = torch.from_numpy(w35).float(); f35 = f35.view(n, n)
+            err = lambda p: float(((p - clean) ** 2)[mask].mean())
+            se = ((f35 - clean) ** 2)[mask].flatten().sort(descending=True).values
+            rows.append(dict(beta=beta, top_octave_excess=top_excess, err_top5_gauss=float(se[: max(1, int(0.05 * len(se)))].sum() / se.sum()),
+                             true_beta=float(lat["beta"][i]), mod_sigma=float(lat["mod_sigma"][i]),
+                             kurtosis=float(((t - t.mean()) ** 4).mean() / t.var() ** 2),
+                             mse_network=err(net), mse_wiener=err(full), mse_wiener_beta35=err(f35), floor_predicted=fl))
+    b = np.array([r["beta"] for r in rows]); k = np.array([r["kurtosis"] for r in rows]); te = np.array([r["top_octave_excess"] for r in rows])
+    t5 = np.array([r["err_top5_gauss"] for r in rows])
+    net = np.array([r["mse_network"] for r in rows]); wie = np.array([r["mse_wiener"] for r in rows])
+    w35 = np.array([r["mse_wiener_beta35"] for r in rows]); fl = np.array([r["floor_predicted"] for r in rows])
+    out = dict(cfg=cfg, tiles=len(rows), beta_median=float(np.median(b)), beta_q10=float(np.quantile(b, .1)), beta_q90=float(np.quantile(b, .9)),
+               kurtosis_median=float(np.median(k)), kurtosis_q90=float(np.quantile(k, .9)),
+               top_octave_excess_median=float(np.median(te)), top_octave_excess_q90=float(np.quantile(te, .9)),
+               err_top5_gauss_median=float(np.median(t5)),
+               wiener_over_own_floor_median=float(np.median(wie / fl)), network_over_wiener_beta35_median=float(np.median(net / w35)),
+               network_over_wiener_median=float(np.median(net / wie)), mse_network_median=float(np.median(net)),
+               mse_wiener_median=float(np.median(wie)), mse_wiener_beta35_median=float(np.median(w35)))
+    os.makedirs("results", exist_ok=True)
+    json.dump(out, open(f"results/emag2_synthetic_v2{tag}.json", "w"), indent=1)
+    print(f"generator v2 tiles at h/dx 1.08: fitted beta {out['beta_median']:.2f} ({out['beta_q10']:.2f}, {out['beta_q90']:.2f}); "
+          f"kurtosis {out['kurtosis_median']:.2f} (q90 {out['kurtosis_q90']:.2f}); top-octave excess {out['top_octave_excess_median']:.2f} (q90 {out['top_octave_excess_q90']:.2f}); "
+          f"Gaussian estimator / own floor {out['wiener_over_own_floor_median']:.2f}; error in worst 5% of pixels {out['err_top5_gauss_median']:.2f}; "
+          f"network / Gaussian(3.5) {out['network_over_wiener_beta35_median']:.2f}, / Gaussian(fitted) {out['network_over_wiener_median']:.2f}")
+    print("real land tiles for comparison: beta 3.34 (2.02, 4.93); kurtosis 3.9 (q90 9.6); Gaussian / own floor 5.3")
+    return out
+
+
 def main():
     p = argparse.ArgumentParser()
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("replot")
+    pst = sub.add_parser("stats"); pst.add_argument("--regions", default="australia,north_america")
     pc = sub.add_parser("convert"); pc.add_argument("path"); pc.add_argument("--out", default="data/emag2_upcont.npy")
     sub.add_parser("calibrate")
     ps = sub.add_parser("synthetic"); ps.add_argument("--run", default="runs/vitxxl_b3.5_hmix_D131072_s0_noalt.json")
+    ps.add_argument("--gen", default="v1", choices=["v1", "v2"]); ps.add_argument("--tag", default="")
     pr = sub.add_parser("run")
     pr.add_argument("--grid", default="data/emag2_upcont.npy")
     pr.add_argument("--run", default="runs/vitxxl_b3.5_hmix_D131072_s0_noalt.json",
@@ -449,15 +557,18 @@ def main():
     pr.add_argument("--regions", default="australia,north_america")
     pr.add_argument("--n", type=int, default=64)
     pr.add_argument("--sigma", type=float, default=1.0)
+    pr.add_argument("--tag", default="", help="suffix for results/emag2<tag>.json and the figures, e.g. _gen2")
     a = p.parse_args()
     if a.cmd == "convert":
         convert(a.path, a.out)
     elif a.cmd == "calibrate":
         calibrate()
     elif a.cmd == "synthetic":
-        synthetic(a.run)
+        synthetic(a.run, gen_kind=a.gen, tag=a.tag)
     elif a.cmd == "replot":
         replot()
+    elif a.cmd == "stats":
+        stats(regions=a.regions)
     else:
         run(a)
 

@@ -40,7 +40,7 @@ def is_grid_run(path, r, tag=""):
     if not m or (m.group(6) or "") != tag:
         return False
     c = r["config"]
-    return (c["model"] == "vit" and not c.get("mup") and not c.get("no_altitude")
+    return (c["model"] == "vit" and not c.get("mup") and not c.get("no_altitude") and c.get("gen", "v1") == "v1"
             and c.get("mask", "random") == "random" and "," not in str(c["h"])
             and bool(c.get("fixed_mask", False)) == (tag == "_fm"))
 
