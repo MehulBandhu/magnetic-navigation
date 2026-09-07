@@ -22,27 +22,47 @@ budget of the scaling grid the same model was at 1.10.
 
 ## The Findings
 
-1. The network learns the exact estimator. At a fixed mask it is linear in its input to
-   0.5%, and its Jacobian rows are within 16% of the exact Wiener rows.
-2. The remaining gap is optimisation. Trained against the exact conditional mean, the
-   same model's approximation error is at most 0.031 nT^2, 6% of the floor; estimation
-   error is about 0.006.
+1. The trained network closely approximates the exact estimator on synthetic inputs. At a
+   fixed mask it is linear in its input to 0.15% after 24k steps, and its Jacobian rows are
+   within 16% of the exact Wiener rows.
+2. Longer training substantially reduces the gap: the excess falls from 0.60 to 0.045
+   within one run. Trained against the exact conditional mean on a fixed mask, the same
+   model approximates it to 0.031 nT^2, 6% of the floor; the remainder on resampled masks
+   is not separately decomposed.
 3. More than half of the apparent parameter scaling is the training budget growing with
    model size: slope 0.66 across the grid at 200 m, 0.25 read at equal steps, and no
    positive size dependence above 5M parameters.
-4. A fit free to choose its own floor puts it at zero in every condition. The analytic
-   floor has to be supplied; the grid cannot recover it.
+4. A fit free to choose its own floor lands at 35% to 95% of the exact value, on a profile
+   too flat to identify it. The analytic floor is the one to use.
 5. The theory can be tested, and part of it fails. The two-layer linear network's time
    exponent, the one statement in Problem 3 with a proof, matches its closed-form test to
    within the log factor the derivation drops; the conjecture that it survives the mask is
    false as written.
 6. On EMAG2 tiles the network does not transfer. It is worse than interpolation by
    the median and about 4x worse than the exact estimator carrying the network's own
-   training prior; real tiles sit 2 to 10x above any Gaussian floor.
+   training prior; real-tile errors exceed the floors predicted by the tested Gaussian
+   priors by 2 to 10x.
 
 Map error becomes position error: on maps reconstructed from synthetic survey lines the
 navigator is at 28 m (exact estimator), 32 m (network) and 37 m (interpolation), against
 17 m on the true map.
+
+Added after submission (Problem 2, Part F): the tails are the learnable part. A network trained
+only on a synthetic generator that reproduces the real tiles' kurtosis goes from 3.9x to 1.4x
+the Gaussian estimator on EMAG2 and beats interpolation on every tile, with no real data;
+fine-tuning the submitted model on a few hundred real tiles from one continent reaches the same
+1.4x on continents it never saw. What remains is concentrated in a few pixels per tile, the
+compilation's seams, for every estimator alike.
+
+![extension](figures/extension_real_data.png)
+
+*The models compared on the same real tiles. Left: error relative to the Gaussian estimator;
+grey trained on Gaussian fields, teal on the generator with tails, red fine-tuned on real tiles
+and tested on other continents; the number above each bar is the fraction of tiles where the
+network beats interpolation. Middle: per-tile errors of the submitted model and the
+generator-trained one on the same 300 tiles. Right: tile kurtosis, real against generated; the
+worst 5% of pixels carry 0.63 of the error on real tiles for every estimator, the compilation's
+seams.*
 
 ## In pictures
 
