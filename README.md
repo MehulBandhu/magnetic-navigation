@@ -64,6 +64,22 @@ generator-trained one on the same 300 tiles. Right: tile kurtosis, real against 
 worst 5% of pixels carry 0.63 of the error on real tiles for every estimator, the compilation's
 seams.*
 
+Added after submission, a flight simulator (`magsim/`, specification in SIM_SPEC.md): a scripted
+flight over the Gawler survey grid with a magnetometer that reads the magnitude of the exact
+vector sum of the earth field and an invented platform field, then the estimator chain: the
+live Tolles-Lawson calibration of Problem 1 (rank 17, 16 band-passed), the lag model, a small
+learned corrector for what the physics leaves, trained on random vehicles and evaluated on
+held-out ones against the Gauss-Newton and lag baselines, and a particle filter navigating on
+the true map and on the maps reconstructed from 25% survey lines by the network, the Gaussian
+estimator and interpolation, with the Cramer-Rao bound alongside. The tables are in
+docs/simulator.md, rendered from results/; magsim/README.md says what is simulated and what
+is not.
+
+![simulator](figures/magsim_demo.png)
+
+*The survey leg over the Gawler window at 60 m: the particle cloud on the four maps, and the
+position error against the bound.*
+
 ## In pictures
 
 ![jacobian](figures/jacobian_vitxxl_b3.5_h200_D131072_s0_long_h200.png)

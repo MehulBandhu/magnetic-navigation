@@ -10,3 +10,4 @@ figures/*_nonetwork.png
 results/*_nonetwork.json
 figures/demo_run.png
 data/
+*.rrd

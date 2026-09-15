@@ -1,0 +1,142 @@
+{
+ "imu": true,
+ "spacing": 4,
+ "sigma_nT": 1.0,
+ "likelihood_sensor_rms_nT": 1.1702606711753938,
+ "legs": {
+  "60": {
+   "h_m": 60.0,
+   "dx_m": 44.527999999896224,
+   "window": {
+    "row0": 1000,
+    "col0": 1400,
+    "n": 256
+   },
+   "window_km": 11.399167999973434,
+   "residual_rms_nT": 2.5769797137940578,
+   "residual_slow_rms_nT": 2.3788658610917737,
+   "drift_nT_per_min": 3.047286498801027,
+   "maps": {
+    "true": {
+     "label": "true map",
+     "map_rms_nT": 0.0,
+     "likelihood_sigma_nT": 2.833463044327169,
+     "map_gradient_rms_nT_per_m": 1.7516285229707242,
+     "error_after_turn_m": 10.16778660084888,
+     "bound_after_turn_m": 3.228280045026919,
+     "error_after_turn_small_box_m": 14.604775824435583,
+     "bound_after_turn_small_box_m": 3.2277917078432465,
+     "error_after_turn_white_noise_m": 116.33735920553377,
+     "error_after_turn_white_noise_constant_offset_m": 113.37845019176463
+    },
+    "network": {
+     "label": "network (lines-trained)",
+     "map_rms_nT": 78.06436590774503,
+     "likelihood_sigma_nT": 78.11577137429977,
+     "map_gradient_rms_nT_per_m": 1.6935728865543704,
+     "error_after_turn_m": 75.13327078544752,
+     "bound_after_turn_m": 80.28930811400639,
+     "error_after_turn_small_box_m": 73.59778028916001,
+     "bound_after_turn_small_box_m": 73.95469320198191
+    },
+    "network_gen2": {
+     "label": "network (generator-trained, random masks)",
+     "map_rms_nT": 238.3653159806949,
+     "likelihood_sigma_nT": 238.3821561598101,
+     "map_gradient_rms_nT_per_m": 2.704831244205071,
+     "error_after_turn_m": 63.59219570713788,
+     "bound_after_turn_m": 118.12450646416215,
+     "error_after_turn_small_box_m": 60.70716052016961,
+     "bound_after_turn_small_box_m": 102.0216368228642
+    },
+    "wiener": {
+     "label": "Gaussian estimator, beta 3.5",
+     "map_rms_nT": 78.92577033107857,
+     "likelihood_sigma_nT": 78.97661511598056,
+     "map_gradient_rms_nT_per_m": 2.0575223192646885,
+     "error_after_turn_m": 75.30954106401055,
+     "bound_after_turn_m": 87.37955569880961,
+     "error_after_turn_small_box_m": 73.47063545724828,
+     "bound_after_turn_small_box_m": 79.18631949833639
+    },
+    "interp": {
+     "label": "linear interpolation between lines",
+     "map_rms_nT": 58.29261189390593,
+     "likelihood_sigma_nT": 58.36143516258927,
+     "map_gradient_rms_nT_per_m": 1.6152180494485062,
+     "error_after_turn_m": 65.60636749385925,
+     "bound_after_turn_m": 66.6586678649725,
+     "error_after_turn_small_box_m": 68.8578503517472,
+     "bound_after_turn_small_box_m": 62.798046876044076
+    }
+   }
+  },
+  "240": {
+   "h_m": 240.0,
+   "dx_m": 178.1119999995849,
+   "window": {
+    "row0": 150,
+    "col0": 200,
+    "n": 256
+   },
+   "window_km": 45.596671999893736,
+   "residual_rms_nT": 4.404515274885282,
+   "residual_slow_rms_nT": 4.1804305106038235,
+   "drift_nT_per_min": 3.047286498801027,
+   "maps": {
+    "true": {
+     "label": "true map",
+     "map_rms_nT": 0.0,
+     "likelihood_sigma_nT": 4.454829883675383,
+     "map_gradient_rms_nT_per_m": 0.8889670925985663,
+     "error_after_turn_m": 75.21196701562928,
+     "bound_after_turn_m": 22.94424232888743,
+     "error_after_turn_small_box_m": 56.55311979956685,
+     "bound_after_turn_small_box_m": 22.7954429788961,
+     "error_after_turn_white_noise_m": 99.40983302879921,
+     "error_after_turn_white_noise_constant_offset_m": 92.42062256172547
+    },
+    "network": {
+     "label": "network (lines-trained)",
+     "map_rms_nT": 179.11169556653627,
+     "likelihood_sigma_nT": 179.16708681566504,
+     "map_gradient_rms_nT_per_m": 0.774144655873828,
+     "error_after_turn_m": 286.24267847567205,
+     "bound_after_turn_m": 782.2960800976307,
+     "error_after_turn_small_box_m": 29.034002322732416,
+     "bound_after_turn_small_box_m": 232.84639320194376
+    },
+    "network_gen2": {
+     "label": "network (generator-trained, random masks)",
+     "map_rms_nT": 260.49002996467794,
+     "likelihood_sigma_nT": 260.52811982642356,
+     "map_gradient_rms_nT_per_m": 0.9822603377498534,
+     "error_after_turn_m": 365.8339022502109,
+     "bound_after_turn_m": 713.9144645981581,
+     "error_after_turn_small_box_m": 39.740719645171566,
+     "bound_after_turn_small_box_m": 232.47100995157123
+    },
+    "wiener": {
+     "label": "Gaussian estimator, beta 3.5",
+     "map_rms_nT": 112.89702858193039,
+     "likelihood_sigma_nT": 112.98488647567733,
+     "map_gradient_rms_nT_per_m": 0.7834466895129074,
+     "error_after_turn_m": 282.3637665687887,
+     "bound_after_turn_m": 398.4368985219949,
+     "error_after_turn_small_box_m": 54.72262577870759,
+     "bound_after_turn_small_box_m": 210.40773283091806
+    },
+    "interp": {
+     "label": "linear interpolation between lines",
+     "map_rms_nT": 117.82241455830382,
+     "likelihood_sigma_nT": 117.90660236662445,
+     "map_gradient_rms_nT_per_m": 0.7172908508041038,
+     "error_after_turn_m": 341.40215757246136,
+     "bound_after_turn_m": 668.7885840443083,
+     "error_after_turn_small_box_m": 39.15569326000759,
+     "bound_after_turn_small_box_m": 223.46366403990118
+    }
+   }
+  }
+ }
+}

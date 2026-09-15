@@ -203,10 +203,87 @@ if os.path.exists("results/magnav.json"):
         sp, name = k.split(":")
         out.append(f"| {int(sp)*100} m | {name} | {v['map_rms']:.3f} | {v['nav_rms']:.1f} | {v['nav_sd']:.1f} |")
 
+# ---- flight simulator: corrector and navigation on the real map (magsim/)
+def corrector_table(path):
+    r = json.load(open(path))
+    a = r["args"]
+    rows = [f"\n## Simulator: residual after each estimator on held-out vehicles ({a['heldout']} vehicles, {a['vehicles']} in training, "
+            f"{r['n_params']} parameters, window {a['window']} steps with a {a['gap']}-step gap, attitude {'from the IMU model' if a['imu'] else 'known'}; "
+            "rms nT per flight after removing the flight mean and the thermal drift, root mean square over flights)\n",
+            "| platform class | motor, battery, servo fields | flights | linear TL | Gauss-Newton | lag model | GN + lag | GN + lag + battery current | corrector after linear | corrector after lag model | drift rms | IMU floor |",
+            "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+    for k, t in r["table"].items():
+        cls, ex = k.split(":")
+        rows.append(f"| {cls.replace('_', ' ')} | {'on' if ex.startswith('with_') else 'off'} | {t['flights']} | {t['linear']:.2f} | {t['gauss_newton']:.2f} | {t['lag']:.2f} | "
+                    f"{t['gauss_newton_lag']:.2f} | {t['gauss_newton_current']:.2f} | {t['corrector']:.2f} | {t.get('lag_corrector', float('nan')):.2f} | {t['drift']:.2f} | {t['imu_floor']:.2f} |")
+    rows.append("\nThe baselines are fitted on each vehicle's own calibration box (280 s) and applied to its other flights; the corrector "
+                "has never seen the vehicle and infers it from the last window of telemetry and residual. The battery-current column is the physics "
+                "with telemetry, what the corrector is meant to approach. The corrector after the lag model is the demo's chain: calibration, lag model, network for the rest. The IMU floor is the residual the attitude error alone leaves through the "
+                "true rigid-body field, which no attitude-based method can remove.\n")
+    return rows
+
+
+sim = []
+for name, path in [("", "results/corrector.json"), (" with IMU attitude", "results/corrector_imu.json")]:
+    if os.path.exists(path):
+        sim += corrector_table(path)
+
+if os.path.exists("results/magsim_nav.json"):
+    nv = json.load(open("results/magsim_nav.json"))
+    for tag, leg in nv["legs"].items():
+        sim += [f"\n## Simulator: navigation on the Gawler window at {leg['h_m']:.0f} m ({leg['window_km']:.1f} km, {leg['dx_m']:.0f} m pixels, survey lines every {nv['spacing']} rows, {nv['sigma_nT']} nT survey noise, attitude {'from the IMU model' if nv.get('imu') else 'known'}; "
+                f"the chain leaves {leg['residual_rms_nT']:.2f} nT against the true map, of which {leg['residual_slow_rms_nT']:.2f} nT varies over ten seconds or longer; the vehicle's drift is {leg['drift_nT_per_min']:.1f} nT per root minute)\n",
+                "| map | rms map error on hidden pixels nT | rms map gradient nT/m | likelihood width nT | position error after the first turn, 1.5 km initial box, m | bound m | from a 300 m box, m | bound m |", "|---|---|---|---|---|---|---|---|"]
+        for k, t in leg["maps"].items():
+            sim.append(f"| {t['label']} | {t['map_rms_nT']:.1f} | {t['map_gradient_rms_nT_per_m']:.3f} | {t['likelihood_sigma_nT']:.1f} | {t['error_after_turn_m']:.1f} | {t['bound_after_turn_m']:.1f} | {t['error_after_turn_small_box_m']:.1f} | {t['bound_after_turn_small_box_m']:.1f} |")
+        t0 = leg["maps"]["true"]
+        if "error_after_turn_white_noise_constant_offset_m" in t0:
+            sim.append(f"\nThe same filter on the true map with a reading carrying white noise of the residual's rms instead of the chain's residual, from the 1.5 km box: "
+                       f"{t0['error_after_turn_white_noise_m']:.1f} m after the turn with the offset allowed to walk as the drift does, {t0['error_after_turn_white_noise_constant_offset_m']:.1f} m with a constant offset, "
+                       f"which is the case the bound of {t0['bound_after_turn_m']:.1f} m describes.")
+    sim.append("\nThe chain is the calibration and the lag model; the bound is the Cramer-Rao bound of Problem 1C along the flown track with the likelihood width used for "
+               "matching (what the chain leaves on the calibration box, the slow part of its residual, and the map's rms error combined) and the offset as a third unknown; it "
+               "assumes white sensor error, and the part of the chain's residual that varies over ten seconds is what keeps the realised error above it. A lower map rms does "
+               "not by itself mean better navigation: the navigator uses the map's gradients, and interpolation between lines has the smallest rms error while flattening the "
+               "gradient across lines, which is what a position fix needs.\n")
+
+if os.path.exists("results/magsim_demo.json"):
+    d = json.load(open("results/magsim_demo.json"))
+    p1, p2 = d.get("part1_calibration"), d.get("part2_interference")
+    sim += [f"\n## Simulator: demo readouts (scenario {d['scenario']}, {d['duration_s']:.0f} s of flight, attitude {'from the IMU model' if d['imu'] else 'known'})\n"]
+    if p1:
+        sim.append(f"- Part 1, fixed-wing box ({p1['platform_field_mean_nT']:.0f} nT of platform field): rank {p1['rank_raw_end']} raw and {p1['rank_band_passed_end']} band-passed at the end, "
+                   f"17 reached after {p1['time_to_rank_17_s']:.0f} s; the linear model leaves {p1['residual_rms_band_passed_nT']:.2f} nT in band.")
+    if p2:
+        m = p2["manoeuvre"]
+        sim.append(f"- Part 2, multirotor ({p2['platform_field_mean_nT']:.0f} nT): on the box the linear model leaves {p2['box_residual_rms_nT']:.1f} nT in band; on the free manoeuvre with the box's calibration: "
+                   f"linear {m['linear']:.1f}, Gauss-Newton {m['gauss_newton']:.1f}, lag model {m['lag']:.1f}, Gauss-Newton + lag {m['gauss_newton_lag']:.1f}, corrector after the linear model {m['corrector']:.1f}, "
+                   f"after the lag model {m['lag_corrector']:.1f} nT (rms, drift and mean removed).")
+out += sim
+
+def sim_text(level):
+    # the section headings without the "Simulator:" prefix, sentence case kept
+    import re as _re
+    return _re.sub(r"(\n#+ )(\w)", lambda m: m.group(1) + m.group(2).upper(), "\n".join(l.replace("## Simulator: ", level) for l in sim))
+
+
+# the same tables make docs/simulator.md, and go into magsim/README.md between its markers
+if sim:
+    open("docs/simulator.md", "w").write("# Simulator: the corrector and navigation on the real map\n\nGenerated by `python scripts/render_tables.py` from results/corrector.json, "
+                                         "results/magsim_nav.json and results/magsim_demo.json. Do not edit by hand. What the simulator is and is not: magsim/README.md.\n"
+                                         + sim_text("## ") + "\n")
+if os.path.exists("magsim/README.md") and sim:
+    rd = open("magsim/README.md").read()
+    a, b = rd.index("<!-- tables:start -->"), rd.index("<!-- tables:end -->")
+    open("magsim/README.md", "w").write(rd[:a] + "<!-- tables:start -->\n" + sim_text("### ") + "\n" + rd[b:])
+
+
 # ---- compute used
 hours = defaultdict(float)
 n_runs = 0
 for f in glob.glob("runs/*.json"):
+    if os.path.basename(f).startswith("corrector"):
+        continue                                   # the simulator's corrector: minutes on a CPU, not part of the GPU tally
     r = json.load(open(f))
     n_runs += 1
     name = os.path.basename(f)
@@ -217,7 +294,7 @@ for f in glob.glob("runs/*.json"):
     hours[group] += r.get("wall_time_s", 0) / 3600
 out += ["\n## Compute used\n", f"{n_runs} training runs, {sum(hours.values()):.1f} GPU-hours of recorded wall time:\n"]
 out += [f"- {k}: {v:.2f} h" for k, v in sorted(hours.items(), key=lambda kv: -kv[1])]
-n_hw = sum(1 for f in glob.glob("runs/*.json") if json.load(open(f)).get("samples_per_s"))
+n_hw = sum(1 for f in glob.glob("runs/*.json") if not os.path.basename(f).startswith("corrector") and json.load(open(f)).get("samples_per_s"))
 out.append(f"\n{n_hw} of {n_runs} runs record the GPU, precision and throughput (the fields were added after the first runs).")
 out.append("\nplus the 40 CPU linear-reference jobs (about 10 minutes each).")
 

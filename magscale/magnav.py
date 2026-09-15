@@ -110,8 +110,8 @@ def network_recon(noisy, mask, ckpt, h):
 
 # ---------------------------------------------------------------- navigation
 def bilinear(m, y, x):
-    n = m.shape[0]
-    y = np.clip(y, 0, n - 1.001); x = np.clip(x, 0, n - 1.001)
+    # rows and columns clipped separately so a non-square grid (the Gawler window) samples too
+    y = np.clip(y, 0, m.shape[0] - 1.001); x = np.clip(x, 0, m.shape[1] - 1.001)
     y0 = np.floor(y).astype(int); x0 = np.floor(x).astype(int)
     fy = y - y0; fx = x - x0
     return ((1 - fy) * (1 - fx) * m[y0, x0] + (1 - fy) * fx * m[y0, x0 + 1]

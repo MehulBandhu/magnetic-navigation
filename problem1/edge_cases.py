@@ -38,57 +38,73 @@ def lag(x, tau, dt):
     return y
 
 
-def platform_field(u, udot, dt, a, M, C, tau=0.0, extra=None):
-    """vector platform field in the body frame. extra: (t x 3) field not tied to attitude"""
-    Bp = a[None, :] + B0 * u @ M.T + B0 * lag(udot, tau, dt) @ C.T
+def platform_field(u, udot, dt, a, M, C, tau=0.0, extra=None, B=B0):
+    """vector platform field in the body frame. extra: (t x 3) field not tied to attitude.
+    B: ambient magnitude in nT, a scalar or a (t,) array (the simulator passes the map value
+    added to B0, since the induced and eddy terms scale with the field actually present)"""
+    B = np.reshape(B, (-1, 1)) if np.ndim(B) else B
+    Bp = a[None, :] + B * (u @ M.T) + B * (lag(udot, tau, dt) @ C.T)
     if extra is not None:
         Bp = Bp + extra
     return Bp
 
 
-def exact_scalar(u, Bp):
-    return np.linalg.norm(B0 * u + Bp, axis=1)
+def exact_scalar(u, Bp, B=B0):
+    """magnitude of the exact vector sum, nT; B scalar or (t,) array of ambient magnitudes"""
+    B = np.reshape(B, (-1, 1)) if np.ndim(B) else B
+    return np.linalg.norm(B * u + Bp, axis=1)
 
 
 def fit_linear(A, y):
     return A @ np.linalg.lstsq(A, y, rcond=None)[0]
 
 
-def gauss_newton(u, udot, m, iters=4, extra=None):
+def gn_predict(theta, u, udot, extra=None, B=B0):
+    """scalar prediction of the exact model for parameters theta (a, M, C and, with extra,
+    the 3-vector field per unit of the extra signal); returns (|B u + Bp|, B u + Bp)"""
+    B = np.reshape(B, (-1, 1)) if np.ndim(B) else B
+    a, M, C = theta[:3], theta[3:12].reshape(3, 3), theta[12:21].reshape(3, 3)
+    Bp = a[None, :] + B * (u @ M.T) + B * (udot @ C.T)
+    if extra is not None:
+        Bp = Bp + extra[:, None] * theta[21:][None, :]
+    tot = B * u + Bp
+    return np.linalg.norm(tot, axis=1), tot
+
+
+def gauss_newton(u, udot, m, iters=4, extra=None, B=B0, return_theta=False, filt=None):
     """fit a, M, C (21 params) to exact scalar data by Gauss-Newton with column
     scaling and a min-norm step (the null modes stay at zero). Iteration 1 from
     zero is the linear TL fit; later iterations pick up the second-order term.
     extra: optional (T,) signal such as motor current; its body-frame field
-    direction (3 params) is fitted too."""
-    def predict(theta):
-        a, M, C = theta[:3], theta[3:12].reshape(3, 3), theta[12:21].reshape(3, 3)
-        Bp = a[None, :] + B0 * u @ M.T + B0 * udot @ C.T
-        if extra is not None:
-            Bp = Bp + extra[:, None] * theta[21:][None, :]
-        tot = B0 * u + Bp
-        return np.linalg.norm(tot, axis=1), tot
+    direction (3 params) is fitted too. B: ambient magnitude, scalar or (T,).
+    filt: optional linear filter (T, k) -> (T, k) applied to the residual and the Jacobian,
+    a high-pass that keeps a slow sensor drift out of the fit. Returns the prediction, or
+    (prediction, theta) with return_theta."""
+    Bc = np.reshape(B, (-1, 1)) if np.ndim(B) else B
+    predict = lambda theta: gn_predict(theta, u, udot, extra, B)
+    filt = filt or (lambda x: x)
 
     theta = np.zeros(21 + (0 if extra is None else 3))
     pred, tot = predict(theta)
     for _ in range(iters):
         d = tot / pred[:, None]                                   # d m / d Bp
         cols = [d]
-        cols += [B0 * u[:, [j]] * d[:, [i]] for i in range(3) for j in range(3)]      # M_ij
-        cols += [B0 * udot[:, [j]] * d[:, [i]] for i in range(3) for j in range(3)]   # C_ij
+        cols += [Bc * u[:, [j]] * d[:, [i]] for i in range(3) for j in range(3)]      # M_ij
+        cols += [Bc * udot[:, [j]] * d[:, [i]] for i in range(3) for j in range(3)]   # C_ij
         if extra is not None:
             cols.append(extra[:, None] * d)
         J = np.hstack(cols)
         sc = np.linalg.norm(J, axis=0)
         sc[sc == 0] = 1
-        step = np.linalg.lstsq(J / sc, m - pred, rcond=1e-10)[0] / sc
+        step = np.linalg.lstsq(filt(J) / sc, filt(m - pred), rcond=1e-10)[0] / sc
         # backtracking: halve the step until the residual decreases
         for _ in range(20):
             new_pred, new_tot = predict(theta + step)
-            if rms(m - new_pred) < rms(m - pred):
+            if rms(filt(m - new_pred)) < rms(filt(m - pred)):
                 break
             step = step / 2
         theta, pred, tot = theta + step, new_pred, new_tot
-    return pred
+    return (pred, theta) if return_theta else pred
 
 
 def rms(x):

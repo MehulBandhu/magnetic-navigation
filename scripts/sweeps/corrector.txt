@@ -1,0 +1,2 @@
+python -m magsim.train_corrector --vehicles 300 --heldout 45 --steps 40000 --fresh_every 2000 --eval_every 2000 --out runs/corrector.pt --results results/corrector.json
+python -m magsim.train_corrector --vehicles 300 --heldout 45 --steps 40000 --fresh_every 2000 --eval_every 2000 --imu --out runs/corrector_imu.pt --results results/corrector_imu.json
